@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.dev.vars
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.opencode
+.worktrees/
+seo-research.md
+AGENT.md
+.cursor/plans/seo_authority_plan_70052192.plan.md
+aphexheating.com-20260307T134644.html
+THEME_IMPLEMENTATION.md
+
+# Blog (boilerplate content, not relevant to this site)
+public/content/blog/
+public/content/blog-index.json
+
+# Internal docs and planning (not needed for build)
+docs/
+updates/
+*.plan.md
+client-form.md
+image-alt-descriptions.md
+
+# Agent context (dev-only)
+AGENT.md
+AGENTS.md
+
+# Skills lock
+skills-lock.json

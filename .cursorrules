@@ -1,0 +1,18 @@
+# Project Rules
+
+## Styling and UI
+This project uses **shadcn/ui** and **Tailwind CSS**. All styling should follow the component-based approach defined in `.cursor/rules/styling.md`.
+
+- **UI Components**: Use `@/components/ui` for primitives.
+- **Styling**: Use Tailwind utility classes. Avoid custom CSS.
+- **Theme**: Use theme variables from `tailwind.config.ts`.
+- **Conditional Classes**: Use the `cn` utility from `@/lib/utils`.
+
+## Tech Stack
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Lucide React (Icons)
+- Radix UI (Primitives)
+

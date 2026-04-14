@@ -1,0 +1,127 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Decap CMS — Total Wraps & Tints
+# Auth: DecapBridge PKCE (works on Cloudflare Pages, no serverless needed)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Use DecapBridge PKCE auth
+backend:
+  name: git-gateway
+  repo: jschof1/aphex-heating
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/6c74957a-b2f3-4fc3-8be2-99d976bf0e71/pkce
+  auth_token_endpoint: /sites/6c74957a-b2f3-4fc3-8be2-99d976bf0e71/token
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+site_url: https://aphex-heating.pages.dev
+
+# Where uploaded images are stored in the repo
+media_folder: public/uploads/blog
+# Public URL prefix for images in content
+public_folder: /uploads/blog
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: public/content/blog
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: title
+    preview_path: "blog/{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - label: "Post Title"
+        name: title
+        widget: string
+        hint: "The main headline for this post. Keep it clear and descriptive (e.g. 'How to Bleed a Radiator')."
+
+      - label: "Publish Date"
+        name: date
+        widget: datetime
+        date_format: "DD/MM/YYYY"
+        time_format: "HH:mm"
+        format: "YYYY-MM-DDTHH:mm:ss.SSSZ"
+        hint: "When this post should be dated. Posts are sorted newest first."
+
+      - label: "Category"
+        name: category
+        widget: select
+        hint: "Pick the category that best describes this post."
+        options:
+          - { label: "🔥 Boiler", value: "Boiler" }
+          - { label: "🏠 Heating", value: "Heating" }
+          - { label: "💡 Tips & Advice", value: "Tips" }
+          - { label: "🚨 Emergency", value: "Emergency" }
+          - { label: "📰 News", value: "News" }
+
+      - label: "Author"
+        name: author
+        widget: string
+        default: "Total Wraps & Tints"
+        required: false
+        hint: "Who wrote this post? Leave as 'Total Wraps & Tints' if unsure."
+
+      - label: "Cover Image"
+        name: coverImage
+        widget: image
+        required: false
+        hint: "The main image shown on the blog listing card and at the top of the post. Use a clear, relevant photo."
+        media_library:
+          config:
+            multiple: false
+
+      - label: "Short Summary"
+        name: excerpt
+        widget: text
+        hint: "Write 2–3 sentences summarising the post. This appears on the blog listing page and in Google search results — so make it clear and useful!"
+        pattern:
+          - ".{20,300}"
+          - "Please write between 20 and 300 characters."
+
+      - label: "Tags"
+        name: tags
+        widget: list
+        required: false
+        hint: "Optional keywords to describe the post (e.g. boiler, radiator, gas safe). Press Enter after each one."
+        field:
+          label: Tag
+          name: tag
+          widget: string
+
+      - label: "Post Content"
+        name: body
+        widget: markdown
+        hint: "Write your full post here. Use the toolbar above to add headings, bold text, bullet lists, links, and images. You can insert images anywhere in the text using the image button (📷)."
+        buttons:
+          - bold
+          - italic
+          - heading-one
+          - heading-two
+          - heading-three
+          - bulleted-list
+          - numbered-list
+          - link
+          - quote
+        editor_components:
+          - image
+        modes:
+          - rich_text

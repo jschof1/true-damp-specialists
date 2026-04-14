@@ -1,0 +1,5 @@
+# GHL webhooks (Main / Quote / Negative / Discount)
+FORM_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/fJBkV60oEidpLQK6gsGP
+QUOTE_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/UNBSZRTzZZtN3qIUAEFI
+FEEDBACK_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/LNI7myrFYlBONwi8aHyr
+DISCOUNT_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/vb4OGGaiLPaoBVU6sO26

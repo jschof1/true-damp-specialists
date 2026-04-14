@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Total Wraps & Tints — Content Manager</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+
+    <script>
+      // ── Google Fonts in the preview pane ──────────────────────────────────
+      CMS.registerPreviewStyle(
+        'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap'
+      );
+
+      // ── Preview pane base styles ───────────────────────────────────────────
+      CMS.registerPreviewStyle(`
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+          font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+          background: #f5f4f2;
+          color: #1a2033;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        .preview-wrap {
+          max-width: 740px;
+          margin: 0 auto;
+          background: #ffffff;
+          min-height: 100vh;
+          box-shadow: 0 0 0 1px #e5e7eb;
+        }
+
+        /* Cover image */
+        .cover {
+          width: 100%;
+          height: 280px;
+          object-fit: cover;
+          display: block;
+          background: #1a2033;
+        }
+        .cover-placeholder {
+          width: 100%;
+          height: 280px;
+          background: linear-gradient(135deg, #1a2033 0%, #2c3a5a 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 3rem;
+          font-weight: 800;
+          color: rgba(255,255,255,0.08);
+          letter-spacing: -0.02em;
+        }
+
+        /* Post content area */
+        .post-content {
+          padding: 2.5rem 3rem;
+        }
+
+        /* Meta row */
+        .meta {
+          display: flex;
+          align-items: center;
+          gap: 0.875rem;
+          flex-wrap: wrap;
+          margin-bottom: 1.25rem;
+        }
+        .category-badge {
+          background: rgba(240, 146, 30, 0.12);
+          color: #c45e0f;
+          padding: 4px 14px;
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+        .meta-item {
+          color: #9ca3af;
+          font-size: 13px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+
+        /* Title */
+        .post-title {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 2.1rem;
+          font-weight: 800;
+          line-height: 1.15;
+          color: #1a2033;
+          letter-spacing: -0.025em;
+          margin-bottom: 1.25rem;
+        }
+
+        /* Excerpt callout */
+        .excerpt {
+          border-left: 4px solid #f0921e;
+          padding: 0.75rem 1.25rem;
+          background: #fffbf5;
+          color: #5a6070;
+          font-size: 1rem;
+          line-height: 1.7;
+          margin-bottom: 1.5rem;
+          border-radius: 0 8px 8px 0;
+        }
+
+        /* Author line */
+        .author-line {
+          color: #9ca3af;
+          font-size: 0.8rem;
+          padding-bottom: 1.5rem;
+          margin-bottom: 2rem;
+          border-bottom: 1px solid #f0f0ee;
+        }
+
+        /* Body prose */
+        .prose h2 {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 1.45rem;
+          font-weight: 700;
+          color: #1a2033;
+          margin: 2.25rem 0 0.75rem;
+          letter-spacing: -0.01em;
+          line-height: 1.25;
+        }
+        .prose h3 {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: #1a2033;
+          margin: 1.75rem 0 0.5rem;
+        }
+        .prose p {
+          color: #454e62;
+          line-height: 1.8;
+          margin-bottom: 1.1rem;
+          font-size: 1rem;
+        }
+        .prose ul, .prose ol {
+          padding-left: 1.5rem;
+          margin-bottom: 1.25rem;
+          color: #454e62;
+        }
+        .prose li {
+          line-height: 1.75;
+          margin-bottom: 0.35rem;
+        }
+        .prose strong {
+          color: #1a2033;
+          font-weight: 600;
+        }
+        .prose a {
+          color: #c45e0f;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+        .prose blockquote {
+          border-left: 4px solid #f0921e;
+          padding: 0.5rem 1rem;
+          color: #7a828f;
+          font-style: italic;
+          margin: 1.5rem 0;
+          background: #fffbf5;
+          border-radius: 0 6px 6px 0;
+        }
+        .prose img {
+          width: 100%;
+          border-radius: 8px;
+          margin: 1.5rem 0;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .prose hr {
+          border: none;
+          border-top: 1px solid #f0f0ee;
+          margin: 2rem 0;
+        }
+
+        /* CTA strip at bottom */
+        .cta-strip {
+          margin: 3rem 0 0;
+          background: #1a2033;
+          border-radius: 12px;
+          padding: 2rem 2.5rem;
+          text-align: center;
+        }
+        .cta-strip .cta-label {
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #f0921e;
+          margin-bottom: 0.5rem;
+        }
+        .cta-strip .cta-title {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 1.35rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin-bottom: 0.5rem;
+        }
+        .cta-strip .cta-sub {
+          color: rgba(255,255,255,0.55);
+          font-size: 0.875rem;
+          margin-bottom: 1.25rem;
+        }
+        .cta-btn {
+          display: inline-block;
+          background: #f0921e;
+          color: #1a2033;
+          font-weight: 700;
+          font-size: 0.875rem;
+          padding: 0.6rem 1.5rem;
+          border-radius: 999px;
+        }
+
+        /* Empty state */
+        .empty {
+          padding: 4rem 2rem;
+          text-align: center;
+          color: #9ca3af;
+          font-size: 0.9rem;
+        }
+        .empty-title {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #cbd5e1;
+          margin-bottom: 0.5rem;
+        }
+      `, { raw: true });
+
+      // ── Preview template ───────────────────────────────────────────────────
+      var BlogPostPreview = createClass({
+        render: function () {
+          var entry   = this.props.entry;
+          var title   = entry.getIn(['data', 'title'])      || '';
+          var rawDate = entry.getIn(['data', 'date']);
+          var category = entry.getIn(['data', 'category'])  || '';
+          var author  = entry.getIn(['data', 'author'])     || 'Total Wraps & Tints';
+          var excerpt = entry.getIn(['data', 'excerpt'])    || '';
+          var image   = entry.getIn(['data', 'coverImage']);
+          var body    = this.props.widgetFor('body');
+
+          var dateStr = '';
+          if (rawDate) {
+            try {
+              dateStr = new Date(rawDate).toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric'
+              });
+            } catch (e) {}
+          }
+
+          // Word count estimate from body text (rough)
+          var bodyText = entry.getIn(['data', 'body']) || '';
+          var words = bodyText.trim().split(/\s+/).filter(Boolean).length;
+          var readMins = Math.max(1, Math.ceil(words / 200));
+
+          if (!title && !body) {
+            return h('div', { className: 'preview-wrap' },
+              h('div', { className: 'empty' },
+                h('div', { className: 'empty-title' }, 'Start writing to see a preview'),
+                h('p', {}, 'Fill in the Title and Content fields on the left.')
+              )
+            );
+          }
+
+          return h('div', { className: 'preview-wrap' },
+
+            // Cover image or placeholder
+            image
+              ? h('img', { src: image, className: 'cover', alt: title })
+              : h('div', { className: 'cover-placeholder' }, 'APHEX'),
+
+            h('div', { className: 'post-content' },
+
+              // Meta row
+              h('div', { className: 'meta' },
+                category && h('span', { className: 'category-badge' }, category),
+                dateStr && h('span', { className: 'meta-item' }, '📅 ' + dateStr),
+                h('span', { className: 'meta-item' }, '⏱ ' + readMins + ' min read')
+              ),
+
+              // Title
+              title && h('h1', { className: 'post-title' }, title),
+
+              // Excerpt callout
+              excerpt && h('p', { className: 'excerpt' }, excerpt),
+
+              // Author
+              h('p', { className: 'author-line' }, 'By ' + author),
+
+              // Body
+              h('div', { className: 'prose' }, body),
+
+              // CTA strip
+              h('div', { className: 'cta-strip' },
+                h('p', { className: 'cta-label' }, 'Ready to transform your space?'),
+                h('p', { className: 'cta-title' }, 'Total Wraps & Tints — Get a Free Quote'),
+                h('p', { className: 'cta-sub' }, 'Professional wrapping specialists covering Glasgow & Scotland'),
+                h('span', { className: 'cta-btn' }, 'Get a free quote →')
+              )
+            )
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate('blog', BlogPostPreview);
+    </script>
+  </body>
+</html>

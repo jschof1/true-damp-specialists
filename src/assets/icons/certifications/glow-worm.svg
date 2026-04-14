@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="none"/>
+  <circle cx="40" cy="50" r="15" fill="#FFD700"/>
+  <text x="70" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#000000">Glow-worm</text>
+</svg>

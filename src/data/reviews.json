@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Joe",
+    "location": "AL1",
+    "rating": 5,
+    "text": "Rob took time to explain the leak damage properly, guided us through every step and produced a thorough report that made the next move much clearer.",
+    "service": "Independent Damp & Mould Surveys",
+    "date": "28 March",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Denise T",
+    "location": "AL1",
+    "rating": 5,
+    "text": "Our older property had been troubled by damp for years. Rob responded quickly, visited within days and delivered a detailed report the next day.",
+    "service": "Independent Damp & Mould Surveys",
+    "date": "06 March",
+    "verified": false,
+    "avatar": null
+  },
+  {
+    "name": "Saf N",
+    "location": "LU1",
+    "rating": 5,
+    "text": "The survey was outstanding from start to finish. Rob explained the process clearly, used thermal imaging and set out the root cause with practical next steps.",
+    "service": "Moisture Diagnostics & Building Pathology",
+    "date": "05 March",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Amy P",
+    "location": "LU7",
+    "rating": 5,
+    "text": "The survey on our house was incredibly thorough and professional. The report showed real expertise, and Rob even took time to explain the thermal images to my son.",
+    "service": "Moisture Diagnostics & Building Pathology",
+    "date": "22 February",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Antonio A",
+    "location": "LU4",
+    "rating": 5,
+    "text": "The pre-purchase damp survey was invaluable. Rob arranged the visit quickly, kept me updated and delivered a solution-focused report that made the decision easier.",
+    "service": "Independent Damp & Mould Surveys",
+    "date": "10 February",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Jesse D",
+    "location": "LU6",
+    "rating": 5,
+    "text": "We were really pleased with the service. The report was incredibly detailed and comprehensive, and it gave us exactly the clarity we needed.",
+    "service": "Remedial Specifications & Project Support",
+    "date": "02 February",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Yousuf M",
+    "location": "LU1",
+    "rating": 5,
+    "text": "Communication through Checkatrade was quick, the survey was booked in fast and the detailed report arrived the same evening.",
+    "service": "Independent Damp & Mould Surveys",
+    "date": "01 February",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Jason",
+    "location": "LU5",
+    "rating": 5,
+    "text": "Rob arrived exactly when promised and gave a thorough assessment of what we needed to consider. Very knowledgeable and would definitely use again.",
+    "service": "Independent Damp & Mould Surveys",
+    "date": "12 January",
+    "verified": true,
+    "avatar": null
+  },
+  {
+    "name": "Steve S",
+    "location": "MK17",
+    "rating": 5,
+    "text": "The communication was excellent and the survey explained complex heritage-property issues in a way that was easy to understand, with a clear focus on solutions.",
+    "service": "Moisture Diagnostics & Building Pathology",
+    "date": "31 December 2025",
+    "verified": true,
+    "avatar": null
+  }
+]

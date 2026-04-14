@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="none"/>
+  <path d="M50,20 Q80,10 110,20 Q140,30 170,20" stroke="#00968F" stroke-width="8" fill="none"/>
+  <text x="20" y="75" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#00968F">Vaillant</text>
+</svg>
