@@ -94,22 +94,24 @@ const ReviewsPage = () => {
           </div>
         </section>
 
-        {/* Stats Grid */}
-        <section className="-mt-10 md:-mt-16 relative z-20 pb-12 md:pb-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
-              {stats.map((stat, index) => <Card key={index} className="border-2 md:border-4 border-primary shadow-2xl shadow-primary/5 overflow-hidden group hover:-translate-y-1 transition-all duration-300">
-                  <CardContent className="p-3 md:p-8 flex flex-row md:flex-col items-center md:text-center gap-3 md:gap-0">
-                    <div className={cn("w-10 h-10 md:w-14 md:h-14 shrink-0 rounded-lg md:rounded-2xl bg-primary/5 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform", stat.color)}>
-                      <stat.icon className="w-5 h-5 md:w-8 md:h-8" />
+        {/* Stats Bar */}
+        <section className="-mt-8 md:-mt-12 relative z-20 pb-12 md:pb-20">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <Card className="border-0 shadow-2xl shadow-black/10 overflow-hidden bg-border/50 backdrop-blur-sm">
+              <CardContent className="p-[1px]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-[1px]">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="p-6 md:p-8 flex flex-col items-center text-center group hover:bg-accent/5 transition-colors bg-card">
+                      <div className={cn("w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform", stat.color)}>
+                        <stat.icon className="w-5 h-5 md:w-6 md:h-6" />
+                      </div>
+                      <div className="font-display font-black text-2xl md:text-3xl text-foreground mb-1">{stat.value}</div>
+                      <div className="text-muted-foreground font-bold uppercase tracking-wider text-[10px] md:text-xs">{stat.label}</div>
                     </div>
-                    <div className="flex flex-col md:items-center min-w-0">
-                      <div className="font-display font-black text-lg sm:text-xl md:text-4xl text-card-foreground leading-tight md:mb-2">{stat.value}</div>
-                      <div className="text-muted-foreground font-bold uppercase tracking-widest text-[8px] sm:text-[9px] md:text-xs leading-tight">{stat.label}</div>
-                    </div>
-                  </CardContent>
-                </Card>)}
-            </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 

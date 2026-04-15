@@ -10,11 +10,11 @@ const AddCustomerPage = () => {
         {/* Form embed script - loaded via Helmet for Safari compatibility (dynamic appendChild can fail in Safari) */}
         <script src="https://link.msgsndr.com/js/form_embed.js" async />
       </Helmet>
-      <div className="min-h-[803px] w-full">
+      <div className="min-h-[842px] w-full">
         <iframe
-          src="https://api.leadconnectorhq.com/widget/form/20DTl9TFYlBvFDGmVBWE"
-          className="w-full min-h-[803px] border-0 rounded-md"
-          id="inline-20DTl9TFYlBvFDGmVBWE"
+          src="https://api.leadconnectorhq.com/widget/form/urhI2nZYgBzwKWdTCXIT"
+          className="w-full min-h-[842px] border-0 rounded-lg"
+          id="inline-urhI2nZYgBzwKWdTCXIT"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
           data-trigger-value=""
@@ -23,9 +23,9 @@ const AddCustomerPage = () => {
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
           data-form-name="Client Review + 1 Year Followup Sequence Form"
-          data-height="803"
-          data-layout-iframe-id="inline-20DTl9TFYlBvFDGmVBWE"
-          data-form-id="20DTl9TFYlBvFDGmVBWE"
+          data-height="842"
+          data-layout-iframe-id="inline-urhI2nZYgBzwKWdTCXIT"
+          data-form-id="urhI2nZYgBzwKWdTCXIT"
           title="Client Review + 1 Year Followup Sequence Form"
           referrerPolicy="no-referrer-when-downgrade"
         />

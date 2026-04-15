@@ -2,11 +2,11 @@ import { Star, Check, Quote, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import GoogleIcon from "./GoogleIcon";
 import { reviews, reviewStats, type Review } from "@/data/reviews";
 import { siteSettings } from "@/data/siteSettings";
 import { getSectionCtaLabel } from "@/data/content";
 import theme from "@/config/theme";
+import checkatradeLogo from "@/assets/icons/certifications/checkatrade.webp";
 
 const ReviewShowcase = () => {
   // Get top verified reviews
@@ -56,15 +56,15 @@ const ReviewShowcase = () => {
           </div>
 
           <div className="flex flex-row gap-2 md:gap-3 w-full md:w-auto">
-            {/* Google Badge */}
+            {/* Checkatrade Badge */}
             <a 
               href={siteSettings.googlePageUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 md:gap-4 bg-slate-50 border border-slate-200 p-2 md:p-4 rounded-lg md:rounded-xl hover:border-accent hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 shadow-sm group flex-1 md:flex-none justify-center md:justify-start min-w-0 md:min-w-[200px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <div className="shrink-0">
-                <GoogleIcon className="w-6 h-6 md:w-10 md:h-10" />
+              <div className="shrink-0 flex items-center justify-center">
+                <img src={checkatradeLogo} alt="Checkatrade" className="w-8 h-8 md:w-12 md:h-12 object-contain" />
               </div>
               <div className="text-left">
                 <div className="flex items-center gap-1 mb-0.5 md:mb-1">

@@ -10,7 +10,7 @@ const ChatWidget = () => {
       script.id = "ghl-chat-widget-script";
       script.src = "https://widgets.leadconnectorhq.com/loader.js";
       script.setAttribute("data-resources-url", "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-      script.setAttribute("data-widget-id", "69b415053cf1bd37cb3defea");
+      script.setAttribute("data-widget-id", "69de51319f3b6fa7e276cf08");
       script.defer = true;
       
       document.body.appendChild(script);

@@ -2,40 +2,68 @@
   "version": 1,
   "transcripts": {
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/0fdee6b5-b226-4c78-b165-6731c329e1af/0fdee6b5-b226-4c78-b165-6731c329e1af.jsonl": {
-      "mtimeMs": 1776162517869,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776172721074.04,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/0fdee6b5-b226-4c78-b165-6731c329e1af/subagents/a4038f73-d52c-4772-aea5-467d88f91f0a.jsonl": {
-      "mtimeMs": 1776162509239,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776162509239.8726,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/2c27cf1e-0089-472f-b2bf-8ed571fb0a97/2c27cf1e-0089-472f-b2bf-8ed571fb0a97.jsonl": {
+      "mtimeMs": 1776175516157.6394,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/3fecce7a-8789-45d5-9143-12387b643359/3fecce7a-8789-45d5-9143-12387b643359.jsonl": {
-      "mtimeMs": 1776171904918,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776172597179.6038,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/3fecce7a-8789-45d5-9143-12387b643359/subagents/d123f482-fd88-4c09-bd53-d406da1a165c.jsonl": {
-      "mtimeMs": 1776171913055,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776171972125.486,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/52707f67-c968-4785-9dbb-0ac8dbe9ff57/52707f67-c968-4785-9dbb-0ac8dbe9ff57.jsonl": {
+      "mtimeMs": 1776180777510.0308,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/52707f67-c968-4785-9dbb-0ac8dbe9ff57/subagents/f9d506f9-dcb4-4d76-8e5a-b53c015c1ecd.jsonl": {
+      "mtimeMs": 1776180787403.188,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/6866908e-d49a-46fe-b421-8524c274af5c/6866908e-d49a-46fe-b421-8524c274af5c.jsonl": {
-      "mtimeMs": 1776162602378,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776162602378.9075,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/827493d3-60eb-48a6-b85e-9109d9cf6153/827493d3-60eb-48a6-b85e-9109d9cf6153.jsonl": {
+      "mtimeMs": 1776174150344.2563,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/93157c3c-a6c6-40f6-9efb-4c3c3cb1c2cc/93157c3c-a6c6-40f6-9efb-4c3c3cb1c2cc.jsonl": {
+      "mtimeMs": 1776175520328.2039,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/a38af52b-39e9-4860-b9db-d10b1d7759e4/a38af52b-39e9-4860-b9db-d10b1d7759e4.jsonl": {
+      "mtimeMs": 1776173375150.1248,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
+    },
+    "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/aa30b31a-9751-45e6-a991-7a93f07c059d/aa30b31a-9751-45e6-a991-7a93f07c059d.jsonl": {
+      "mtimeMs": 1776175373267.1597,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/dc48a699-79d7-45fd-af29-96aba5680cbc/dc48a699-79d7-45fd-af29-96aba5680cbc.jsonl": {
-      "mtimeMs": 1776163365968,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776163365968.5273,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/e7a42c91-f1bb-4693-947c-c86ac6bb4eee/e7a42c91-f1bb-4693-947c-c86ac6bb4eee.jsonl": {
-      "mtimeMs": 1776167019717,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776167019717.2266,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/e7a42c91-f1bb-4693-947c-c86ac6bb4eee/subagents/2a189ffc-d94c-42a1-80c7-848b4caa6478.jsonl": {
-      "mtimeMs": 1776158130372,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776158130372.6746,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     },
     "/Users/jack/.cursor/projects/Users-jack-Documents-GitHub-true-damp-specialists/agent-transcripts/e7a42c91-f1bb-4693-947c-c86ac6bb4eee/subagents/50e8adee-0ba2-4a46-9fe6-539d85bcb565.jsonl": {
-      "mtimeMs": 1776158158005,
-      "lastProcessedAt": "2026-04-14T13:06:02.579973Z"
+      "mtimeMs": 1776158158005.3914,
+      "lastProcessedAt": "2026-04-14T15:34:50.216Z"
     }
   }
 }

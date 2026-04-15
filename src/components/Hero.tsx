@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
+import { Phone, ShieldCheck, ChevronRight, Loader2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -8,6 +8,8 @@ import { siteSettings } from "@/data/siteSettings";
 import { formEndpoints, postFormSubmission } from "@/lib/formApi";
 import { normalizeUKPhone } from "@/lib/phoneUtils";
 import { getHeroContent, getFormServiceOptions, getFormServicePlaceholder } from "@/data/content";
+import checkatradeLogo from "@/assets/icons/certifications/checkatrade.webp";
+import pcaLogo from "@/assets/icons/certifications/pca-logo.png";
 
 interface HeroProps {
   areaName?: string;
@@ -73,10 +75,22 @@ const Hero = ({ areaName, description }: HeroProps) => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-12 xl:px-24 relative z-10 py-10 sm:py-14 md:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_1fr] xl:grid-cols-[1.1fr_1fr] gap-6 sm:gap-8 lg:gap-16 xl:gap-24 items-center">
+        <div className="grid lg:grid-cols-[1.3fr_1fr] xl:grid-cols-[1.5fr_1fr] gap-6 sm:gap-8 lg:gap-16 xl:gap-24 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left animate-fade-in lg:pr-8 xl:pr-16">
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-[1.05] mb-5 sm:mb-6 drop-shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 mb-6">
+              <div className="flex items-center gap-1 text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-current" />
+                ))}
+              </div>
+              <div className="flex items-center gap-2 text-primary-foreground/90 font-medium text-sm sm:text-base">
+                <span>5 stars rated on</span>
+                <img src={checkatradeLogo} alt="Checkatrade" className="h-6 w-auto object-contain" />
+              </div>
+            </div>
+
+            <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-[1.05] mb-5 sm:mb-6 drop-shadow-sm">
               Independent Specialists in{" "}
               <span className="text-accent">Damp, Mould &amp; Waterproofing</span>{" "}
               Investigation
@@ -87,15 +101,22 @@ const Hero = ({ areaName, description }: HeroProps) => {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
-              {hero.badges.slice(0, 3).map((badge: { text: string }, i: number) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/10 px-4 py-2 text-sm text-primary-foreground/90 font-medium backdrop-blur-sm"
-                >
-                  <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
-                  {badge.text}
-                </span>
-              ))}
+              {hero.badges.slice(0, 3).map((badge: { text: string }, i: number) => {
+                const isPCA = badge.text.toLowerCase().includes("pca");
+                return (
+                  <span
+                    key={i}
+                    className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/10 px-4 py-2 text-sm text-primary-foreground/90 font-medium backdrop-blur-sm"
+                  >
+                    {isPCA ? (
+                      <img src={pcaLogo} alt="PCA Logo" className="w-4 h-auto object-contain shrink-0" />
+                    ) : (
+                      <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                    )}
+                    {badge.text}
+                  </span>
+                );
+              })}
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">

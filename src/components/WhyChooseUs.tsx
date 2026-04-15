@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 
 import { getWhyChooseUsContent, getSectionCtaLabel } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
+import pcaLogo from "@/assets/icons/certifications/pca-logo.png";
 
 interface WhyChooseUsProps {
   areaName?: string;
@@ -73,7 +74,7 @@ const WhyChooseUs = ({ areaName }: WhyChooseUsProps) => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground rounded-xl px-5 py-3 shadow-lg font-display font-bold text-sm flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4" />
+                <img src={pcaLogo} alt="PCA Logo" className="w-8 h-auto object-contain" />
                 PCA-Trained Surveyors
               </div>
             </div>
