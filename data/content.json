@@ -70,7 +70,7 @@
       {
         "kind": "paragraphs",
         "items": [
-          "We're an independent consultancy providing accurate damp, mould, and waterproofing investigations — not sales-driven quotes.",
+          "We're an independent consultancy providing accurate damp, mould, and waterproofing investigations — not sales-driven quotes. At True Damp Specialists, we do things differently. We're an independent consultancy, not a treatment company. Our purpose is to identify causes, not sell cures.",
           "Our PCA-trained surveyors deliver detailed diagnostics and evidence-based reporting to uncover the true cause of moisture issues across residential, commercial, and complex properties."
         ]
       },
@@ -239,7 +239,7 @@
     "accreditation": {
       "subtitle": "Trust and technical discipline",
       "title": "Built for clarity, not hard-sell treatment",
-      "description": "The site should make it obvious that our value is independent thinking, structured reporting and technical credibility. The point is not to overwhelm with badges, but to show that the work is grounded and defensible.",
+      "description": "Every client deserves clarity, honesty, and solutions that last. We don't offer quick fixes — we deliver confidence. Each survey and report is backed by independent methodology, measurable data, and full professional indemnity insurance. If you're not completely satisfied that we've identified the cause of your issue or provided clear next steps, we'll review your case again — free of charge. Independent. Evidence-based. Reliable. That's our promise — and our guarantee.",
       "points": [
         "Independent diagnosis-first positioning",
         "British Standards and PCA-led methodology",
@@ -503,11 +503,12 @@
     "hero": {
       "badge": "About us",
       "title": "The right diagnosis before the right repair",
-      "description": "We bring together a multi-disciplinary team dedicated to accurate investigation and effective moisture management, so you can move forward with confidence.",
+      "description": "Experience you can trust, we bring together a multi-disciplinary team of experts dedicated to accurate investigation and effective moisture management.",
       "trustChips": [
         "Independent of product sales",
-        "PCA-trained surveyors",
-        "BS-aligned methodology"
+        "PCA-trained, CSCS-qualified professionals",
+        "Fully insured for consultancy and reporting",
+        "Trusted by TFL, Network Rail & Housing Associations"
       ],
       "ctaPrimary": "Request Advice",
       "ctaSecondary": "Call now"
@@ -516,15 +517,15 @@
       "items": [
         { "label": "Public review profile", "value": "{rating} average", "hint": "Checkatrade-backed feedback" },
         { "label": "Cases reviewed", "value": "{reviewCount}+", "hint": "Homeowners to national providers" },
-        { "label": "Typical clarity", "value": "1–3 days", "hint": "Survey turnaround where possible" },
-        { "label": "Coverage", "value": "UK-wide", "hint": "Watford base · London & Home Counties focus" }
+        { "label": "Fully insured", "value": "PI Covered", "hint": "Consultancy and reporting services" },
+        { "label": "Qualifications", "value": "PCA & CSCS", "hint": "All surveys by trained, qualified professionals" }
       ]
     },
     "valueSplit": {
-      "badge": "Why independence matters",
+      "badge": "We don't chase sales — we find facts",
       "title": "Technical depth, practical judgement, zero sales agenda",
       "paragraphs": [
-        "Our team combines technical depth with a practical understanding of buildings and people. We are not here to sell a default treatment package. We are here to explain what is happening, why it is happening, and what a proportionate next step looks like.",
+        "Our team combines technical depth with a practical understanding of buildings and people. We are not here to sell a default treatment package — we investigate, analyse, and report, giving you confidence and a clear plan built on facts.",
         "That matters when you are buying a property, disputing a failed repair, supporting tenants, or managing compliance at scale."
       ],
       "bullets": [
@@ -594,16 +595,16 @@
       "subtitle": "A repeatable process that stays proportionate to the property and the risk.",
       "steps": [
         {
-          "title": "Brief & scope",
-          "description": "We clarify what you need from the report: purchase decision, dispute, tenant health, or programme planning."
+          "title": "Survey & Data Collection",
+          "description": "We use thermal imaging, salt testing, humidity readings, and moisture profiling to locate and understand the issue."
         },
         {
-          "title": "Site investigation",
-          "description": "Structured inspection, measurements, imaging and sampling where appropriate."
+          "title": "Analysis & Reporting",
+          "description": "Findings are documented clearly with data, images, and moisture maps. Each report includes diagnostic results, clear explanations, and guidance that aligns with current legislation such as Awaab's Law."
         },
         {
-          "title": "Analysis & reporting",
-          "description": "Findings tied to evidence with clear cause, extent and next-step options."
+          "title": "Recommendations & Planning",
+          "description": "You receive factual, unbiased advice, including indicative costs and repair options from trusted PCA-approved systems — giving you control, not obligation."
         },
         {
           "title": "Next steps",
@@ -612,19 +613,19 @@
       ]
     },
     "objections": {
-      "title": "If you have been here before, read this",
+      "title": "Our Principles",
       "items": [
         {
-          "title": "No treatment-first sales pitch",
-          "description": "We do not start from a product catalogue. We start from the building and the data."
+          "title": "Integrity",
+          "description": "Evidence, not sales. We do not start from a product catalogue — we start from the building and the data."
         },
         {
-          "title": "Second opinions welcome",
-          "description": "We frequently review failed works, conflicting reports, and unclear recommendations."
+          "title": "Accuracy & Transparency",
+          "description": "Every reading and recommendation supported by data. Clear pricing and process upfront, so you always know where you stand."
         },
         {
-          "title": "Works with your own contractors",
-          "description": "Our output is designed to be usable by you, your builder, or your housing maintenance team."
+          "title": "Accountability",
+          "description": "We stand by our findings and reports. By keeping investigation separate from treatment, we deliver clarity, not confusion — and that is what makes us different."
         }
       ]
     },
@@ -657,8 +658,8 @@
     ],
     "partners": {
       "title": "Current best practice, without manufacturer bias",
-      "intro": "We operate independently but stay up to date with industry-leading manufacturers and training providers so our guidance reflects current technical standards.",
-      "body": "That includes Newton Waterproofing, Delta Membranes, Safeguard Europe, and Wykamol. The point is simple: we know the systems, but we are not paid to specify one brand over another.",
+      "intro": "We operate independently but stay up to date with industry-leading manufacturers and training providers — including Newton Waterproofing, Delta Membranes, Safeguard Europe, and Wykamol — to ensure our guidance always reflects current best practice and technical standards.",
+      "body": "We know the systems, but we are not paid to specify one brand over another. Whether inspecting a single home or advising a national housing provider, our focus remains the same — clarity, accuracy, and independence.",
       "partnerNames": [
         "Newton Waterproofing",
         "Delta Membranes",
@@ -694,8 +695,11 @@
       ]
     },
     "closing": [
-      "Whether inspecting a single home or advising a national housing provider, our focus remains the same: clarity, accuracy, and independence.",
-      "Every inspection is carried out with the same detailed, structured approach, from initial moisture readings to full remedial strategy planning."
+      "Whether inspecting a single home or advising a national housing provider, our focus remains the same — clarity, accuracy, and independence.",
+      "Every inspection is carried out with the same detailed, structured approach — from initial moisture readings to full remedial strategy planning.",
+      "Data-led investigations — using calibrated instruments and photographic evidence. Independent reporting — clear, factual, and easy to follow. Remediation design and oversight — when needed, ensuring all solutions are cost-effective and compliant.",
+      "Continuous professional development — every team member participates in PCA, CPD or manufacturer training to maintain the highest technical standards.",
+      "Our strength lies in understanding both the science of moisture and the reality of property performance — giving every client confidence that what we find, recommend, and design is right first time."
     ],
     "cta": {
       "title": "Ready for a clearer next step?",
@@ -741,7 +745,7 @@
     "openingHours": "When To Contact Us",
     "emergencyService": "Independent Damp Advice",
     "emergencyDescription": "Diagnosis, reporting and next-step guidance",
-    "rights": "© 2026 True Damp Specialists. All rights reserved.",
+    "rights": "© 2025 True Damp Specialists. All rights reserved.",
     "services": [
       "Damp & Mould, Thermal & Salt Analysis",
       "Residential Compliance – Awaab's Law",

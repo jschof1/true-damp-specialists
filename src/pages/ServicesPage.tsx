@@ -337,9 +337,9 @@ const ServicesPage = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {[
-                { name: "Robert F.", loc: "Harpenden", text: "Incredibly expert installation. The kitchen transformation is a work of art and the finish is flawless. Highly recommend." },
-                { name: "Michael T.", loc: "Redbourn", text: "The furniture revitalization was handled perfectly from survey to finish. Spotless work and very professional team." },
-                { name: "Emma W.", loc: "St Albans", text: "Transformed my tired kitchen into a modern masterpiece. Professional, thorough, and left the house perfectly tidy." }
+                { name: "Sarah H.", loc: "Watford", text: "Rob was thorough from start to finish. The thermal imaging revealed the real cause after two other companies had misdiagnosed it completely." },
+                { name: "James P.", loc: "St Albans", text: "Detailed, honest and genuinely independent. The report was clear enough to give our contractor exactly what they needed." },
+                { name: "Amara K.", loc: "Central London", text: "After months of conflicting advice, True Damp gave us a straight answer backed by actual evidence. Finally know what to fix." }
               ].map((t, i) => (
                 <Card key={i} className="bg-card border-2 border-primary/10 hover:border-accent/30 hover:shadow-xl transition-all">
                   <CardContent className="p-4 sm:p-6 md:p-8">
