@@ -43,7 +43,7 @@ const serviceImages: Record<string, string> = {
   "independent-damp-mould-surveys": "/assets/true-damp-service-survey.jpeg",
   "moisture-diagnostics-building-pathology": "/assets/true-damp-service-diagnostics.jpeg",
   "mould-remediation-condensation-control": "/assets/true-damp-service-mould.jpeg",
-  "basement-below-ground-waterproofing": "/assets/true-damp-service-waterproofing.jpeg",
+  "basement-below-ground-waterproofing": "/assets/true-damp-service-diagnostics.jpeg",
   "external-defects-drainage-weathering": "/assets/true-damp-service-external.jpeg",
   "remedial-specifications-project-support": "/assets/true-damp-service-specifications.jpeg",
 };

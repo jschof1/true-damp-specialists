@@ -68,6 +68,15 @@ export const routes: RouteMetadata[] = [
     changefreq: "monthly",
   },
   {
+    path: "/about",
+    outputPath: "about/index.html",
+    title: "About Us | True Damp Specialists",
+    description:
+      "Independent damp specialists with PCA-trained surveyors, engineers and waterproofing designers. Evidence-led surveys, clear reports, and advice that is not tied to treatment sales.",
+    priority: 0.85,
+    changefreq: "monthly",
+  },
+  {
     path: "/get-quote",
     outputPath: "get-quote/index.html",
     title: "Request Specialist Advice | True Damp Specialists",

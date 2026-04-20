@@ -12,19 +12,19 @@ interface ServicesGridProps {
 }
 
 const serviceSlugs: Record<string, string> = {
-  "Independent Damp & Mould Surveys": "independent-damp-mould-surveys",
-  "Moisture Diagnostics & Building Pathology": "moisture-diagnostics-building-pathology",
-  "Mould Remediation & Condensation Control": "mould-remediation-condensation-control",
-  "Basement & Below-Ground Waterproofing": "basement-below-ground-waterproofing",
-  "External Defects & Drainage Investigations": "external-defects-drainage-weathering",
-  "Remedial Specifications & Project Support": "remedial-specifications-project-support",
+  "Damp & Mould, Thermal & Salt Analysis": "independent-damp-mould-surveys",
+  "Residential Compliance – Awaab's Law": "moisture-diagnostics-building-pathology",
+  "Commercial & Multi-Occupancy Surveys": "mould-remediation-condensation-control",
+  "Complex Cases & Second Opinions": "basement-below-ground-waterproofing",
+  "Invasive, CCTV & Drainage Investigations": "external-defects-drainage-weathering",
+  "Pre-Purchase Surveys & Remediation Planning": "remedial-specifications-project-support",
 };
 
 const serviceImages = [
   "/assets/true-damp-service-survey.jpeg",
   "/assets/true-damp-service-diagnostics.jpeg",
   "/assets/true-damp-service-mould.jpeg",
-  "/assets/true-damp-service-waterproofing.jpeg",
+  "/assets/true-damp-service-diagnostics.jpeg",
   "/assets/true-damp-service-external.jpeg",
   "/assets/true-damp-service-specifications.jpeg",
 ];

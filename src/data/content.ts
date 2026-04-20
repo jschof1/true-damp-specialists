@@ -120,6 +120,10 @@ export function getPortfolioPageContent() {
   return (content as unknown as { portfolioPage: Record<string, unknown> }).portfolioPage;
 }
 
+export function getAboutPageContent() {
+  return (content as unknown as { aboutPage: Record<string, unknown> }).aboutPage;
+}
+
 export function getHeaderContent() {
   return content.header;
 }

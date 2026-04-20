@@ -22,6 +22,7 @@ import MarketingFormPage from "./pages/MarketingFormPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import PortfolioPage from "./pages/PortfolioPage";
+import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -55,6 +56,7 @@ export function AppRoutes() {
       {/* <Route path="/blog" element={<BlogPage />} />
       <Route path="/blog/:slug" element={<BlogPostPage />} /> */}
       <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/about" element={<AboutPage />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>

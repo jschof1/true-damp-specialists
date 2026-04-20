@@ -1,23 +1,23 @@
 {
   "formServiceOptions": [
-    { "value": "independent-damp-mould-surveys", "label": "Independent Damp & Mould Surveys" },
-    { "value": "moisture-diagnostics-building-pathology", "label": "Moisture Diagnostics & Building Pathology" },
-    { "value": "mould-remediation-condensation-control", "label": "Mould Remediation & Condensation Control" },
-    { "value": "basement-below-ground-waterproofing", "label": "Basement & Below-Ground Waterproofing" },
-    { "value": "external-defects-drainage-weathering", "label": "External Defects & Drainage Investigations" },
-    { "value": "remedial-specifications-project-support", "label": "Remedial Specifications & Project Support" },
+    { "value": "independent-damp-mould-surveys", "label": "Damp & Mould, Thermal & Salt Analysis" },
+    { "value": "moisture-diagnostics-building-pathology", "label": "Residential Compliance – Awaab's Law" },
+    { "value": "mould-remediation-condensation-control", "label": "Commercial & Multi-Occupancy Surveys" },
+    { "value": "basement-below-ground-waterproofing", "label": "Complex Cases & Second Opinions" },
+    { "value": "external-defects-drainage-weathering", "label": "Invasive, CCTV & Drainage Investigations" },
+    { "value": "remedial-specifications-project-support", "label": "Pre-Purchase Surveys & Remediation Planning" },
     { "value": "other", "label": "Other Enquiry" }
   ],
   "formServicePlaceholder": "What kind of issue or property concern do you need help with?",
   "formServiceLabel": "What do you need help with?",
   "quoteServiceOptions": [
-    { "id": "independent-damp-mould-surveys", "label": "Independent Surveys", "description": "Clear diagnosis before any treatment is recommended", "icon": "clipboard" },
-    { "id": "moisture-diagnostics-building-pathology", "label": "Moisture Diagnostics", "description": "Rising, penetrating, condensation and hidden moisture analysis", "icon": "scan" },
-    { "id": "mould-remediation-condensation-control", "label": "Mould & Condensation", "description": "Root-cause analysis, ventilation and remediation strategy", "icon": "wind" },
-    { "id": "basement-below-ground-waterproofing", "label": "Basement Waterproofing", "description": "BS 8102-led below-ground advice and system planning", "icon": "building" },
-    { "id": "external-defects-drainage-weathering", "label": "External Defects & Drainage", "description": "Envelope, junction and water ingress investigations", "icon": "droplets" },
-    { "id": "remedial-specifications-project-support", "label": "Remedial Specifications", "description": "Reporting, scope definition and project support", "icon": "file-text" },
-    { "id": "other", "label": "Other Enquiry", "description": "Second opinions, complex cases and general advice", "icon": "message-circle" }
+    { "id": "independent-damp-mould-surveys", "label": "Thermal & salt analysis", "description": "Moisture profiling, thermal imaging, mould and salt testing", "icon": "clipboard" },
+    { "id": "moisture-diagnostics-building-pathology", "label": "Awaab's Law compliance", "description": "Residential reports aligned with housing health standards", "icon": "scan" },
+    { "id": "mould-remediation-condensation-control", "label": "Commercial surveys", "description": "COSHH-aligned assessments and multi-occupancy investigations", "icon": "wind" },
+    { "id": "basement-below-ground-waterproofing", "label": "Second opinions", "description": "Review of failed treatments, conflicting reports and complex cases", "icon": "building" },
+    { "id": "external-defects-drainage-weathering", "label": "Invasive & CCTV", "description": "Selective exposure and drainage CCTV with full documentation", "icon": "droplets" },
+    { "id": "remedial-specifications-project-support", "label": "Pre-purchase planning", "description": "Advice before sale or works with BS-aligned remedial plans", "icon": "file-text" },
+    { "id": "other", "label": "Other Enquiry", "description": "General advice or enquiries that do not fit the list above", "icon": "message-circle" }
   ],
   "quoteUrgencyOptions": [
     { "id": "urgent", "label": "Urgent", "description": "A live issue or active concern", "color": "bg-red-500" },
@@ -155,28 +155,28 @@
     "description": "Explore how we support homeowners, landlords, housing providers, developers, and commercial teams with evidence-led surveys and reporting.",
     "items": [
       {
-        "title": "Independent Damp & Mould Surveys",
-        "description": "Independent reporting for homeowners, buyers, landlords and property teams who need clarity before committing to works in {areaName}."
+        "title": "Damp & Mould, Thermal & Salt Analysis",
+        "description": "Moisture profiling, thermal imaging, mould and salt testing to establish the true cause and extent of damp — with clear data and visual evidence in {areaName}."
       },
       {
-        "title": "Moisture Diagnostics & Building Pathology",
-        "description": "Rising damp, penetrating damp, condensation and hidden moisture analysis built around evidence rather than assumptions."
+        "title": "Residential Compliance – Awaab's Law",
+        "description": "Reports aligned with Awaab's Law and housing health standards for landlords, providers and residents — clear timeframes and defensible documentation."
       },
       {
-        "title": "Mould Remediation & Condensation Control",
-        "description": "Diagnosis-led support for black mould, poor ventilation, humidity imbalance and long-term condensation issues."
+        "title": "Commercial & Multi-Occupancy Surveys",
+        "description": "COSHH-aligned risk assessments and damp investigations across offices, retail, apartment blocks and communal areas in {areaName}."
       },
       {
-        "title": "Basement & Below-Ground Waterproofing",
-        "description": "Specialist waterproofing investigations and BS 8102-aligned guidance for cellars, basements and below-ground structures."
+        "title": "Complex Cases & Second Opinions",
+        "description": "Impartial review of previous reports and failed treatments for misdiagnosed or long-running damp and mould cases."
       },
       {
-        "title": "External Defects & Drainage Investigations",
-        "description": "Roofing junctions, rainwater goods, masonry defects, drainage faults and other external sources of moisture ingress."
+        "title": "Invasive, CCTV & Drainage Investigations",
+        "description": "Selective exposure and CCTV drainage surveys where surface readings are not enough — photography and video evidence throughout."
       },
       {
-        "title": "Remedial Specifications & Project Support",
-        "description": "Clear remedial scopes, cost guidance, contractor coordination and practical next-step planning once the cause is understood."
+        "title": "Pre-Purchase Surveys & Remediation Planning",
+        "description": "Independent advice before works or sales, with cost guidance and remedial plans built around BS 8102, BS 5250 and PCA methodology."
       }
     ],
     "footerText": "Need clarity on a property issue rather than a generic damp quote?",
@@ -496,6 +496,215 @@
       "secondaryText": "Call Now"
     }
   },
+  "aboutPage": {
+    "seo": {
+      "description": "Independent damp specialists with PCA-trained surveyors, engineers and waterproofing designers. Evidence-led surveys, clear reports, and advice that is not tied to treatment sales."
+    },
+    "hero": {
+      "badge": "About us",
+      "title": "The right diagnosis before the right repair",
+      "description": "We bring together a multi-disciplinary team dedicated to accurate investigation and effective moisture management, so you can move forward with confidence.",
+      "trustChips": [
+        "Independent of product sales",
+        "PCA-trained surveyors",
+        "BS-aligned methodology"
+      ],
+      "ctaPrimary": "Request Advice",
+      "ctaSecondary": "Call now"
+    },
+    "trustStrip": {
+      "items": [
+        { "label": "Public review profile", "value": "{rating} average", "hint": "Checkatrade-backed feedback" },
+        { "label": "Cases reviewed", "value": "{reviewCount}+", "hint": "Homeowners to national providers" },
+        { "label": "Typical clarity", "value": "1–3 days", "hint": "Survey turnaround where possible" },
+        { "label": "Coverage", "value": "UK-wide", "hint": "Watford base · London & Home Counties focus" }
+      ]
+    },
+    "valueSplit": {
+      "badge": "Why independence matters",
+      "title": "Technical depth, practical judgement, zero sales agenda",
+      "paragraphs": [
+        "Our team combines technical depth with a practical understanding of buildings and people. We are not here to sell a default treatment package. We are here to explain what is happening, why it is happening, and what a proportionate next step looks like.",
+        "That matters when you are buying a property, disputing a failed repair, supporting tenants, or managing compliance at scale."
+      ],
+      "bullets": [
+        "Moisture profiling, thermal imaging and defect-led reasoning, not guesswork",
+        "Reports written for decisions: homeowners, landlords, housing teams, insurers",
+        "Remediation guidance that matches the building, not a brochure"
+      ],
+      "imageKey": "flatlay",
+      "imageAlt": "Damp survey tools and diagnostic equipment laid out for inspection",
+      "ctaLabel": "See how we investigate",
+      "ctaPath": "/services"
+    },
+    "storyPanels": [
+      {
+        "badge": "Evidence-led",
+        "title": "From first readings to a clear remedial strategy",
+        "body": "Every inspection follows a structured path: context, measurement, analysis, and reporting. You get a documented trail from initial moisture readings through to proportionate remedial planning.",
+        "imageKey": "thermal",
+        "imageAlt": "Thermal imaging used during damp and moisture investigation",
+        "ctaLabel": "View case-study themes",
+        "ctaPath": "/portfolio",
+        "imagePosition": "right"
+      },
+      {
+        "badge": "Mould & air quality",
+        "title": "Understand the environment, not just the stain",
+        "body": "Where mould or air quality is part of the picture, we look at ventilation, humidity, building defects and occupancy patterns so recommendations address causes, not only symptoms.",
+        "imageKey": "mouldCorner",
+        "imageAlt": "Mould growth in an internal corner requiring investigation",
+        "ctaLabel": "Mould & condensation services",
+        "ctaPath": "/services/mould-remediation-condensation-control",
+        "imagePosition": "left"
+      }
+    ],
+    "bento": {
+      "title": "Where we add the most value",
+      "subtitle": "A snapshot of the situations we help clients resolve every week.",
+      "cards": [
+        {
+          "title": "Below-ground & BS 8102",
+          "description": "Type A, B and C protection systems planned with structure and sequencing in mind.",
+          "imageKey": "basement",
+          "imageAlt": "Below-ground waterproofing and tanking context",
+          "ctaLabel": "Waterproofing guidance",
+          "ctaPath": "/services/basement-below-ground-waterproofing"
+        },
+        {
+          "title": "Envelope & ingress",
+          "description": "Roof, wall and junction defects traced back to how water actually enters the building.",
+          "imageKey": "externalRoof",
+          "imageAlt": "Roofline and external building fabric relevant to water ingress",
+          "ctaLabel": "External defect investigations",
+          "ctaPath": "/services/external-defects-drainage-weathering"
+        },
+        {
+          "title": "Rising & lateral damp",
+          "description": "Ground-level moisture pathways checked against evidence, salts and construction.",
+          "imageKey": "risingExterior",
+          "imageAlt": "External wall and ground-level detail relevant to damp pathways",
+          "ctaLabel": "Moisture diagnostics",
+          "ctaPath": "/services/moisture-diagnostics-building-pathology"
+        }
+      ]
+    },
+    "process": {
+      "title": "How we work with you",
+      "subtitle": "A repeatable process that stays proportionate to the property and the risk.",
+      "steps": [
+        {
+          "title": "Brief & scope",
+          "description": "We clarify what you need from the report: purchase decision, dispute, tenant health, or programme planning."
+        },
+        {
+          "title": "Site investigation",
+          "description": "Structured inspection, measurements, imaging and sampling where appropriate."
+        },
+        {
+          "title": "Analysis & reporting",
+          "description": "Findings tied to evidence with clear cause, extent and next-step options."
+        },
+        {
+          "title": "Next steps",
+          "description": "Remedial strategy, specifications, or contractor briefing support as required."
+        }
+      ]
+    },
+    "objections": {
+      "title": "If you have been here before, read this",
+      "items": [
+        {
+          "title": "No treatment-first sales pitch",
+          "description": "We do not start from a product catalogue. We start from the building and the data."
+        },
+        {
+          "title": "Second opinions welcome",
+          "description": "We frequently review failed works, conflicting reports, and unclear recommendations."
+        },
+        {
+          "title": "Works with your own contractors",
+          "description": "Our output is designed to be usable by you, your builder, or your housing maintenance team."
+        }
+      ]
+    },
+    "teamHeading": "Our core team includes:",
+    "teamRoles": [
+      {
+        "role": "PCA-trained surveyors",
+        "detail": "Delivering detailed damp, mould, and condensation diagnostics."
+      },
+      {
+        "role": "CSCS-qualified managers",
+        "detail": "Overseeing safe, compliant, and professional site works."
+      },
+      {
+        "role": "Structural engineers",
+        "detail": "Advising on building movement, wall retention, and water ingress."
+      },
+      {
+        "role": "Waterproofing designers",
+        "detail": "Experienced in BS 8102:2022 Type A, B, and C protection systems."
+      },
+      {
+        "role": "Environmental scientists",
+        "detail": "Supporting air quality testing and mould analysis."
+      },
+      {
+        "role": "Ventilation specialists",
+        "detail": "Ensuring effective humidity and airflow management."
+      }
+    ],
+    "partners": {
+      "title": "Current best practice, without manufacturer bias",
+      "intro": "We operate independently but stay up to date with industry-leading manufacturers and training providers so our guidance reflects current technical standards.",
+      "body": "That includes Newton Waterproofing, Delta Membranes, Safeguard Europe, and Wykamol. The point is simple: we know the systems, but we are not paid to specify one brand over another.",
+      "partnerNames": [
+        "Newton Waterproofing",
+        "Delta Membranes",
+        "Safeguard Europe",
+        "Wykamol"
+      ],
+      "imageKey": "consultation",
+      "imageAlt": "Consultation and review of damp survey reporting with a client"
+    },
+    "testimonial": {
+      "quote": "Rob took time to explain the leak damage properly, guided us through every step and produced a thorough report that made the next move much clearer.",
+      "author": "Joe",
+      "role": "Homeowner",
+      "ctaLabel": "Read more feedback",
+      "ctaPath": "/reviews"
+    },
+    "faqTeaser": {
+      "title": "Common questions",
+      "subtitle": "Straight answers before you book.",
+      "items": [
+        {
+          "question": "Why pay for an independent survey?",
+          "answer": "Because the goal is diagnosis, not a tied treatment sale. You get evidence-led reasoning you can rely on for the next decision.",
+          "linkText": "See pricing & scope FAQ",
+          "linkPath": "/faq"
+        },
+        {
+          "question": "Do you carry out remedial works?",
+          "answer": "Our core role is investigation, reporting and remedial planning. We help you understand what work is appropriate and how to procure it.",
+          "linkText": "Read how we work",
+          "linkPath": "/faq"
+        }
+      ]
+    },
+    "closing": [
+      "Whether inspecting a single home or advising a national housing provider, our focus remains the same: clarity, accuracy, and independence.",
+      "Every inspection is carried out with the same detailed, structured approach, from initial moisture readings to full remedial strategy planning."
+    ],
+    "cta": {
+      "title": "Ready for a clearer next step?",
+      "description": "Tell us what you are seeing. We will confirm the right survey scope, typical turnaround, and what to expect from the report.",
+      "primaryText": "Request Advice",
+      "secondaryText": "Email the team",
+      "note": "Prefer the phone? Same-day call-back where possible on {phone}."
+    }
+  },
   "header": {
     "home": "Home",
     "difference": "The True Damp Difference",
@@ -534,12 +743,12 @@
     "emergencyDescription": "Diagnosis, reporting and next-step guidance",
     "rights": "© 2026 True Damp Specialists. All rights reserved.",
     "services": [
-      "Independent Damp & Mould Surveys",
-      "Moisture Diagnostics & Building Pathology",
-      "Mould Remediation & Condensation Control",
-      "Basement & Below-Ground Waterproofing",
-      "External Defects & Drainage Investigations",
-      "Remedial Specifications & Project Support"
+      "Damp & Mould, Thermal & Salt Analysis",
+      "Residential Compliance – Awaab's Law",
+      "Commercial & Multi-Occupancy Surveys",
+      "Complex Cases & Second Opinions",
+      "Invasive, CCTV & Drainage Investigations",
+      "Pre-Purchase Surveys & Remediation Planning"
     ],
     "popularAreas": [
       "Watford",

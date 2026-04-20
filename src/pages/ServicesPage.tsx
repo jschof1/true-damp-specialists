@@ -33,7 +33,7 @@ const serviceImages: Record<string, string> = {
   "independent-damp-mould-surveys": "/assets/true-damp-service-survey.jpeg",
   "moisture-diagnostics-building-pathology": "/assets/true-damp-service-diagnostics.jpeg",
   "mould-remediation-condensation-control": "/assets/true-damp-service-mould.jpeg",
-  "basement-below-ground-waterproofing": "/assets/true-damp-service-waterproofing.jpeg",
+  "basement-below-ground-waterproofing": "/assets/true-damp-service-diagnostics.jpeg",
   "external-defects-drainage-weathering": "/assets/true-damp-service-external.jpeg",
   "remedial-specifications-project-support": "/assets/true-damp-service-specifications.jpeg",
 };
@@ -67,7 +67,7 @@ const ServicesPage = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title={`Damp & Building Pathology Services | ${siteSettings.businessName}`}
-        description="Independent damp surveys, moisture diagnostics, mould investigations, waterproofing advice and remedial project support."
+        description="Thermal and salt analysis, Awaab's Law compliance reporting, commercial surveys, second opinions, invasive and CCTV drainage investigations, and pre-purchase remediation planning."
         path="/services"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -183,23 +183,23 @@ const ServicesPage = () => {
                     </div>
                   </div>
                   
-                    <CardContent className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow text-primary-foreground">
-                      <h3 className="font-display font-black text-lg sm:text-xl md:text-2xl text-primary-foreground mb-2 sm:mb-3 group-hover:text-accent transition-colors leading-tight">
+                    <CardContent className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow text-foreground">
+                      <h3 className="font-display font-black text-lg sm:text-xl md:text-2xl text-foreground mb-2 sm:mb-3 group-hover:text-accent transition-colors leading-tight">
                         {service.title}
                   </h3>
                       {/* Accent line under title */}
                       <div className="w-12 h-0.5 bg-accent/80 mb-3 sm:mb-4" />
-                      <p className="text-primary-foreground/75 text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 md:mb-5 flex-grow line-clamp-3 sm:line-clamp-none">
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 md:mb-5 flex-grow line-clamp-3 sm:line-clamp-none">
                     {service.shortDesc}
                   </p>
                   
                       {/* Accent divider before features */}
-                      <div className="border-t border-accent/30 pt-3 sm:pt-4 mb-3 sm:mb-4 md:mb-5">
+                      <div className="border-t border-border pt-3 sm:pt-4 mb-3 sm:mb-4 md:mb-5">
                         <div className="space-y-2 sm:space-y-2.5">
                           {service.features.slice(0, 3).map((feature, i) => (
                             <div key={i} className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm">
-                              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent mt-0.5 shrink-0" />
-                              <span className="text-primary-foreground/90 font-medium line-clamp-2">{feature}</span>
+                              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent mt-0.5 shrink-0" aria-hidden />
+                              <span className="text-foreground font-medium line-clamp-2">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -208,12 +208,12 @@ const ServicesPage = () => {
                       <div className="pt-3 sm:pt-4 border-t-2 border-accent/40 mt-auto flex items-center justify-between gap-2">
                         <Link 
                           to={`/services/${service.slug}`} 
-                          className="inline-flex items-center gap-1.5 sm:gap-2 text-accent font-bold hover:text-primary-foreground hover:gap-3 transition-all text-sm sm:text-base min-w-0"
+                          className="inline-flex items-center gap-1.5 sm:gap-2 text-accent font-bold hover:text-accent/80 hover:gap-3 transition-all text-sm sm:text-base min-w-0"
                         >
                           View Details
                           <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
                       </Link>
-                        <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-accent-foreground bg-accent/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full shrink-0">
+                        <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-foreground bg-background border border-border px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full shrink-0 shadow-sm">
                           {service.pricing[0]?.price || "Call for Quote"}
                         </span>
                       </div>

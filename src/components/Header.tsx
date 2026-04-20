@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="flex min-h-[4.5rem] items-center justify-between py-2 md:min-h-[6rem] md:py-2.5">
+        <div className="flex min-h-[3.5rem] items-center justify-between py-1.5 md:min-h-[4rem] md:py-1.5">
           <Link
             to="/"
             aria-label={`${siteSettings.businessName} home`}
@@ -27,26 +27,26 @@ const Header = () => {
             <img
               src={siteSettings.logoPath}
               alt=""
-              className="h-14 w-auto shrink-0 object-contain sm:h-16 md:h-[5.25rem]"
+              className="h-10 w-auto shrink-0 object-contain sm:h-11 md:h-12"
               width={120}
               height={200}
               decoding="async"
             />
             <span className="flex min-w-0 flex-col leading-[1.08]">
-              <span className="font-display text-lg font-bold tracking-tight text-primary-foreground sm:text-xl md:text-2xl">
+              <span className="font-display text-base font-bold tracking-tight text-primary-foreground sm:text-lg md:text-xl">
                 {siteSettings.logoWordmarkLine1}
               </span>
-              <span className="font-display text-sm font-semibold tracking-wide text-accent sm:text-base md:text-xl">
+              <span className="font-display text-xs font-semibold tracking-wide text-accent sm:text-sm md:text-base">
                 {siteSettings.logoWordmarkLine2}
               </span>
             </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 font-display">
-            <a href="/#about" className={navLinkClass}>
+            <Link to="/about" className={navLinkClass}>
               About
               <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
-            </a>
+            </Link>
 
             <Link to="/services" className={navLinkClass}>
               {header.services}
@@ -106,13 +106,13 @@ const Header = () => {
             aria-label="Mobile navigation"
           >
             <div className="flex flex-col gap-1">
-              <a
-                href="/#about"
+              <Link
+                to="/about"
                 className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
+              </Link>
 
               <Link
                 to="/services"

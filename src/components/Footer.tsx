@@ -166,6 +166,11 @@ const Footer = () => {
             <p className="font-display font-bold text-lg mb-4 text-accent">{footer.quickLinks}</p>
             <ul className="space-y-2">
               <li>
+                <Link to="/about" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded">
+                  About us
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded">
                   Our Services
                 </Link>
