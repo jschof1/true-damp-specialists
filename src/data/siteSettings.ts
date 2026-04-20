@@ -11,11 +11,11 @@ export const siteSettings = {
   phone: "+447782229411",
   phoneFormatted: "+44 7782 229411",
   email: "info@truedampspecialists.co.uk",
-  address: "Watford, Hertfordshire WD24 4AS, UK",
+  address: "National coverage — London, Home Counties, Midlands & beyond",
   addressDetails: {
-    addressLocality: "Watford",
-    addressRegion: "Hertfordshire",
-    postalCode: "WD24 4AS",
+    addressLocality: "London & the Home Counties",
+    addressRegion: "the UK",
+    postalCode: "",
     addressCountry: "GB",
   },
   /** Geo coordinates not available from the supplied brief; omitted intentionally. */
@@ -29,7 +29,7 @@ export const siteSettings = {
   sameAs: [] as string[],
   feedbackGoogleReviewUrl: "https://g.page/r/CU-GUEpjknolEBM/review",
   areaServed:
-    "London, the Home Counties, the Midlands, Watford, Buckinghamshire, Hertfordshire, Bedfordshire, Oxfordshire and specialist projects across the UK",
+    "London, the Home Counties, the Midlands, Buckinghamshire, Hertfordshire, Bedfordshire, Oxfordshire, heritage and listed buildings nationwide",
   standardFaqs: [
     {
       question: "Why choose an independent damp survey instead of a free damp quote?",
@@ -54,7 +54,7 @@ export const siteSettings = {
     {
       question: "What areas do you cover?",
       answer:
-        "We are based in Watford and cover London, the Home Counties and the Midlands, plus Buckinghamshire, Hertfordshire, Bedfordshire, and Oxfordshire, with availability for specialist projects elsewhere in the UK.",
+        "We provide national coverage with a core focus on London, the Home Counties and the Midlands. We regularly travel across the UK for specialist projects, including heritage and listed buildings. If you have a property that needs an independent damp investigation, get in touch — distance is rarely a barrier.",
     },
     {
       question: "Can your reports help with Awaab's Law and damp compliance cases?",

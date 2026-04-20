@@ -38,11 +38,11 @@
     "tagline": "Accurate. Independent. Trusted.",
     "experience": "Evidence-led",
     "rating": "Independent reporting",
-    "phone": "+447877988453",
-    "phoneDisplay": "07877 988 453",
+    "phone": "+447782229411",
+    "phoneDisplay": "07782 229 411",
     "webDisplay": "www.truedampspecialists.co.uk",
     "email": "info@truedampspecialists.co.uk",
-    "address": "Serving London, the Home Counties & the Midlands"
+    "address": "National coverage — London, the Home Countries, the Midlands & beyond"
   },
   "hero": {
     "eyebrow": "Light and Shadow",
@@ -50,9 +50,9 @@
     "propertyTypes": ["Residential", "Commercial"],
     "titleAccent": "Damp Mould & Waterproofing Investigation",
     "title": "Independent Damp Surveys in {areaName}",
-    "description": "Providing accurate diagnostics, independent reporting, and clear remediation guidance for homeowners, landlords, housing providers, and developers across London, the Home Counties and the Midlands.",
+    "description": "Providing accurate diagnostics, independent reporting, and clear remediation guidance for homeowners, landlords, housing providers, and developers across London, the Home Countries and the Midlands.",
     "formTitle": "Request A Specialist Callback",
-    "formSubtitle": "Tell us what you're seeing and we’ll point you toward the right next step.",
+    "formSubtitle": "Tell us what you're seeing and we'll point you toward the right next step.",
     "ctaText": "Request Callback",
     "badges": [
       { "text": "PCA-trained surveyors" },
@@ -733,13 +733,13 @@
   "footer": {
     "tagline": "Accurate. Independent. Trusted.",
     "specialistLine": "Independent Specialists in Damp, Mould & Waterproofing Investigation",
-    "servingLine": "Serving London • Home Counties • Midlands",
+    "servingLine": "National Coverage • London • Home Counties • Midlands",
     "connectHeading": "Connect with us",
     "socialLinks": [
       { "label": "LinkedIn", "href": "https://www.linkedin.com/" },
       { "label": "Instagram", "href": "https://www.instagram.com/" }
     ],
-    "description": "True Damp Specialists — independent damp, mould, and waterproofing investigation. Clear diagnostics, independent reporting, and remediation guidance across London, the Home Counties and the Midlands.",
+    "description": "True Damp Specialists — independent damp, mould, and waterproofing investigation. Clear diagnostics, independent reporting, and remediation guidance across London, the Home Countries and the Midlands.",
     "quickLinks": "Quick Links",
     "areasCovered": "Coverage Areas",
     "openingHours": "When To Contact Us",
@@ -821,7 +821,7 @@
     "cta": {
       "title": "Not sure if your property falls within scope?",
       "description": "Get in touch with the postcode, property type and the issue you are dealing with, and we can advise on the best next step.",
-      "phone": "+447877988453",
+      "phone": "+447782229411",
       "ctaText": "Call Now"
     }
   },
@@ -891,7 +891,7 @@
       "description": "Talk through the symptoms, the property and any previous advice, and we can help you choose the right next step in {areaName}.",
       "primaryText": "Request advice",
       "secondaryText": "Call Now",
-      "phone": "+447877988453"
+      "phone": "+447782229411"
     }
   }
 }
