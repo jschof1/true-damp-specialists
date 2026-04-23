@@ -135,12 +135,12 @@ const GetQuotePage = () => {
   return (
     <>
       <SEO
-        title={`Request a Survey | ${siteSettings.businessName}`}
+        title={`Request Specialist Advice | ${siteSettings.businessName}`}
         description={`Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across ${siteSettings.addressDetails.addressLocality} and ${siteSettings.addressDetails.addressRegion}.`}
         path="/get-quote"
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: "Get a Quote", path: "/get-quote" },
+          { name: "Request Advice", path: "/get-quote" },
         ]}
       />
 
@@ -167,10 +167,10 @@ const GetQuotePage = () => {
               Takes less than 2 minutes
             </div>
             <h1 className="font-display font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 sm:mb-8 leading-tight max-w-4xl mx-auto animate-fade-in">
-              Get Your Free Quote
+              Request a Survey
             </h1>
             <p className="text-primary-foreground/80 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-12 animate-fade-in">
-              Request an independent survey or second opinion. Fast response across our core coverage areas and specialist support nationwide.
+              Tell us what you're seeing and we'll point you toward the right next step. Independent advice, not a sales pitch.
             </p>
 
             <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 animate-fade-in">
@@ -429,12 +429,12 @@ const GetQuotePage = () => {
                               Sending...
                             </>
                           ) : (
-                            "Get My Free Quote"
+                            "Request My Survey"
                           )}
                         </Button>
                         <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-2 flex items-center gap-1">
                           <Shield className="w-3 h-3 text-accent" />
-                          100% Free & No Obligation
+                          No obligation, no sales pitch
                         </p>
                       </div>
                     )}
@@ -470,8 +470,8 @@ const GetQuotePage = () => {
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm">Fast, Free Quotes</div>
-                      <div className="text-xs text-muted-foreground">No obligation, transparent pricing.</div>
+                      <div className="font-bold text-sm">Independent Advice</div>
+                      <div className="text-xs text-muted-foreground">Evidence-led, not sales-driven.</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">

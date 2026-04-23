@@ -82,6 +82,7 @@ export const routes: RouteMetadata[] = [
     title: "Request a Survey | True Damp Specialists",
     description:
       "Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across London & the Home Counties and the UK.",
+      "Tell us what you're seeing and we'll point you toward the right next step. Independent damp, mould and moisture advice from True Damp Specialists.",
     priority: 0.6,
     changefreq: "monthly",
   },

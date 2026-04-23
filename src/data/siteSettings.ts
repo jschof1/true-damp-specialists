@@ -8,8 +8,8 @@ export const siteSettings = {
   /** Two-line lockup next to the icon for readability on dark headers. */
   logoWordmarkLine1: "True Damp",
   logoWordmarkLine2: "Specialists",
-  phone: "+447782229411",
-  phoneFormatted: "+44 7782 229411",
+  phone: "+447877988453",
+  phoneFormatted: "07877 988 453",
   email: "info@truedampspecialists.co.uk",
   address: "National coverage — London, Home Counties, Midlands & beyond",
   addressDetails: {

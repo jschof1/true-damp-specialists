@@ -377,7 +377,7 @@ const FAQPage = () => {
                     { label: "Fast Turnaround", desc: "1–3 days typical" },
                     { label: "Fully Insured", desc: "For your peace of mind" },
                     { label: "Quality Guarantee", desc: "Backed by our promise" },
-                    { label: "Free Quote", desc: "No obligation" },
+                    { label: "No Sales Pitch", desc: "Advice only" },
                   ]).map((item, i) => {
                     const icons = [Clock, ShieldCheck, CheckCircle2, CheckCircle2];
                     const Icon = icons[i] ?? CheckCircle2;
