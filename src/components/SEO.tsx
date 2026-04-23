@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { siteSettings } from "@/data/siteSettings";
-import { reviewStats } from "@/data/reviews";
 const defaultOgImage = siteSettings.primaryImagePath;
 
 type BreadcrumbItem = {
@@ -37,11 +36,11 @@ const parseReviewCount = (value: string) => {
 };
 
 const buildLocalBusinessSchema = (imageUrl: string) => {
-  const ratingValue = reviewStats.averageRating
-    ? parseRatingValue(reviewStats.averageRating)
+  const ratingValue = siteSettings.googleRating
+    ? parseRatingValue(siteSettings.googleRating)
     : undefined;
-  const reviewCount = reviewStats.totalReviews
-    ? parseReviewCount(reviewStats.totalReviews)
+  const reviewCount = siteSettings.reviewCount
+    ? parseReviewCount(siteSettings.reviewCount)
     : undefined;
   const hasAddressDetails =
     typeof siteSettings.addressDetails === "object" && siteSettings.addressDetails !== null;

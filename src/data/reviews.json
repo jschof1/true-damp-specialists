@@ -5,6 +5,7 @@
     "rating": 5,
     "text": "We recently experienced a leak that caused significant water damage to our bathroom and flooring, so we contacted Rob for a quote to assess the extent of the damp. From the outset, he was incredibly supportive and professional, taking the time to guide us through every step of the process and clearly explain what needed to be done. His report was both thorough and easy to understand, giving us real confidence in how to move forward. He also made himself available to answer questions at any time, which really helped ease our worries during what has been a very stressful situation. Recommend!",
     "service": "Independent Damp & Mould Surveys",
+    "scenarioLabel": "Escape of water – bathroom leak investigation",
     "date": "28 March",
     "verified": true,
     "avatar": null
@@ -15,6 +16,7 @@
     "rating": 5,
     "text": "I have an older property which has had damp problems since I moved in 8 years ago. I have tried several people but none of them have been as helpful as Rob. Rob responded very quickly and came to do his survey within a few days. He talked me through everything he found and produced a detailed report the next day. Highly recommended.",
     "service": "Independent Damp & Mould Surveys",
+    "scenarioLabel": "Long-term damp misdiagnosed as rising damp",
     "date": "06 March",
     "verified": false,
     "avatar": null
@@ -25,6 +27,7 @@
     "rating": 5,
     "text": "The process from start to finish was outstanding it was a pleasure meeting Rob who explained clear defined steps and detailed knowledge surrounding damp issues. The report was equally impressive lots of detailed analysis along with thermal imaging to show the root cause and added remedial actions to undertake to tackle the issues cant recommend highly enough.",
     "service": "Moisture Diagnostics & Building Pathology",
+    "scenarioLabel": "High moisture readings with unclear source",
     "date": "05 March",
     "verified": true,
     "avatar": null
@@ -35,6 +38,7 @@
     "rating": 5,
     "text": "Rob was incredibly thorough and professional while conducting the damp survey on our house. I have just received the report and it is clear that Rob is an expert in his field and has spent a lot of time compiling the report. My son was obsessed with his special ladder and Rob let him climb it and also showed him the thermal images and explained what they meant.",
     "service": "Moisture Diagnostics & Building Pathology",
+    "scenarioLabel": "Condensation and mould in older property",
     "date": "22 February",
     "verified": true,
     "avatar": null
@@ -45,6 +49,7 @@
     "rating": 5,
     "text": "Rob carried out a specialist damp survey on a property I am looking to purchase, and his input has been invaluable. He was very responsive in arranging the visit, liaising smoothly with the estate agent and keeping me updated at each stage. On site, he explained his findings in clear, straightforward terms, making the technical aspects easy to understand and always steering the conversation towards practical solutions. The report was detailed, solution-focused, and delivered promptly, which has really helped me make an informed decision about the purchase.",
     "service": "Independent Damp & Mould Surveys",
+    "scenarioLabel": "Pre-purchase damp assessment",
     "date": "10 February",
     "verified": true,
     "avatar": null
@@ -55,6 +60,7 @@
     "rating": 5,
     "text": "Really pleased with the service and work done by Rob. Provided an incredibly detailed and comprehensive report.",
     "service": "Remedial Specifications & Project Support",
+    "scenarioLabel": "Structural moisture ingress linked to external defects",
     "date": "02 February",
     "verified": true,
     "avatar": null

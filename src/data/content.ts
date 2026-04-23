@@ -148,8 +148,16 @@ export function getFaqPageContent() {
   return content.faqPage;
 }
 
+export function getHomeFaqContent() {
+  return (content as unknown as { homeFaq: Record<string, unknown> }).homeFaq;
+}
+
 export function getContactPageContent() {
   return content.contactPage;
+}
+
+export function getLocationsPageContent() {
+  return (content as unknown as { locationsPage: Record<string, unknown> }).locationsPage;
 }
 
 export function getFormServiceOptions() {

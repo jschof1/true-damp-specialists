@@ -18,34 +18,34 @@ export const routes: RouteMetadata[] = [
     outputPath: "index.html",
     title: "Independent Damp Surveys | True Damp Specialists",
     description:
-      "Independent damp, mould and moisture investigations from a Watford base across London and the Home Counties. Evidence-led reporting and clearer next steps.",
+      "Independent damp, mould and moisture specialists focused on diagnosis, evidence-led reporting and practical next steps across London, the Home Counties and the Midlands.",
     priority: 1.0,
     changefreq: "weekly",
   },
   {
     path: "/services",
     outputPath: "services/index.html",
-    title: "Damp & Moisture Services | True Damp Specialists",
+    title: "Services | True Damp Specialists",
     description:
-      "Explore independent damp surveys, moisture diagnostics, mould investigations, waterproofing guidance and remedial support from True Damp Specialists.",
+      "We identify the cause of damp, mould and moisture issues using evidence-led investigation — giving you clear conclusions and practical next steps you can rely on.",
     priority: 0.9,
     changefreq: "weekly",
   },
   {
     path: "/locations",
     outputPath: "locations/index.html",
-    title: "Areas We Cover | True Damp Specialists",
+    title: "Damp Problems We Diagnose | True Damp Specialists",
     description:
-      "Coverage across Watford, London, Buckinghamshire, Hertfordshire, Bedfordshire and Oxfordshire for independent damp and mould investigations.",
+      "Independent, evidence-led damp and moisture investigations across residential, heritage and complex buildings, focused on getting the diagnosis right.",
     priority: 0.8,
     changefreq: "weekly",
   },
   {
     path: "/reviews",
     outputPath: "reviews/index.html",
-    title: "Client Feedback | True Damp Specialists",
+    title: "Reviews | True Damp Specialists",
     description:
-      "Read client feedback themes around clarity, professionalism and diagnosis-first damp investigations from True Damp Specialists.",
+      "Read what clients say after getting the right diagnosis, with independent damp and moisture investigations focused on clarity and correct next steps.",
     priority: 0.7,
     changefreq: "monthly",
   },
@@ -54,16 +54,16 @@ export const routes: RouteMetadata[] = [
     outputPath: "faq/index.html",
     title: "Damp Survey FAQ | True Damp Specialists",
     description:
-      "Answers to common questions about independent damp surveys, mould diagnosis, moisture investigations and next-step reporting.",
+      "Answers on damp surveys, mould, condensation, waterproofing, report scope and remedial recommendations.",
     priority: 0.7,
     changefreq: "monthly",
   },
   {
     path: "/contact",
     outputPath: "contact/index.html",
-    title: "Contact True Damp Specialists",
+    title: "Contact True Damp Specialists | Independent Damp Specialists",
     description:
-      "Get in touch with True Damp Specialists for independent damp, mould and moisture advice across Watford, London and the Home Counties.",
+      "Speak to a damp and moisture specialist for independent advice, diagnosis-led surveys, second opinions, and clear next-step guidance.",
     priority: 0.8,
     changefreq: "monthly",
   },
@@ -79,18 +79,18 @@ export const routes: RouteMetadata[] = [
   {
     path: "/get-quote",
     outputPath: "get-quote/index.html",
-    title: "Request Specialist Advice | True Damp Specialists",
+    title: "Request a Survey | True Damp Specialists",
     description:
-      "Share your damp, mould or moisture issue with True Damp Specialists and request independent advice on the right next step.",
+      "Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across London & the Home Counties and the UK.",
     priority: 0.6,
     changefreq: "monthly",
   },
   {
     path: "/portfolio",
     outputPath: "portfolio/index.html",
-    title: "Case Studies & Project Evidence | True Damp Specialists",
+    title: "Case Studies | True Damp Specialists",
     description:
-      "Explore selected case-study themes, project evidence and investigation-led examples from True Damp Specialists.",
+      "This section should showcase outcomes, project types and the sort of evidence-rich work the business is known for, rather than generic marketing gallery filler.",
     priority: 0.8,
     changefreq: "weekly",
   },

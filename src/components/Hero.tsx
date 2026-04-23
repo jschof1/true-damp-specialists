@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Phone, ShieldCheck, ChevronRight, Loader2, Star } from "lucide-react";
+import { Phone, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { siteSettings } from "@/data/siteSettings";
 import { formEndpoints, postFormSubmission } from "@/lib/formApi";
 import { normalizeUKPhone } from "@/lib/phoneUtils";
 import { getHeroContent, getFormServiceOptions, getFormServicePlaceholder } from "@/data/content";
-import checkatradeLogo from "@/assets/icons/certifications/checkatrade.webp";
 import pcaLogo from "@/assets/icons/certifications/pca-logo.png";
 
 interface HeroProps {
@@ -24,6 +24,7 @@ const Hero = ({ areaName, description }: HeroProps) => {
     name: "",
     phone: "",
     issue: "",
+    issueDescription: "",
     postcode: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,13 +44,14 @@ const Hero = ({ areaName, description }: HeroProps) => {
         name: formData.name.trim(),
         phone: normalizeUKPhone(formData.phone.trim()),
         issue: formData.issue,
+        issueDescription: formData.issueDescription.trim(),
         postcode: formData.postcode.trim(),
         source: "website_hero_form",
         area: displayArea,
       });
 
       toast.success("Thank you! We'll call you back shortly.");
-      setFormData({ name: "", phone: "", issue: "", postcode: "" });
+      setFormData({ name: "", phone: "", issue: "", issueDescription: "", postcode: "" });
     } catch {
       toast.error("Something went wrong. Please call us directly.");
     } finally {
@@ -78,27 +80,23 @@ const Hero = ({ areaName, description }: HeroProps) => {
         <div className="grid lg:grid-cols-[1.3fr_1fr] xl:grid-cols-[1.5fr_1fr] gap-6 sm:gap-8 lg:gap-16 xl:gap-24 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left animate-fade-in lg:pr-8 xl:pr-16">
-            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 mb-6">
-              <div className="flex items-center gap-1 text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
-                ))}
-              </div>
-              <div className="flex items-center gap-2 text-primary-foreground/90 font-medium text-sm sm:text-base">
-                <span>5 stars rated on</span>
-                <img src={checkatradeLogo} alt="Checkatrade" className="h-6 w-auto object-contain" />
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground/90 backdrop-blur-sm mb-6">
+              Independent, evidence-led diagnosis
             </div>
 
             <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-[1.05] mb-5 sm:mb-6 drop-shadow-sm">
-              Independent Specialists in{" "}
-              <span className="text-accent">Damp, Mould &amp; Waterproofing</span>{" "}
-              Investigation
+              {hero.title}
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-primary-foreground/90 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
               {displayDescription}
             </p>
+
+            {hero.additionalLine ? (
+              <p className="text-sm sm:text-base lg:text-lg text-primary-foreground/75 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                {hero.additionalLine}
+              </p>
+            ) : null}
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
               {hero.badges.slice(0, 3).map((badge: { text: string }, i: number) => {
@@ -200,6 +198,22 @@ const Hero = ({ areaName, description }: HeroProps) => {
                       </SelectContent>
                     </Select>
                   </div>
+                  <div>
+                    <label className="mb-2 block text-left text-sm font-semibold text-primary-foreground/80">
+                      {hero.issueDescriptionLabel ?? "Brief description of the issue"}
+                    </label>
+                    <Textarea
+                      placeholder={
+                        hero.issueDescriptionPlaceholder ?? "A brief description of the issue"
+                      }
+                      className="min-h-[110px] resize-none text-base bg-white/5 border border-white/10 focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent transition-all text-primary-foreground placeholder:text-primary-foreground/50 rounded-md"
+                      value={formData.issueDescription}
+                      onChange={(e) =>
+                        setFormData({ ...formData, issueDescription: e.target.value })
+                      }
+                      maxLength={500}
+                    />
+                  </div>
 
                   <Button
                     type="submit"
@@ -219,6 +233,12 @@ const Hero = ({ areaName, description }: HeroProps) => {
                     )}
                   </Button>
                 </form>
+
+                {hero.helperText ? (
+                  <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
+                    {hero.helperText}
+                  </p>
+                ) : null}
               </div>
             </div>
           </div>

@@ -58,7 +58,7 @@ const AreaPage = () => {
     { icon: localServicesIcons[0], title: "Independent Surveys", desc: "Diagnosis-led damp and mould investigations" },
     { icon: localServicesIcons[1], title: "Moisture Diagnostics", desc: "Technical assessment of damp mechanisms and building defects" },
     { icon: localServicesIcons[2], title: "Remedial Specifications", desc: "Clear written recommendations for the right next steps" },
-    { icon: localServicesIcons[3], title: "Project Support", desc: "Guidance for homeowners, buyers, landlords and contractors" }
+    { icon: localServicesIcons[3], title: "Project Support", desc: "Guidance for homeowners, buyers, landlords and property professionals" }
   ];
 
   const areaServiceSchema = {
@@ -137,13 +137,10 @@ const AreaPage = () => {
 
             <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 animate-fade-in">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 sm:px-8 h-12 sm:h-14 rounded-xl text-base sm:text-lg shadow-xl shadow-accent/25">
-                <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
+                <Link to="/get-quote">Request Advice</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-primary-foreground/5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-bold px-6 sm:px-8 h-12 sm:h-14 rounded-xl text-base sm:text-lg">
-                <a href="#reviews">Read Reviews</a>
+                <a href="#process">Understand the approach</a>
               </Button>
             </div>
           </div>
@@ -154,10 +151,10 @@ const AreaPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-8">
               {[
-                { label: "Response Time", value: area.emergencyTime, icon: Clock },
-                { label: "Local Specialists", value: "Certified", icon: Shield },
-                { label: "Customer Rating", value: `${reviewStats.averageRating}/5`, icon: GoogleIcon },
-                { label: "Service Area", value: area.name, icon: MapPin }
+                { label: "Approach", value: "Independent", icon: Clock },
+                { label: "Method", value: "Evidence-led", icon: Shield },
+                { label: "Reporting", value: "Clear", icon: GoogleIcon },
+                { label: "Coverage", value: area.name, icon: MapPin }
               ].map((stat, index) => (
                 <Card key={index} className="border-none shadow-2xl shadow-primary/10 overflow-hidden group hover:-translate-y-1 transition-all duration-300">
                   <CardContent className="p-3 sm:p-4 md:p-6 lg:p-8 flex items-center gap-2 sm:gap-3 md:gap-6">
@@ -220,10 +217,10 @@ const AreaPage = () => {
                   <div className="flex items-center gap-0.5 mb-2 md:mb-3">
                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-accent text-accent" />)}
                   </div>
-                  <p className="text-xs md:text-sm italic text-muted-foreground mb-3 md:mb-4 font-medium leading-relaxed">
-                    "They gave us a much clearer explanation of the moisture problem than any contractor quote had managed."
+                    <p className="text-xs md:text-sm italic text-muted-foreground mb-3 md:mb-4 font-medium leading-relaxed">
+                    "They gave us a much clearer explanation of the moisture problem than any previous advice had managed."
                   </p>
-                  <p className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-wider">— Local {area.name} Resident</p>
+                  <p className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-wider">— Independent review theme</p>
                 </div>
               </div>
             </div>
@@ -283,7 +280,7 @@ const AreaPage = () => {
           </div>
         </section>
 
-        <section className="py-12 md:py-24 bg-primary text-primary-foreground overflow-hidden relative">
+        <section id="process" className="py-12 md:py-24 bg-primary text-primary-foreground overflow-hidden relative">
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-10 md:mb-16">
@@ -319,8 +316,8 @@ const AreaPage = () => {
                 <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground mb-6 md:mb-8">{areaPage.faq.title}</h2>
                 <div className="space-y-3 md:space-y-4">
                   {[
-                    { q: `How quickly can you book a survey in ${area.name}?`, a: `Most bookings in ${area.name} can be arranged promptly, with timing depending on the issue, access and reporting scope.` },
-                    { q: "Do you work locally in this area?", a: "Yes. We regularly cover this area and surrounding districts as part of our wider London and Home Counties consultancy coverage." },
+                    { q: `Do you cover ${area.name}?`, a: `Yes. We support ${area.name} and surrounding areas as part of our wider London, Home Counties and Midlands consultancy coverage.` },
+                    { q: "How do you approach diagnosis here?", a: "The same way we do everywhere else: by understanding the building, gathering the right evidence, and explaining the correct next step without a sales agenda." },
                     { q: "Do you offer fixed prices?", a: "Survey fees depend on the property, the issue and the level of reporting required. We explain scope clearly before any booking is confirmed." }
                   ].map((faq, i) => (
                     <div key={i} className="p-4 md:p-6 bg-primary/5 rounded-xl md:rounded-2xl border border-transparent hover:border-accent/30 hover:bg-primary/10 hover:shadow-md transition-all group min-w-0">

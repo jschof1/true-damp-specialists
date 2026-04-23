@@ -4,41 +4,19 @@ import { Button } from "@/components/ui/button";
 
 import { getServicesContent, getSectionCtaLabel } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
-import { getServiceDestination } from "@/lib/serviceLinks";
-import { Layers } from "lucide-react";
+import { Layers, CheckCircle2 } from "lucide-react";
 
 interface ServicesGridProps {
   areaName?: string;
 }
 
-const serviceSlugs: Record<string, string> = {
-  "Damp & Mould, Thermal & Salt Analysis": "independent-damp-mould-surveys",
-  "Residential Compliance – Awaab's Law": "moisture-diagnostics-building-pathology",
-  "Commercial & Multi-Occupancy Surveys": "mould-remediation-condensation-control",
-  "Complex Cases & Second Opinions": "basement-below-ground-waterproofing",
-  "Invasive, CCTV & Drainage Investigations": "external-defects-drainage-weathering",
-  "Pre-Purchase Surveys & Remediation Planning": "remedial-specifications-project-support",
-};
-
-const serviceImages = [
-  "/assets/true-damp-service-survey.jpeg",
-  "/assets/true-damp-service-diagnostics.jpeg",
-  "/assets/true-damp-service-mould.jpeg",
-  "/assets/true-damp-service-diagnostics.jpeg",
-  "/assets/true-damp-service-external.jpeg",
-  "/assets/true-damp-service-specifications.jpeg",
-];
-
 const ServicesGrid = ({ areaName }: ServicesGridProps) => {
   const displayArea = areaName || siteSettings.addressDetails.addressRegion;
-  const servicesContent = getServicesContent(displayArea);
-
-  const services = servicesContent.items.map((item, index) => ({
-    ...item,
-    image: serviceImages[index] ?? serviceImages[0],
-    description: item.description,
-    slug: serviceSlugs[item.title] ?? null,
-  }));
+  const servicesContent = getServicesContent(displayArea) as ReturnType<typeof getServicesContent> & {
+    groups?: { title: string; items: string[] }[];
+    projectSupportNote?: string;
+  };
+  const groups = servicesContent.groups ?? [];
 
   return (
     <section id="services" className="py-10 md:py-16 lg:py-24 bg-white text-slate-900">
@@ -58,55 +36,36 @@ const ServicesGrid = ({ areaName }: ServicesGridProps) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={getServiceDestination(service.slug)}
-              className="block no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg"
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {groups.map((group) => (
+            <Card
+              key={group.title}
+              className="border-2 border-slate-200 bg-white shadow-sm h-full"
             >
-              <Card
-                className="group border-2 border-slate-200 overflow-hidden transition-all duration-500 cursor-pointer bg-white shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 hover:-translate-y-2 h-full"
-              >
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                    width={400}
-                    height={300}
-                    decoding="async"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
-                    aria-hidden
-                  />
-                  {/* Decorative Accent Corner */}
-                  <div
-                    className="absolute top-0 right-0 w-12 h-12 bg-accent/90 backdrop-blur-sm -mr-6 -mt-6 rotate-45 group-hover:bg-accent-gradient transition-colors border-b border-l border-white/20 shadow-sm"
-                    aria-hidden
-                  />
-                </div>
-                <CardContent className="p-6 border-t-4 border-accent relative bg-white">
-                  <h3 className="font-display font-bold text-xl text-slate-900 leading-tight tracking-tight mb-3 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
-                    {service.description}
-                  </p>
-                  <div className="flex items-center text-accent-text-on-light text-sm font-black uppercase tracking-wider group-hover:gap-3 transition-all duration-300">
-                    <span className="relative">
-                      Find out more
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-text-on-light transition-all group-hover:w-full" />
-                    </span>
-                    <span className="ml-1 transition-transform group-hover:translate-x-2" aria-hidden>→</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+              <CardContent className="p-6">
+                <h3 className="font-display font-bold text-xl text-slate-900 mb-4">
+                  {group.title}
+                </h3>
+                <ul className="space-y-3">
+                  {group.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-slate-700">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
+
+        {servicesContent.projectSupportNote ? (
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm">
+            <p className="text-sm md:text-base leading-relaxed text-slate-700">
+              {servicesContent.projectSupportNote}
+            </p>
+          </div>
+        ) : null}
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">

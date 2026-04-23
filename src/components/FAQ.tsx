@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { siteSettings } from "@/data/siteSettings";
-import { getSectionCtaLabel } from "@/data/content";
+import { getHomeFaqContent, getSectionCtaLabel } from "@/data/content";
 import { HelpCircle } from "lucide-react";
 
 interface FAQProps {
@@ -15,50 +15,12 @@ interface FAQProps {
 }
 
 const FAQ = ({ areaName }: FAQProps) => {
-  const displayArea = areaName || siteSettings.addressDetails.addressLocality;
-  
-  const faqs = [
-    {
-      question: "Do you charge for an initial enquiry?",
-      answer:
-        `We will always explain the likely scope first. Survey fees depend on the property and level of investigation needed, and any remedial work is quoted separately so you know exactly what is being recommended.`,
-    },
-    {
-      question: `How quickly can you get to ${displayArea}?`,
-      answer:
-        `For urgent moisture or mould concerns in ${displayArea}, we aim to arrange the earliest practical appointment. Most standard survey bookings can be scheduled within a few working days depending on access and property size.`,
-    },
-    {
-      question: "Are you independent?",
-      answer:
-        "Yes. Our surveys are diagnosis-led and focused on identifying the root cause, not selling a pre-selected treatment. That helps clients compare options and avoid unnecessary work.",
-    },
-    {
-      question: "What does a damp survey include?",
-      answer:
-        "Typical surveys include a visual inspection, moisture profiling, assessment of ventilation and building defects, and a written report with clear findings and recommendations. The exact scope depends on the issue and property type.",
-    },
-    {
-      question: "Can you specify remedial works?",
-      answer:
-        "Yes. We can produce a remedial specification, review contractor proposals, and help clients understand whether suggested waterproofing, ventilation, joinery or masonry works actually match the diagnosis.",
-    },
-    {
-      question: "What areas do you cover?",
-      answer:
-        `We cover ${displayArea}, London, Hertfordshire, Buckinghamshire, Bedfordshire and Oxfordshire, and we can support specialist projects further afield when the brief is a good fit.`,
-    },
-    {
-      question: "Can you help with mould and condensation issues?",
-      answer:
-        "Yes. We investigate whether mould is being driven by condensation, hidden leaks, thermal bridging, poor ventilation or another underlying defect, then outline the right next steps instead of treating it as a one-size-fits-all problem.",
-    },
-    {
-      question: "Do you work with homeowners only?",
-      answer:
-        "No. We also support landlords, buyers, surveyors, property managers and contractors who need an independent view before committing to repairs or waterproofing work.",
-    },
-  ];
+  const homeFaq = getHomeFaqContent() as {
+    title: string;
+    description: string;
+    items: { question: string; answer: string }[];
+  };
+  const faqs = homeFaq.items;
 
   return (
     <section id="faq" className="py-10 md:py-16 lg:py-24 bg-white text-slate-900">
@@ -70,10 +32,10 @@ const FAQ = ({ areaName }: FAQProps) => {
             FAQ
           </span>
           <h2 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4">
-            Common Questions
+            {homeFaq.title}
           </h2>
           <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">
-            Got questions? We've got answers. Here are the most common things our customers ask.
+            {homeFaq.description}
           </p>
         </div>
 

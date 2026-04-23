@@ -72,8 +72,7 @@ const ProjectGallery = ({ areaName }: ProjectGalleryProps) => {
               className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight animate-fade-in"
               style={{ color: theme.surfaces.foreground }}
             >
-              {galleryContent.title} <br />
-              <span style={{ color: theme.surfaces.accentTextOnLight }}>in {displayArea}</span>
+              {galleryContent.title}
             </h2>
             <p 
               className="text-base md:text-lg lg:text-xl leading-relaxed animate-fade-in max-w-xl" 
@@ -175,7 +174,7 @@ const ProjectGallery = ({ areaName }: ProjectGalleryProps) => {
                     style={{ color: theme.colors.accent.DEFAULT }}
                   >
                     <MapPin className="w-3.5 h-3.5" />
-                    {project.location.split(',')[0]}
+                    Investigation example
                   </div>
                   <h3 
                     className="font-display font-black text-xl mb-3 leading-tight transition-colors duration-300 hover:[color:var(--hover-text)] group-hover:[color:var(--hover-text)]"

@@ -24,8 +24,8 @@ export const siteSettings = {
   /** Public rating references should be treated carefully until approved by the client. */
   googleRating: null as string | null,
   reviewCount: null as string | null,
-  /** Review links are routed to public profiles until a preferred GBP/share link is confirmed. */
-  googlePageUrl: "https://www.checkatrade.com/trades/truedampspecialists",
+  /** Public review/profile link. */
+  googlePageUrl: "https://g.page/r/CU-GUEpjknolEBM",
   sameAs: [] as string[],
   feedbackGoogleReviewUrl: "https://g.page/r/CU-GUEpjknolEBM/review",
   areaServed:

@@ -95,10 +95,10 @@ const ServiceDetailPage = () => {
 
   const trustStatsIcons = [GoogleIcon, Award, Clock, Shield];
   const trustStats = [
-    { value: "5/5", label: serviceDetailPage.stats.rating, icon: trustStatsIcons[0] },
-    { value: "15+", label: serviceDetailPage.stats.experience, icon: trustStatsIcons[1] },
-    { value: "Fast", label: serviceDetailPage.stats.availability, icon: trustStatsIcons[2] },
-    { value: "Independent", label: serviceDetailPage.stats.insured, icon: trustStatsIcons[3] },
+    { value: "Independent", label: serviceDetailPage.stats.rating, icon: trustStatsIcons[0] },
+    { value: "Evidence-led", label: serviceDetailPage.stats.experience, icon: trustStatsIcons[1] },
+    { value: "Specialist", label: serviceDetailPage.stats.availability, icon: trustStatsIcons[2] },
+    { value: "Clear", label: serviceDetailPage.stats.insured, icon: trustStatsIcons[3] },
   ];
 
   return (
@@ -150,7 +150,7 @@ const ServiceDetailPage = () => {
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 sm:px-8 h-12 sm:h-14 rounded-xl text-base sm:text-lg shadow-xl shadow-accent/25">
                 <a href={`tel:${siteSettings.phoneFormatted}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Call the Survey Team
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-primary-foreground/5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-bold px-6 sm:px-8 h-12 sm:h-14 rounded-xl text-base sm:text-lg">
@@ -262,7 +262,7 @@ const ServiceDetailPage = () => {
                           </div>
                           <div className="min-w-0">
                              <h3 className="font-black text-base sm:text-lg md:text-xl text-foreground mb-0.5 sm:mb-1">{item.service}</h3>
-                             <p className="text-xs sm:text-sm text-muted-foreground">{item.note || "Professional quality guaranteed"}</p>
+                             <p className="text-xs sm:text-sm text-muted-foreground">{item.note || "Scope depends on the property, the issue, and the reporting brief."}</p>
                           </div>
                        </div>
                        <div className="flex items-center justify-between sm:justify-end gap-4 sm:gap-8 shrink-0">

@@ -11,6 +11,7 @@ export interface Review {
   rating: number;
   text: string;
   service: string;
+  scenarioLabel?: string;
   date: string;
   verified: boolean;
   avatar?: string | null;

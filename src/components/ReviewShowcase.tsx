@@ -4,11 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { reviews, reviewStats, type Review } from "@/data/reviews";
 import { siteSettings } from "@/data/siteSettings";
-import { getSectionCtaLabel } from "@/data/content";
+import { getSectionCtaLabel, getTestimonialsContent } from "@/data/content";
 import theme from "@/config/theme";
-import checkatradeLogo from "@/assets/icons/certifications/checkatrade.webp";
+import GoogleIcon from "./GoogleIcon";
 
 const ReviewShowcase = () => {
+  const showcaseContent = getTestimonialsContent();
   // Get top verified reviews
   const featuredReviews = reviews
     .filter(r => r.rating === 5)
@@ -40,23 +41,18 @@ const ReviewShowcase = () => {
           <div className="text-center md:text-left max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-gradient text-accent-foreground text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 md:mb-4 shadow-sm">
               <Star className="w-3 h-3 md:w-3.5 md:h-3.5 fill-accent-foreground" aria-hidden="true" />
-              Trusted by Locals
+              {showcaseContent.subtitle}
             </div>
-                <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-3 md:mb-4 leading-tight">
-              Rated <span className="text-accent-text-on-light relative inline-block">
-                Excellent
-                <svg className="absolute w-full h-2 md:h-3 -bottom-1 left-0 text-accent/20 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-                </svg>
-              </span>
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-3 md:mb-4 leading-tight">
+              {showcaseContent.title}
             </h2>
             <p className="text-slate-600 text-base md:text-lg font-medium max-w-xl mx-auto md:mx-0">
-              See how homeowners, buyers and landlords describe the clarity of our surveys and remedial guidance.
+              {showcaseContent.description}
             </p>
           </div>
 
           <div className="flex flex-row gap-2 md:gap-3 w-full md:w-auto">
-            {/* Checkatrade Badge */}
+            {/* Public review profile */}
             <a 
               href={siteSettings.googlePageUrl} 
               target="_blank" 
@@ -64,7 +60,7 @@ const ReviewShowcase = () => {
               className="flex items-center gap-2 md:gap-4 bg-slate-50 border border-slate-200 p-2 md:p-4 rounded-lg md:rounded-xl hover:border-accent hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 shadow-sm group flex-1 md:flex-none justify-center md:justify-start min-w-0 md:min-w-[200px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               <div className="shrink-0 flex items-center justify-center">
-                <img src={checkatradeLogo} alt="Checkatrade" className="w-8 h-8 md:w-12 md:h-12 object-contain" />
+                <GoogleIcon className="w-8 h-8 md:w-12 md:h-12" />
               </div>
               <div className="text-left">
                 <div className="flex items-center gap-1 mb-0.5 md:mb-1">
@@ -75,7 +71,9 @@ const ReviewShowcase = () => {
                     ))}
                   </div>
                 </div>
-                <div className="text-[8px] md:text-[10px] font-bold text-slate-500 uppercase tracking-wider">Reviews</div>
+                <div className="text-[8px] md:text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                  Public review profile
+                </div>
               </div>
             </a>
           </div>

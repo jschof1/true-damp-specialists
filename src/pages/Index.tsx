@@ -7,20 +7,22 @@ import ServicesGrid from "@/components/ServicesGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProjectGallery from "@/components/ProjectGallery";
 import ServiceAreas from "@/components/ServiceAreas";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
 import { siteSettings } from "@/data/siteSettings";
-import { getSiteContent } from "@/data/content";
+import { getHomeFaqContent, getSiteContent } from "@/data/content";
 
 const Index = () => {
   const site = getSiteContent();
+  const homeFaq = getHomeFaqContent() as {
+    items: { question: string; answer: string }[];
+  };
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: (siteSettings.standardFaqs || []).map((faq) => ({
+    mainEntity: (homeFaq.items || []).map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -50,7 +52,6 @@ const Index = () => {
         <ServicesGrid />
         <ProjectGallery />
         <ServiceAreas />
-        <Testimonials />
         <FAQ />
         <FinalCTA />
       </main>

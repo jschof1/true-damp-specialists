@@ -51,8 +51,8 @@ export interface Service {
 }
 
 const coreAreas = [
-  "Watford",
   "Central London",
+  "Watford",
   "St Albans",
   "High Wycombe",
   "Luton",
@@ -85,8 +85,8 @@ const commonProcess: ServiceProcessStep[] = [
 export const services: Service[] = [
   {
     slug: "independent-damp-mould-surveys",
-    title: "Damp & Mould, Thermal & Salt Analysis",
-    metaTitle: `Damp, Thermal & Salt Analysis ${DEFAULT_AREA} | True Damp Specialists`,
+    title: "Damp & Mould Assessment",
+    metaTitle: `Damp & Mould Assessment ${DEFAULT_AREA} | True Damp Specialists`,
     metaDescription: `Independent damp and mould diagnostics in ${DEFAULT_AREA} using moisture profiling, thermal imaging, mould testing and salt testing. Clear data, visual evidence and defensible conclusions.`,
     icon: Search,
     heroDescription:
@@ -145,26 +145,26 @@ export const services: Service[] = [
   },
   {
     slug: "moisture-diagnostics-building-pathology",
-    title: "Residential Compliance – Awaab's Law",
-    metaTitle: `Awaab's Law & Residential Compliance ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Housing health and Awaab's Law–aligned reporting in ${DEFAULT_AREA} for landlords, housing providers and residents. Clear timeframes, evidence and standards-led documentation.`,
+    title: "Moisture Diagnostics & Building Pathology",
+    metaTitle: `Moisture Diagnostics & Building Pathology ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Moisture diagnostics and building pathology support in ${DEFAULT_AREA}. Evidence-led investigation for unclear damp, moisture movement, and building defect cases.`,
     icon: Scale,
     heroDescription:
-      "Detailed reports aligned with Awaab's Law and current housing health standards, helping landlords, housing providers, and residents meet legislative timeframes and improve living conditions.",
+      "Detailed moisture diagnostics built around how the building is actually performing. Used where the cause is unclear, the moisture mechanism needs proper interpretation, or the problem requires a more technical building-pathology lens.",
     shortDesc:
-      "Reports aligned with Awaab's Law and housing health standards for landlords, providers and residents.",
+      "Evidence-led diagnostics for unclear moisture behaviour, defect pathways, and building-pathology cases.",
     fullDescription: [
-      "This service focuses on residential compliance: documenting damp and mould risk in a way that aligns with Awaab's Law expectations and wider housing health requirements.",
-      "Reports are structured to help landlords, housing providers, managing agents and residents understand severity, timescales and proportionate next steps.",
-      "The aim is defensible documentation that supports timely action and clearer communication between all parties.",
+      "This service is designed for cases where moisture behaviour, construction detail, or defect interaction needs to be broken down properly before the right decision can be made.",
+      "We use evidence-led reasoning to explain what is actually happening within the building fabric, rather than relying on generic damp labels or assumptions.",
+      "The output is a clearer diagnosis, a more defensible explanation, and practical guidance on what should happen next.",
     ],
     features: [
-      "Awaab's Law–aware reporting structure",
-      "Housing health and standards-led framing",
-      "Suitable for landlords, providers and residents",
-      "Clear severity and evidence documentation",
-      "Supports prioritisation within legislative timeframes",
-      "Works alongside technical damp and mould investigation",
+      "Building-pathology-led reasoning",
+      "Moisture mechanism analysis",
+      "Defect interaction and construction context",
+      "Evidence-led reporting",
+      "Clear diagnosis and next-step guidance",
+      "Suitable for technically unclear cases",
     ],
     pricing: [
       {
@@ -205,26 +205,26 @@ export const services: Service[] = [
   },
   {
     slug: "mould-remediation-condensation-control",
-    title: "Commercial & Multi-Occupancy Surveys",
-    metaTitle: `Commercial Damp & COSHH Surveys ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `COSHH-aligned damp and environmental assessments in ${DEFAULT_AREA} for offices, retail, apartments and communal buildings. Evidence-based compliance and risk documentation.`,
+    title: "Condensation & Ventilation Assessment",
+    metaTitle: `Condensation & Ventilation Assessment ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Condensation and ventilation assessment in ${DEFAULT_AREA} for recurring mould, humidity imbalance, cold-surface risk, and indoor moisture problems.`,
     icon: Building2,
     heroDescription:
-      "COSHH-aligned risk assessments, environmental testing, and damp investigations across offices, retail units, apartment blocks, and communal areas. Protecting tenants, staff, and the public through evidence-based compliance.",
+      "Used where mould or condensation is recurring, where internal conditions appear to be driving the issue, or where proper assessment of airflow, humidity, and cold-surface risk is needed.",
     shortDesc:
-      "COSHH-aligned assessments and damp investigations for commercial and multi-occupancy buildings.",
+      "Assessment of humidity, airflow, thermal bridging, and mould risk in condensation-led cases.",
     fullDescription: [
-      "Commercial and shared buildings need surveys that respect occupancy risk, statutory expectations and clear audit trails. We deliver COSHH-aligned risk assessment thinking alongside environmental testing and damp investigation where needed.",
-      "The service covers offices, retail, apartment blocks, communal spaces and similar settings where multiple stakeholders rely on proportionate, documented conclusions.",
-      "Outputs are designed to support duty-holders, facilities teams and residents with evidence-based compliance rather than generic damp sales language.",
+      "This service is for recurring mould and condensation problems where the visible symptoms are only part of the picture.",
+      "We assess humidity behaviour, airflow, thermal bridging, and internal environmental conditions to explain what is actually driving the issue.",
+      "The aim is to produce a diagnosis-led explanation and prevention-focused recommendations rather than a surface-level treatment response.",
     ],
     features: [
-      "COSHH-aligned risk assessment framing",
-      "Environmental testing integrated with damp investigation",
-      "Offices, retail, blocks and communal areas",
-      "Tenant, staff and public safety considerations",
-      "Evidence-based reporting for duty-holders",
-      "Scalable to single assets or portfolios",
+      "Humidity behaviour and dew-point risk",
+      "Ventilation performance review",
+      "Thermal bridging and cold-surface analysis",
+      "Mould cause identification",
+      "Prevention-focused recommendations",
+      "Evidence-led reporting",
     ],
     pricing: [
       {
@@ -265,26 +265,26 @@ export const services: Service[] = [
   },
   {
     slug: "basement-below-ground-waterproofing",
-    title: "Complex Cases & Second Opinions",
-    metaTitle: `Second Opinions & Complex Damp Cases ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Independent second opinions in ${DEFAULT_AREA} for misdiagnosed damp, failed treatments and conflicting reports. Factual review and clear next steps.`,
+    title: "Basement & Below-Ground Waterproofing Assessment",
+    metaTitle: `Basement & Below-Ground Waterproofing Assessment ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Basement and below-ground waterproofing assessment in ${DEFAULT_AREA}, including moisture risk, ingress pathways, and BS 8102-aligned thinking.`,
     icon: GitCompare,
     heroDescription:
-      "We review previous reports, failed treatments, or conflicting findings to provide an impartial, factual second opinion. Ideal for misdiagnosed or long-term damp and mould cases.",
+      "Assessment of below-ground moisture risk, ingress pathways, and waterproofing context for basements and other below-ground structures where the right diagnosis needs to come before the right intervention.",
     shortDesc:
-      "Impartial review of prior reports and treatments for misdiagnosed or long-running damp and mould problems.",
+      "Below-ground and basement assessment with moisture-risk analysis and waterproofing guidance.",
     fullDescription: [
-      "This service is for clients stuck between contradictory advice, repeat failed treatments, or reports that do not match what the building is doing.",
-      "We work through the history, the previous conclusions and the site evidence to produce an independent, factual second opinion.",
-      "It is especially suited to long-term or high-stakes cases where the cost of getting the diagnosis wrong is significant.",
+      "Below-ground moisture problems often need a more specialist waterproofing lens than a standard damp visit can provide.",
+      "We assess likely ingress pathways, existing waterproofing context, construction detail, and the building’s actual risk profile so the next step is properly defined.",
+      "This helps clients avoid generic or misdirected waterproofing recommendations and move toward proportionate, technically grounded decisions.",
     ],
     features: [
-      "Structured review of prior reports and treatments",
-      "Impartial, evidence-led conclusions",
-      "Clarifies conflicting or generic advice",
-      "Suitable for homeowners, landlords and professionals",
-      "Supports dispute resolution and next-step planning",
-      "Can combine with targeted re-survey work",
+      "Below-ground moisture risk assessment",
+      "Ingress pathway analysis",
+      "Waterproofing context and system review",
+      "BS 8102-aligned reasoning",
+      "Evidence-led reporting",
+      "Clear next-step guidance",
     ],
     pricing: [
       {
@@ -325,8 +325,8 @@ export const services: Service[] = [
   },
   {
     slug: "external-defects-drainage-weathering",
-    title: "Invasive, CCTV & Drainage Investigations",
-    metaTitle: `Invasive & CCTV Drainage Surveys ${DEFAULT_AREA} | True Damp Specialists`,
+    title: "Leak, Drainage & External Defect Investigation",
+    metaTitle: `Leak, Drainage & External Defect Investigation ${DEFAULT_AREA} | True Damp Specialists`,
     metaDescription: `Selective invasive investigation and CCTV drainage surveys in ${DEFAULT_AREA} where surface readings are insufficient. Photo and video evidence for hidden ingress and defects.`,
     icon: Camera,
     heroDescription:
@@ -385,26 +385,26 @@ export const services: Service[] = [
   },
   {
     slug: "remedial-specifications-project-support",
-    title: "Pre-Purchase Surveys & Remediation Planning",
-    metaTitle: `Pre-Purchase Damp Surveys ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Pre-purchase damp surveys and remediation planning in ${DEFAULT_AREA}. Independent advice before sale or works, aligned with BS 8102, BS 5250 and PCA methodology.`,
+    title: "Remedial Specifications & Project Support",
+    metaTitle: `Remedial Specifications & Project Support ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Remedial specifications and project support in ${DEFAULT_AREA}, with clear scopes, contractor guidance, and diagnosis-led next-step planning.`,
     icon: ClipboardList,
     heroDescription:
-      "For buyers and homeowners, we deliver clear, independent advice before works or sales — including cost guidance and remedial design plans built around BS 8102, BS 5250, and PCA methodology.",
+      "Clear remedial specifications and project support where the diagnosis is already known and the next step needs to be defined, scoped, or reviewed properly.",
     shortDesc:
-      "Independent pre-purchase advice and remediation planning with BS-aligned remedial design thinking.",
+      "Diagnosis-led remedial scopes, contractor guidance, and next-step project support.",
     fullDescription: [
-      "Buying or selling a property with damp or mould risk needs proportionate, independent advice before money is committed to the wrong works.",
-      "This service delivers clear findings before purchase or major works, with cost guidance and remedial design planning framed around BS 8102, BS 5250 and PCA methodology where applicable.",
-      "Outputs help buyers, vendors and homeowners negotiate fairly and instruct contractors with a defensible scope.",
+      "This service is for cases where the problem has been identified and the client needs help defining what should actually happen next.",
+      "We produce clearer scopes, review suggested works, and help clients understand whether proposed contractor actions align with the diagnosis.",
+      "The aim is controlled, proportionate implementation support rather than vague or over-specified remedial advice.",
     ],
     features: [
-      "Pre-purchase and pre-works independent advice",
-      "Remediation planning and scope clarity",
-      "BS 8102, BS 5250 and PCA-aligned thinking",
-      "Indicative cost guidance categories",
-      "Supports conveyancing and project budgeting",
-      "Reduces risk of repeat failed treatments",
+      "Remedial scope definition",
+      "Contractor review and guidance",
+      "Project support after diagnosis",
+      "Clear written recommendations",
+      "Proportionate next-step planning",
+      "Reduced risk of wrong or unnecessary works",
     ],
     pricing: [
       {

@@ -1,41 +1,33 @@
-import { Award, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import { FileText, Search, ShieldCheck } from "lucide-react";
 import GoogleIcon from "./GoogleIcon";
 import { siteSettings } from "@/data/siteSettings";
 import theme from "@/config/theme";
 
-interface TrustBarProps {
-  emergencyTime?: string;
-  areaName?: string;
-}
-
-const TrustBar = ({ emergencyTime, areaName }: TrustBarProps) => {
-  const displayTime = emergencyTime || "<60";
-  const displayArea = areaName || siteSettings.addressDetails.addressRegion;
-  
+const TrustBar = () => {
   const trustItems = [
     {
       icon: GoogleIcon,
-      value: siteSettings.googleRating ? siteSettings.googleRating.split("/")[0] : "Google",
+      value: siteSettings.googleRating ? siteSettings.googleRating.split("/")[0] : "Public",
       label: "Reviews",
-      subtext: siteSettings.reviewCount ? `${siteSettings.reviewCount} Reviews` : "View on Google",
+      subtext: siteSettings.reviewCount ? `${siteSettings.reviewCount} approved reviews` : "View public profile",
     },
     {
-      icon: Sparkles,
-      value: "Premium",
-      label: "Materials",
-      subtext: "Architectural vinyl",
+      icon: ShieldCheck,
+      value: "Independent",
+      label: "Advice",
+      subtext: "No treatment-led sales",
     },
     {
-      icon: Award,
-      value: "15+",
-      label: "Years Experience",
-      subtext: "Expert workmanship",
+      icon: Search,
+      value: "Evidence-led",
+      label: "Diagnosis",
+      subtext: "Moisture profiling and building analysis",
     },
     {
-      icon: Clock,
-      value: displayTime,
-      label: "Min Response",
-      subtext: `In ${displayArea}`,
+      icon: FileText,
+      value: "Specialist",
+      label: "Cases",
+      subtext: "Often instructed after failed or unclear previous advice",
     },
   ];
 
@@ -88,7 +80,7 @@ const TrustBar = ({ emergencyTime, areaName }: TrustBarProps) => {
               }}
             >
               <ShieldCheck className="w-3 h-3" />
-              Why Choose Us
+              Why clients come to us
             </div>
             
             <div 
@@ -100,11 +92,11 @@ const TrustBar = ({ emergencyTime, areaName }: TrustBarProps) => {
                 '--hover-shadow': theme.effects.shadows.accentGlow
               } as React.CSSProperties}
             >
-              <span className="text-sm font-bold text-foreground/90">Minimal mess</span>
+              <span className="text-sm font-bold text-foreground/90">Independent</span>
               <span className="text-accent">•</span>
-              <span className="text-sm font-bold text-foreground/90">Quick turnaround</span>
+              <span className="text-sm font-bold text-foreground/90">Evidence-led</span>
               <span className="text-accent">•</span>
-              <span className="text-sm font-bold text-foreground/90">Attention to detail</span>
+              <span className="text-sm font-bold text-foreground/90">Clear reporting</span>
             </div>
           </div>
 
