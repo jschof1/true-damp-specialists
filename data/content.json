@@ -1,29 +1,103 @@
 {
   "formServiceOptions": [
-    { "value": "damp-moisture-concern", "label": "Damp / moisture concern" },
-    { "value": "mould-condensation", "label": "Mould / condensation" },
-    { "value": "leak-escape-of-water", "label": "Leak / escape of water" },
-    { "value": "pre-purchase-survey", "label": "Pre-purchase survey" },
-    { "value": "second-opinion", "label": "Second opinion (previous advice received)" },
-    { "value": "previous-works-failed", "label": "Ongoing issue / previous works failed" },
-    { "value": "basement-waterproofing", "label": "Basement / waterproofing concern" },
-    { "value": "other", "label": "Other" }
+    {
+      "value": "damp-moisture-concern",
+      "label": "Damp / moisture concern"
+    },
+    {
+      "value": "mould-condensation",
+      "label": "Mould / condensation"
+    },
+    {
+      "value": "leak-escape-of-water",
+      "label": "Leak / escape of water"
+    },
+    {
+      "value": "pre-purchase-survey",
+      "label": "Pre-purchase survey"
+    },
+    {
+      "value": "second-opinion",
+      "label": "Second opinion (previous advice received)"
+    },
+    {
+      "value": "previous-works-failed",
+      "label": "Ongoing issue / previous works failed"
+    },
+    {
+      "value": "basement-waterproofing",
+      "label": "Basement / waterproofing concern"
+    },
+    {
+      "value": "other",
+      "label": "Other"
+    }
   ],
   "formServicePlaceholder": "Select the issue you need help with",
   "formServiceLabel": "What do you need help with?",
   "quoteServiceOptions": [
-    { "id": "independent-damp-mould-surveys", "label": "Thermal & salt analysis", "description": "Moisture profiling, thermal imaging, mould and salt testing", "icon": "clipboard" },
-    { "id": "moisture-diagnostics-building-pathology", "label": "Awaab's Law compliance", "description": "Residential reports aligned with housing health standards", "icon": "scan" },
-    { "id": "mould-remediation-condensation-control", "label": "Commercial surveys", "description": "COSHH-aligned assessments and multi-occupancy investigations", "icon": "wind" },
-    { "id": "basement-below-ground-waterproofing", "label": "Second opinions", "description": "Review of failed treatments, conflicting reports and complex cases", "icon": "building" },
-    { "id": "external-defects-drainage-weathering", "label": "Invasive & CCTV", "description": "Selective exposure and drainage CCTV with full documentation", "icon": "droplets" },
-    { "id": "remedial-specifications-project-support", "label": "Pre-purchase planning", "description": "Advice before sale or works with BS-aligned remedial plans", "icon": "file-text" },
-    { "id": "other", "label": "Other Enquiry", "description": "General advice or enquiries that do not fit the list above", "icon": "message-circle" }
+    {
+      "id": "independent-damp-mould-surveys",
+      "label": "Thermal & salt analysis",
+      "description": "Moisture profiling, thermal imaging, mould and salt testing",
+      "icon": "clipboard"
+    },
+    {
+      "id": "moisture-diagnostics-building-pathology",
+      "label": "Awaab's Law compliance",
+      "description": "Residential reports aligned with housing health standards",
+      "icon": "scan"
+    },
+    {
+      "id": "mould-remediation-condensation-control",
+      "label": "Commercial surveys",
+      "description": "COSHH-aligned assessments and multi-occupancy investigations",
+      "icon": "wind"
+    },
+    {
+      "id": "basement-below-ground-waterproofing",
+      "label": "Second opinions",
+      "description": "Review of failed treatments, conflicting reports and complex cases",
+      "icon": "building"
+    },
+    {
+      "id": "external-defects-drainage-weathering",
+      "label": "Invasive & CCTV",
+      "description": "Selective exposure and drainage CCTV with full documentation",
+      "icon": "droplets"
+    },
+    {
+      "id": "remedial-specifications-project-support",
+      "label": "Pre-purchase planning",
+      "description": "Advice before sale or works with BS-aligned remedial plans",
+      "icon": "file-text"
+    },
+    {
+      "id": "other",
+      "label": "Other Enquiry",
+      "description": "General advice or enquiries that do not fit the list above",
+      "icon": "message-circle"
+    }
   ],
   "quoteUrgencyOptions": [
-    { "id": "urgent", "label": "Urgent", "description": "A live issue or active concern", "color": "bg-red-500" },
-    { "id": "soon", "label": "Soon", "description": "Need clarity in the next few weeks", "color": "bg-amber-500" },
-    { "id": "planned", "label": "Planning", "description": "Pre-purchase, project planning or second opinion", "color": "bg-green-500" }
+    {
+      "id": "urgent",
+      "label": "Urgent",
+      "description": "A live issue or active concern",
+      "color": "bg-red-500"
+    },
+    {
+      "id": "soon",
+      "label": "Soon",
+      "description": "Need clarity in the next few weeks",
+      "color": "bg-amber-500"
+    },
+    {
+      "id": "planned",
+      "label": "Planning",
+      "description": "Pre-purchase, project planning or second opinion",
+      "color": "bg-green-500"
+    }
   ],
   "quoteFormLabels": {
     "step1Title": "What type of issue are you dealing with?",
@@ -60,9 +134,15 @@
     "issueDescriptionLabel": "Brief description of the issue",
     "issueDescriptionPlaceholder": "A brief description of the issue",
     "badges": [
-      { "text": "Independent of product sales" },
-      { "text": "PCA-trained surveyors" },
-      { "text": "Evidence-led reporting" }
+      {
+        "text": "Independent of product sales"
+      },
+      {
+        "text": "PCA-trained surveyors"
+      },
+      {
+        "text": "Evidence-led reporting"
+      }
     ]
   },
   "whyChooseUs": {
@@ -98,10 +178,22 @@
       }
     ],
     "stats": [
-      { "value": "Independent", "label": "No sales agenda" },
-      { "value": "Evidence-led", "label": "Diagnosis first" },
-      { "value": "Specialist cases", "label": "Failed previous advice" },
-      { "value": "Clear reporting", "label": "Practical next steps" }
+      {
+        "value": "Independent",
+        "label": "No sales agenda"
+      },
+      {
+        "value": "Evidence-led",
+        "label": "Diagnosis first"
+      },
+      {
+        "value": "Specialist cases",
+        "label": "Failed previous advice"
+      },
+      {
+        "value": "Clear reporting",
+        "label": "Practical next steps"
+      }
     ]
   },
   "services": {
@@ -221,10 +313,22 @@
       "ctaSecondary": "View Services"
     },
     "trustStats": [
-      { "value": "Independent", "label": "Not tied to products or treatments" },
-      { "value": "Evidence-led", "label": "Moisture profiling, thermal imaging and building analysis" },
-      { "value": "Specialist cases", "label": "Often instructed after failed or unclear previous advice" },
-      { "value": "Clear outcomes", "label": "Diagnosis, explanation and practical next steps" }
+      {
+        "value": "Independent",
+        "label": "Not tied to products or treatments"
+      },
+      {
+        "value": "Evidence-led",
+        "label": "Moisture profiling, thermal imaging and building analysis"
+      },
+      {
+        "value": "Specialist cases",
+        "label": "Often instructed after failed or unclear previous advice"
+      },
+      {
+        "value": "Clear outcomes",
+        "label": "Diagnosis, explanation and practical next steps"
+      }
     ],
     "coreServices": {
       "title": "Services built around real decisions",
@@ -480,10 +584,22 @@
       "ctaSecondary": "Request Advice"
     },
     "supportBadges": [
-      { "label": "Independent", "desc": "No treatment-led sales" },
-      { "label": "Evidence-Led", "desc": "Technical reasoning and reporting" },
-      { "label": "Second Opinions", "desc": "For failed or unclear cases" },
-      { "label": "Broad Client Mix", "desc": "Home, landlord and commercial" }
+      {
+        "label": "Independent",
+        "desc": "No treatment-led sales"
+      },
+      {
+        "label": "Evidence-Led",
+        "desc": "Technical reasoning and reporting"
+      },
+      {
+        "label": "Second Opinions",
+        "desc": "For failed or unclear cases"
+      },
+      {
+        "label": "Broad Client Mix",
+        "desc": "Home, landlord and commercial"
+      }
     ]
   },
   "contactPage": {
@@ -644,9 +760,21 @@
       "title": "How a case usually progresses",
       "description": "Getting clear answers in {areaName} should not feel vague or sales-led. The process is structured around evidence, explanation and practical next steps.",
       "steps": [
-        { "step": "01", "title": "Understand the symptoms", "desc": "We look at what is being seen, what has already been tried and what decision needs to be made in {areaName}." },
-        { "step": "02", "title": "Inspect and analyse", "desc": "We gather the right evidence, assess likely causes and compare the findings against the building context." },
-        { "step": "03", "title": "Report and recommend", "desc": "You get clearer reasoning, practical recommendations and a stronger basis for whatever comes next." }
+        {
+          "step": "01",
+          "title": "Understand the symptoms",
+          "desc": "We look at what is being seen, what has already been tried and what decision needs to be made in {areaName}."
+        },
+        {
+          "step": "02",
+          "title": "Inspect and analyse",
+          "desc": "We gather the right evidence, assess likely causes and compare the findings against the building context."
+        },
+        {
+          "step": "03",
+          "title": "Report and recommend",
+          "desc": "You get clearer reasoning, practical recommendations and a stronger basis for whatever comes next."
+        }
       ]
     },
     "faq": {
@@ -660,7 +788,10 @@
     "finalCTA": {
       "title": "Need independent damp advice in {areaName}?",
       "description": "Talk through the issue, the building and any previous advice, and we can help you choose the right next step.",
-      "points": ["Independent diagnosis", "Clear reporting"]
+      "points": [
+        "Independent diagnosis",
+        "Clear reporting"
+      ]
     }
   },
   "serviceDetailPage": {
@@ -731,7 +862,13 @@
     "gallery": {
       "title": "Selected case-study themes",
       "description": "A curated mix of generated atmosphere, real proof imagery and case-study framing to show what kind of work and reasoning the business is trusted for.",
-      "categories": ["All", "Surveys", "Mould", "Waterproofing", "External Defects"]
+      "categories": [
+        "All",
+        "Surveys",
+        "Mould",
+        "Waterproofing",
+        "External Defects"
+      ]
     },
     "cta": {
       "title": "Need clarity on your own property issue?",
@@ -760,10 +897,26 @@
     },
     "trustStrip": {
       "items": [
-        { "label": "Public review profile", "value": "5.0 average", "hint": "Verified Google reviews" },
-        { "label": "Experience", "value": "Broad", "hint": "Across private homes, developers, and housing providers" },
-        { "label": "Fully insured", "value": "PI Covered", "hint": "Consultancy and reporting services" },
-        { "label": "Qualifications", "value": "PCA & CSCS", "hint": "All surveys by trained, qualified professionals" }
+        {
+          "label": "Public review profile",
+          "value": "5.0 average",
+          "hint": "Verified Google reviews"
+        },
+        {
+          "label": "Experience",
+          "value": "Broad",
+          "hint": "Across private homes, developers, and housing providers"
+        },
+        {
+          "label": "Fully insured",
+          "value": "PI Covered",
+          "hint": "Consultancy and reporting services"
+        },
+        {
+          "label": "Qualifications",
+          "value": "PCA & CSCS",
+          "hint": "All surveys by trained, qualified professionals"
+        }
       ]
     },
     "positioningStrip": {
@@ -1011,8 +1164,14 @@
     "servingLine": "National Coverage • London • Home Counties • Midlands",
     "connectHeading": "Connect with us",
     "socialLinks": [
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/" },
-      { "label": "Instagram", "href": "https://www.instagram.com/" }
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/"
+      }
     ],
     "description": "We focus on identifying the cause of moisture problems — not selling treatments — giving you clear, evidence-led guidance you can rely on.",
     "quickLinks": "Quick Links",
@@ -1026,7 +1185,11 @@
     "coverageNote": "We also take on specialist projects further afield where required.",
     "rights": "© 2025 True Damp Specialists. All rights reserved.",
     "services": [],
-    "popularAreas": ["London", "Home Counties", "Midlands"]
+    "popularAreas": [
+      "London",
+      "Home Counties",
+      "Midlands"
+    ]
   },
   "reviewsPage": {
     "hero": {
@@ -1045,10 +1208,22 @@
       "subtitle": "What Clients Value",
       "title": "What Clients Value",
       "items": [
-        { "title": "Clear Diagnosis, Not Assumptions", "desc": "Clients consistently highlight the clarity of explanation — understanding what is happening within the building and why." },
-        { "title": "Root Cause Identified", "desc": "Issues are assessed in terms of moisture behaviour and building performance, not just surface symptoms." },
-        { "title": "Detailed Reporting", "desc": "Reports are structured to support decision-making, contractor pricing, and where required, insurance submissions." },
-        { "title": "Practical Next Steps", "desc": "Clear, realistic recommendations without unnecessary or over-specified works." }
+        {
+          "title": "Clear Diagnosis, Not Assumptions",
+          "desc": "Clients consistently highlight the clarity of explanation — understanding what is happening within the building and why."
+        },
+        {
+          "title": "Root Cause Identified",
+          "desc": "Issues are assessed in terms of moisture behaviour and building performance, not just surface symptoms."
+        },
+        {
+          "title": "Detailed Reporting",
+          "desc": "Reports are structured to support decision-making, contractor pricing, and where required, insurance submissions."
+        },
+        {
+          "title": "Practical Next Steps",
+          "desc": "Clear, realistic recommendations without unnecessary or over-specified works."
+        }
       ]
     },
     "latestReviews": {
@@ -1123,56 +1298,56 @@
     "viewAllText": "View All Work",
     "projects": [
       {
-        "title": "Independent damp survey for a repeated mould complaint",
+        "title": "Grade II listed terrace — external moisture, not rising damp",
         "location": "London",
-        "description": "A diagnosis-led review of recurring mould where previous advice had focused on treatment rather than cause.",
+        "description": "A mid-19th century listed property where previous contractors had proposed chemical damp proofing and internal tanking. Our investigation found the moisture was caused by external water management failures and lateral ingress, not rising damp. We recommended a source-first strategy focusing on external drainage rather than internal barriers that could damage the historic fabric.",
         "type": "completed",
-        "tag": "Independent Survey",
+        "tag": "Heritage & Listed",
         "imageKey": "independentSurveyCase",
         "slug": "independent-damp-mould-surveys"
       },
       {
-        "title": "Condensation and ventilation review in an occupied home",
+        "title": "Escape of water in converted factory flat",
         "location": "St Albans",
-        "description": "Assessment of humidity, ventilation and building context to separate lifestyle assumptions from actual building performance issues.",
+        "description": "Visible floor distortion, fungal growth at the bathroom doorway, and ceiling staining in the property below. Our investigation identified a concealed leak behind the WC installation within a service void. Water had migrated laterally through the floor structure and vertically downwards. We provided a clear remedial plan covering leak repair, structural drying, and reinstatement.",
         "type": "completed",
-        "tag": "Mould & Condensation",
+        "tag": "Escape of Water",
         "imageKey": "condensationControlCase",
         "slug": "mould-remediation-condensation-control"
       },
       {
-        "title": "Below-ground waterproofing assessment",
-        "location": "Central London",
-        "description": "Specialist review of basement moisture risk and likely waterproofing strategy with BS 8102 thinking in view.",
+        "title": "Listed barn conversion — no active dampness confirmed",
+        "location": "Milton Keynes",
+        "description": "A Grade II listed agricultural barn conversion flagged for suspected dampness and timber deterioration in a prior RICS Level 3 survey. Our investigation found no evidence of active moisture defects — the readings were consistent with the inherent characteristics of traditional vapour-permeable construction. We recommended ongoing monitoring and conservation-aligned maintenance rather than unnecessary treatment.",
         "type": "completed",
-        "tag": "Waterproofing",
+        "tag": "Heritage & Listed",
         "imageKey": "waterproofingCase",
         "slug": "basement-below-ground-waterproofing"
       },
       {
-        "title": "External defect and rainwater investigation",
+        "title": "Second opinion overturns recommended damp treatment",
         "location": "High Wycombe",
-        "description": "Defect-led assessment of masonry junctions, rainwater goods and likely external ingress pathways.",
+        "description": "A homeowner had been quoted for chemical damp proofing and membrane installation by a treatment company. Our independent survey identified external defect and rainwater ingress as the primary moisture source — not rising damp. By addressing the external drainage and junction detailing, the moisture issue was resolved without any internal treatment or disruption.",
         "type": "completed",
-        "tag": "External Defects",
+        "tag": "Second Opinion",
         "imageKey": "externalDefectsCase",
         "slug": "external-defects-drainage-weathering"
       },
       {
-        "title": "Second opinion after failed treatment",
+        "title": "Repeated mould complaint traced to ventilation failure",
         "location": "Luton",
-        "description": "A re-evaluation of a property where prior damp treatment had not addressed the true moisture mechanism.",
+        "description": "A landlord facing repeated mould complaints from tenants. Previous contractors had treated the mould cosmetically without identifying the cause. Our assessment found the mould was driven by inadequate ventilation and excess humidity, not building defects. We provided a clear ventilation strategy and monitoring plan that resolved the issue at a fraction of the previous quoted cost.",
         "type": "completed",
-        "tag": "Second Opinion",
+        "tag": "Mould & Condensation",
         "imageKey": "secondOpinionCase",
         "slug": "moisture-diagnostics-building-pathology"
       },
       {
-        "title": "Remedial specification and scope planning",
+        "title": "Remedial specification for complex basement moisture",
         "location": "Oxford",
-        "description": "Clear scope and next-step planning designed to help the client instruct the right works with less guesswork.",
+        "description": "A property with complex below-ground moisture issues where multiple contractors had given conflicting advice. Our BS 8102-aligned investigation identified the specific moisture pathways and provided a clear, prioritised remedial specification. The client was able to instruct the right specialist works with confidence and less guesswork.",
         "type": "completed",
-        "tag": "Project Support",
+        "tag": "Waterproofing",
         "imageKey": "projectSupportCase",
         "slug": "remedial-specifications-project-support"
       }
