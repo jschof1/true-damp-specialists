@@ -6,6 +6,8 @@ import MobileCallButton from "@/components/MobileCallButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { siteSettings } from "@/data/siteSettings";
+import { services } from "@/data/services";
+import { getServiceDestination } from "@/lib/serviceLinks";
 import { ArrowRight, CheckCircle2, FileText, Phone, Search, ShieldCheck } from "lucide-react";
 import ctaBackground from "@/assets/general/damp-survey-thermal-imaging.webp";
 import { getServicesPageContent } from "@/data/content";
@@ -177,6 +179,38 @@ const ServicesPage = () => {
                     ) : null}
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+
+            <div className="mt-14 text-center">
+              <h3 className="font-display text-2xl font-black text-foreground md:text-3xl">
+                Core Service Pages
+              </h3>
+              <p className="mt-4 text-base text-muted-foreground md:text-lg">
+                The existing detailed service pages remain in place and can still be browsed below.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  to={getServiceDestination(service.slug)}
+                  className="block rounded-lg no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  <Card className="h-full border-2 border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
+                    <CardContent className="p-6">
+                      <h3 className="font-display text-xl font-bold text-foreground">{service.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {service.shortDesc}
+                      </p>
+                      <div className="mt-4 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-accent">
+                        <span>View details</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

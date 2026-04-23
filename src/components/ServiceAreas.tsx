@@ -1,11 +1,17 @@
 import { MapPin, Phone, CheckCircle2, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { areas } from "@/data/areas";
 import { getServiceAreasContent, getSectionCtaLabel } from "@/data/content";
 import theme from "@/config/theme";
 
 const ServiceAreas = () => {
   const serviceAreas = getServiceAreasContent();
+  const regions = serviceAreas.regions.map((region) => ({
+    ...region,
+    locations: areas.filter((a) => a.region === region.id),
+  }));
 
   return (
     <section
@@ -157,6 +163,54 @@ const ServiceAreas = () => {
               </Button>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {regions.map((region) => (
+            <Card
+              key={region.id}
+              className="border bg-transparent shadow-none"
+              style={{
+                backgroundColor: theme.colors.primary[800].replace(')', ' / 0.45)'),
+                borderColor: theme.colors.accent.DEFAULT.replace(')', ' / 0.25)')
+              }}
+            >
+              <CardContent className="p-5">
+                <div className="mb-4 flex items-center gap-3">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-lg"
+                    style={{ backgroundColor: theme.colors.primary[900] }}
+                  >
+                    <Navigation className="h-5 w-5" style={{ color: theme.colors.accent.DEFAULT }} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-black" style={{ color: theme.surfaces.primaryForeground }}>
+                      {region.label}
+                    </h3>
+                    <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: theme.colors.accent.DEFAULT }}>
+                      {region.id}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {region.locations.map((area) => (
+                    <Link
+                      key={area.slug}
+                      to={`/locations/${area.slug}`}
+                      className="rounded-md px-2.5 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors"
+                      style={{
+                        backgroundColor: theme.colors.primary[900],
+                        color: theme.colors.secondary[200],
+                        border: `${theme.borders.width.thin} solid ${theme.colors.accent.DEFAULT.replace(')', ' / 0.2)')}`
+                      }}
+                    >
+                      {area.name}
+                    </Link>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

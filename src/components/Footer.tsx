@@ -1,6 +1,7 @@
 import { Clock, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBar from "@/components/TrustBar";
+import { areas } from "@/data/areas";
 import { getFooterContent, getSiteContent } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
 
@@ -18,9 +19,12 @@ const Footer = () => {
     projectSupportDescription?: string;
     coverageDescription?: string;
     coverageNote?: string;
+    popularAreas?: string[];
     rights?: string;
   };
   const site = getSiteContent() as { webDisplay?: string };
+  const popularAreaNames = footer.popularAreas ?? [];
+  const popularAreas = areas.filter((area) => popularAreaNames.includes(area.name));
 
   return (
     <>
@@ -84,10 +88,14 @@ const Footer = () => {
 
             <div>
               <p className="mb-4 font-display text-lg font-bold text-accent">{footer.areasCovered}</p>
-              <ul className="space-y-2 text-sm text-primary-foreground/70">
-                <li>London</li>
-                <li>Home Counties</li>
-                <li>Midlands</li>
+              <ul className="space-y-2 text-sm">
+                {popularAreas.map((area) => (
+                  <li key={area.slug}>
+                    <Link to={`/locations/${area.slug}`} className="text-primary-foreground/70 hover:text-accent">
+                      {area.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               {footer.coverageNote ? (
                 <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
