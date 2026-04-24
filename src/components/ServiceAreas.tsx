@@ -152,6 +152,7 @@ const ServiceAreas = () => {
                 size="default"
                 className="font-black text-base h-14 uppercase tracking-wider w-full sm:w-auto border-2"
                 style={{
+                  backgroundColor: 'transparent',
                   borderColor: theme.surfaces.primaryForeground,
                   color: theme.surfaces.primaryForeground
                 } as React.CSSProperties}
