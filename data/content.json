@@ -355,6 +355,7 @@
     },
     "serviceCards": [
       {
+        "slug": "independent-damp-mould-surveys",
         "title": "Moisture, Damp & Mould Assessment",
         "description": "Used where damp, mould or condensation is present and the cause is unclear.\n\nWe assess moisture behaviour, identify the source, and explain what is actually happening — not just the symptoms.",
         "includes": [
@@ -366,6 +367,7 @@
         "note": "Where relevant, assessment considers principles aligned with BS 6576 for ground-related moisture behaviour."
       },
       {
+        "slug": "mould-remediation-condensation-control",
         "title": "Condensation & Ventilation Assessment",
         "description": "Used where mould or condensation is recurring or linked to internal conditions.\n\nWe assess humidity, airflow, and cold surface risk to identify the root cause.",
         "includes": [
@@ -377,6 +379,7 @@
         "note": "Assessments are informed by BS 5250 principles for condensation and moisture control."
       },
       {
+        "slug": "external-defects-drainage-weathering",
         "title": "Leak Investigation & Water Ingress",
         "description": "Used where water ingress is suspected from plumbing, roofing or external defects.\n\nWe identify the source and clearly distinguish between cause and resulting damage.",
         "includes": [
@@ -388,6 +391,7 @@
         "note": "Reporting is structured to support insurance claims, clearly defining cause, extent and required action."
       },
       {
+        "slug": "basement-below-ground-waterproofing",
         "title": "External & Waterproofing Assessment",
         "description": "Used where water ingress is linked to external construction, ground levels or waterproofing systems.\n\nIncludes terraces, façades, balconies and below-ground structures.",
         "includes": [
@@ -399,6 +403,7 @@
         "note": "Assessments are aligned with BS 8102 guidance for below-ground and structural waterproofing."
       },
       {
+        "slug": "independent-damp-mould-surveys",
         "title": "Heritage Building Assessment & Planning Support",
         "description": "Used for older or traditionally constructed buildings where modern damp treatments are often inappropriate.\n\nWe assess moisture behaviour and provide guidance suitable for conservation and planning.",
         "includes": [
@@ -409,6 +414,7 @@
         ]
       },
       {
+        "slug": "external-defects-drainage-weathering",
         "title": "Complex Investigations & Intrusive Assessment",
         "description": "Used where the cause of moisture cannot be confirmed through non-invasive inspection alone.\n\nWe carry out targeted investigation to verify construction and identify hidden defects.",
         "includes": [
@@ -420,6 +426,7 @@
         ]
       },
       {
+        "slug": "moisture-diagnostics-building-pathology",
         "title": "Complex Cases & Second Opinions",
         "description": "Used where previous reports or treatments have not resolved the issue.\n\nWe provide an independent review to identify misdiagnosis and establish the correct approach.",
         "includes": [
@@ -431,6 +438,7 @@
         "note": "Often instructed where insurance claims have been disputed or where previous reports have lacked clarity."
       },
       {
+        "slug": "remedial-specifications-project-support",
         "title": "Pre-Purchase Risk Assessments",
         "description": "Used by buyers who need clarity before committing.\n\nWe identify risks, likely costs, and whether issues are manageable.",
         "includes": [
@@ -441,6 +449,7 @@
         ]
       },
       {
+        "slug": "moisture-diagnostics-building-pathology",
         "title": "Commercial & Compliance Assessments",
         "description": "Used for landlords, agents and commercial buildings requiring structured reporting.\n\nAligned with compliance requirements and risk management.",
         "includes": [

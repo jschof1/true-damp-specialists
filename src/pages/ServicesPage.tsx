@@ -24,6 +24,7 @@ const ServicesPage = () => {
     trustStats: { value: string; label: string }[];
     coreServices: { title: string; description: string };
     serviceCards: {
+      slug: string;
       title: string;
       description: string;
       includes: string[];
@@ -57,6 +58,15 @@ const ServicesPage = () => {
     provider: {
       "@id": `${siteSettings.baseUrl}/#organization`,
     },
+  };
+
+  const serviceImages: Record<string, string> = {
+    "independent-damp-mould-surveys": "/assets/true-damp-service-survey.jpeg",
+    "moisture-diagnostics-building-pathology": "/assets/true-damp-service-diagnostics.jpeg",
+    "mould-remediation-condensation-control": "/assets/true-damp-service-mould.jpeg",
+    "basement-below-ground-waterproofing": "/assets/true-damp-service-waterproofing.jpeg",
+    "external-defects-drainage-weathering": "/assets/true-damp-service-external.jpeg",
+    "remedial-specifications-project-support": "/assets/true-damp-service-specifications.jpeg",
   };
 
   const trustIcons = [ShieldCheck, Search, FileText, CheckCircle2];
@@ -150,68 +160,122 @@ const ServicesPage = () => {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {servicesPage.serviceCards.map((card) => (
-                <Card key={card.title} className="h-full border-2 border-border bg-card shadow-sm">
-                  <CardContent className="p-6">
-                    <h3 className="font-display text-xl font-black text-foreground">{card.title}</h3>
-                    <div className="mt-4 space-y-4">
-                      {card.description.split("\n\n").map((paragraph) => (
-                        <p key={paragraph} className="text-sm leading-relaxed text-muted-foreground">
-                          {paragraph}
-                        </p>
-                      ))}
+              {servicesPage.serviceCards.map((card) => {
+                const img = serviceImages[card.slug] ?? "/assets/true-damp-service-survey.jpeg";
+                return (
+                  <Card key={card.title} className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col">
+                    <div className="relative h-48 overflow-hidden shrink-0">
+                      <img
+                        src={img}
+                        alt={card.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                        width={600}
+                        height={400}
+                        decoding="async"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
+                        aria-hidden
+                      />
                     </div>
-                    <div className="mt-5">
-                      <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Includes</p>
-                      <ul className="space-y-2">
-                        {card.includes.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm text-foreground">
-                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                            <span>{item}</span>
-                          </li>
+                    <CardContent className="p-6 border-t-4 border-accent flex flex-col flex-1">
+                      <h3 className="font-display text-xl font-black text-foreground mb-4">{card.title}</h3>
+                      <div className="space-y-3 mb-5">
+                        {card.description.split("\n\n").map((paragraph) => (
+                          <p key={paragraph} className="text-sm leading-relaxed text-muted-foreground">
+                            {paragraph}
+                          </p>
                         ))}
-                      </ul>
-                    </div>
-                    {card.note ? (
-                      <p className="mt-5 rounded-xl bg-muted px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-                        {card.note}
-                      </p>
-                    ) : null}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-14 text-center">
-              <h3 className="font-display text-2xl font-black text-foreground md:text-3xl">
-                Core Service Pages
-              </h3>
-              <p className="mt-4 text-base text-muted-foreground md:text-lg">
-                The existing detailed service pages remain in place and can still be browsed below.
-              </p>
-            </div>
-
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  to={getServiceDestination(service.slug)}
-                  className="block rounded-lg no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                >
-                  <Card className="h-full border-2 border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg">
-                    <CardContent className="p-6">
-                      <h3 className="font-display text-xl font-bold text-foreground">{service.title}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                        {service.shortDesc}
-                      </p>
-                      <div className="mt-4 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-accent">
-                        <span>View details</span>
-                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                      <div className="mb-5">
+                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Includes</p>
+                        <ul className="space-y-2">
+                          {card.includes.map((item) => (
+                            <li key={item} className="flex items-start gap-2 text-sm text-foreground">
+                              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      {card.note ? (
+                        <p className="mb-5 rounded-xl bg-muted px-4 py-3 text-sm leading-relaxed text-muted-foreground">
+                          {card.note}
+                        </p>
+                      ) : null}
+                      <div className="mt-auto flex gap-3">
+                        <Button
+                          asChild
+                          size="sm"
+                          className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
+                        >
+                          <Link to={`/get-quote?service=${card.slug}`}>Enquire</Link>
+                        </Button>
+                        <Button
+                          asChild
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 border-border text-foreground hover:bg-muted hover:border-accent/40 font-semibold rounded-lg"
+                        >
+                          <Link to={getServiceDestination(card.slug)}>Learn More</Link>
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
-              ))}
+                );
+              })}
+            </div>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => {
+                const img = serviceImages[service.slug] ?? "/assets/true-damp-service-survey.jpeg";
+                return (
+                  <Card
+                    key={service.slug}
+                    className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col"
+                  >
+                    <div className="relative h-48 overflow-hidden shrink-0">
+                      <img
+                        src={img}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                        width={600}
+                        height={400}
+                        decoding="async"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
+                        aria-hidden
+                      />
+                    </div>
+                    <CardContent className="p-6 border-t-4 border-accent flex flex-col flex-1">
+                      <h3 className="font-display text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                      <p className="text-sm leading-relaxed text-muted-foreground flex-1 mb-5">
+                        {service.shortDesc}
+                      </p>
+                      <div className="flex gap-3">
+                        <Button
+                          asChild
+                          size="sm"
+                          className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
+                        >
+                          <Link to={`/get-quote?service=${service.slug}`}>Enquire</Link>
+                        </Button>
+                        <Button
+                          asChild
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 border-border text-foreground hover:bg-muted hover:border-accent/40 font-semibold rounded-lg"
+                        >
+                          <Link to={getServiceDestination(service.slug)}>Learn More</Link>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -19,7 +19,7 @@ const ServicesGrid = ({ areaName }: ServicesGridProps) => {
     "independent-damp-mould-surveys": "/assets/true-damp-service-survey.jpeg",
     "moisture-diagnostics-building-pathology": "/assets/true-damp-service-diagnostics.jpeg",
     "mould-remediation-condensation-control": "/assets/true-damp-service-mould.jpeg",
-    "basement-below-ground-waterproofing": "/assets/true-damp-service-diagnostics.jpeg",
+    "basement-below-ground-waterproofing": "/assets/true-damp-service-waterproofing.jpeg",
     "external-defects-drainage-weathering": "/assets/true-damp-service-external.jpeg",
     "remedial-specifications-project-support": "/assets/true-damp-service-specifications.jpeg",
   };
@@ -42,50 +42,57 @@ const ServicesGrid = ({ areaName }: ServicesGridProps) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <Link
+            <Card
               key={service.slug}
-              to={getServiceDestination(service.slug)}
-              className="block no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg"
+              className="group border-2 border-slate-200 overflow-hidden transition-all duration-500 bg-white shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 hover:-translate-y-1 h-full flex flex-col"
             >
-              <Card className="group border-2 border-slate-200 overflow-hidden transition-all duration-500 cursor-pointer bg-white shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 hover:-translate-y-2 h-full">
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={serviceImages[service.slug] ?? "/assets/true-damp-service-survey.jpeg"}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                    width={400}
-                    height={300}
-                    decoding="async"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
-                    aria-hidden
-                  />
-                  <div
-                    className="absolute top-0 right-0 w-12 h-12 bg-accent/90 backdrop-blur-sm -mr-6 -mt-6 rotate-45 group-hover:bg-accent-gradient transition-colors border-b border-l border-white/20 shadow-sm"
-                    aria-hidden
-                  />
+              <div className="relative h-52 overflow-hidden shrink-0">
+                <img
+                  src={serviceImages[service.slug] ?? "/assets/true-damp-service-survey.jpeg"}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                  decoding="async"
+                />
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
+                  aria-hidden
+                />
+                <div
+                  className="absolute top-0 right-0 w-12 h-12 bg-accent/90 backdrop-blur-sm -mr-6 -mt-6 rotate-45 group-hover:bg-accent transition-colors border-b border-l border-white/20 shadow-sm"
+                  aria-hidden
+                />
+              </div>
+              <CardContent className="p-6 border-t-4 border-accent bg-white flex flex-col flex-1">
+                <h3 className="font-display font-bold text-xl text-slate-900 leading-tight tracking-tight mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed font-medium flex-1 mb-5">
+                  {service.shortDesc}
+                </p>
+                <div className="flex gap-3">
+                  <Button
+                    asChild
+                    size="sm"
+                    className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
+                  >
+                    <Link to={`/get-quote?service=${service.slug}`}>Enquire</Link>
+                  </Button>
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="flex-1 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold rounded-lg"
+                  >
+                    <Link to={getServiceDestination(service.slug)}>Learn More</Link>
+                  </Button>
                 </div>
-                <CardContent className="p-6 border-t-4 border-accent relative bg-white">
-                  <h3 className="font-display font-bold text-xl text-slate-900 leading-tight tracking-tight mb-3 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
-                    {service.shortDesc}
-                  </p>
-                  <div className="flex items-center text-accent-text-on-light text-sm font-black uppercase tracking-wider group-hover:gap-3 transition-all duration-300">
-                    <span className="relative">
-                      Find out more
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-text-on-light transition-all group-hover:w-full" />
-                    </span>
-                    <span className="ml-1 transition-transform group-hover:translate-x-2" aria-hidden>→</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
