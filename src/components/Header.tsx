@@ -1,19 +1,40 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { getHeaderContent } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
+import { services } from "@/data/services";
+import { areas } from "@/data/areas";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
+const dropdownContentClass =
+  "z-[100] max-h-[min(70vh,28rem)] w-[min(100vw-2rem,20rem)] overflow-y-auto p-1";
 
 const Header = () => {
   const header = getHeaderContent();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
 
   const navLinkClass =
     "text-white/80 hover:text-accent transition-colors font-medium text-nowrap relative group py-2";
   const navLinkUnderline =
     "absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-200 ease-out";
+
+  const closeMobile = () => {
+    setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
+    setMobileAreasOpen(false);
+  };
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm">
@@ -48,15 +69,77 @@ const Header = () => {
               <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
             </Link>
 
-            <Link to="/services" className={navLinkClass}>
-              {header.services}
-              <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
-            </Link>
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className={cn(
+                    navLinkClass,
+                    "inline-flex items-center gap-1 border-0 bg-transparent p-0 font-display text-left cursor-pointer",
+                    "data-[state=open]:text-accent",
+                  )}
+                >
+                  {header.services}
+                  <ChevronDown
+                    className="relative top-px h-4 w-4 shrink-0 opacity-80 transition-transform group-data-[state=open]:rotate-180"
+                    aria-hidden
+                  />
+                  <span
+                    className={cn(
+                      navLinkUnderline,
+                      "w-0 group-hover:w-full group-data-[state=open]:w-full",
+                    )}
+                  />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" sideOffset={8} className={dropdownContentClass}>
+                <DropdownMenuItem asChild>
+                  <Link to="/services">All services</Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {services.map((service) => (
+                  <DropdownMenuItem key={service.slug} asChild>
+                    <Link to={`/services/${service.slug}`}>{service.title}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-            <Link to="/locations" className={navLinkClass}>
-              {header.areas}
-              <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
-            </Link>
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className={cn(
+                    navLinkClass,
+                    "inline-flex items-center gap-1 border-0 bg-transparent p-0 font-display text-left cursor-pointer",
+                    "data-[state=open]:text-accent",
+                  )}
+                >
+                  {header.areas}
+                  <ChevronDown
+                    className="relative top-px h-4 w-4 shrink-0 opacity-80 transition-transform group-data-[state=open]:rotate-180"
+                    aria-hidden
+                  />
+                  <span
+                    className={cn(
+                      navLinkUnderline,
+                      "w-0 group-hover:w-full group-data-[state=open]:w-full",
+                    )}
+                  />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" sideOffset={8} className={dropdownContentClass}>
+                <DropdownMenuItem asChild>
+                  <Link to="/locations">All areas</Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {areas.map((area) => (
+                  <DropdownMenuItem key={area.slug} asChild>
+                    <Link to={`/locations/${area.slug}`}>{area.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Link to="/reviews" className={navLinkClass}>
               {header.reviews}
@@ -109,31 +192,75 @@ const Header = () => {
               <Link
                 to="/about"
                 className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobile}
               >
                 About
               </Link>
 
-              <Link
-                to="/services"
-                className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {header.services}
-              </Link>
+              <Collapsible open={mobileServicesOpen} onOpenChange={setMobileServicesOpen}>
+                <CollapsibleTrigger
+                  className="flex w-full items-center justify-between gap-2 rounded-lg py-3 px-2 text-left text-white/90 font-medium hover:bg-white/10 transition-colors [&[data-state=open]>svg]:rotate-180"
+                >
+                  {header.services}
+                  <ChevronDown className="h-5 w-5 shrink-0 text-white/70 transition-transform duration-200" aria-hidden />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="overflow-hidden pl-2">
+                  <div className="flex flex-col border-l border-white/15 py-1">
+                    <Link
+                      to="/services"
+                      className="py-2.5 pl-3 pr-2 text-sm text-white/85 hover:text-accent transition-colors"
+                      onClick={closeMobile}
+                    >
+                      All services
+                    </Link>
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        to={`/services/${service.slug}`}
+                        className="py-2.5 pl-3 pr-2 text-sm text-white/85 hover:text-accent transition-colors"
+                        onClick={closeMobile}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
 
-              <Link
-                to="/locations"
-                className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {header.areas}
-              </Link>
+              <Collapsible open={mobileAreasOpen} onOpenChange={setMobileAreasOpen}>
+                <CollapsibleTrigger
+                  className="flex w-full items-center justify-between gap-2 rounded-lg py-3 px-2 text-left text-white/90 font-medium hover:bg-white/10 transition-colors [&[data-state=open]>svg]:rotate-180"
+                >
+                  {header.areas}
+                  <ChevronDown className="h-5 w-5 shrink-0 text-white/70 transition-transform duration-200" aria-hidden />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="overflow-hidden pl-2">
+                  <div className="flex flex-col border-l border-white/15 py-1">
+                    <Link
+                      to="/locations"
+                      className="py-2.5 pl-3 pr-2 text-sm text-white/85 hover:text-accent transition-colors"
+                      onClick={closeMobile}
+                    >
+                      All areas
+                    </Link>
+                    {areas.map((area) => (
+                      <Link
+                        key={area.slug}
+                        to={`/locations/${area.slug}`}
+                        className="py-2.5 pl-3 pr-2 text-sm text-white/85 hover:text-accent transition-colors"
+                        onClick={closeMobile}
+                      >
+                        {area.name}
+                      </Link>
+                    ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
 
               <Link
                 to="/reviews"
                 className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobile}
               >
                 {header.reviews}
               </Link>
@@ -141,16 +268,12 @@ const Header = () => {
               <Link
                 to="/contact"
                 className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobile}
               >
                 {header.contact}
               </Link>
 
-              <Link
-                to="/get-quote"
-                className="mt-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
+              <Link to="/get-quote" className="mt-2" onClick={closeMobile}>
                 <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold">
                   {header.getQuote}
                 </Button>
