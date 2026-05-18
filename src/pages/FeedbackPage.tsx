@@ -72,6 +72,9 @@ const FeedbackPage = () => {
       <Helmet>
         <title>{`Feedback | ${siteSettings.businessName}`}</title>
         <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+        <meta name="referrer" content="no-referrer-when-downgrade" />
+        <link rel="canonical" href={`${siteSettings.baseUrl}/feedback`} />
       </Helmet>
 
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
