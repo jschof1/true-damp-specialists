@@ -34,9 +34,9 @@ export const routes: RouteMetadata[] = [
   {
     path: "/locations",
     outputPath: "locations/index.html",
-    title: "Damp Problems We Diagnose | True Damp Specialists",
+    title: "Areas We Cover | True Damp Specialists",
     description:
-      "Independent, evidence-led damp and moisture investigations across residential, heritage and complex buildings, focused on getting the diagnosis right.",
+      "Independent damp, mould and waterproofing consultancy across London, Hertfordshire, Buckinghamshire, Bedfordshire and Oxfordshire.",
     priority: 0.8,
     changefreq: "weekly",
   },
@@ -68,6 +68,15 @@ export const routes: RouteMetadata[] = [
     changefreq: "monthly",
   },
   {
+    path: "/reports",
+    outputPath: "reports/index.html",
+    title: "Reports & Guidance | True Damp Specialists",
+    description:
+      "Preview the new reports and guidance section from True Damp Specialists while redacted sample documents are being prepared.",
+    priority: 0.75,
+    changefreq: "monthly",
+  },
+  {
     path: "/about",
     outputPath: "about/index.html",
     title: "About Us | True Damp Specialists",
@@ -79,7 +88,7 @@ export const routes: RouteMetadata[] = [
   {
     path: "/get-quote",
     outputPath: "get-quote/index.html",
-    title: "Request a Survey | True Damp Specialists",
+    title: "Request Specialist Advice | True Damp Specialists",
     description:
       "Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across London & the Home Counties and the UK.",
     priority: 0.6,
@@ -90,7 +99,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "portfolio/index.html",
     title: "Case Studies | True Damp Specialists",
     description:
-      "This section should showcase outcomes, project types and the sort of evidence-rich work the business is known for, rather than generic marketing gallery filler.",
+      "These case studies are intended to show how damp and moisture problems are investigated properly: how moisture behaves, how environmental and thermal evidence is interpreted, why previous repairs often fail, and how the right remedial strategy follows the diagnosis.",
     priority: 0.8,
     changefreq: "weekly",
   },
@@ -159,4 +168,3 @@ export const routes: RouteMetadata[] = [
 ];
 
 export const indexableRoutes = routes.filter(r => !r.noindex);
-

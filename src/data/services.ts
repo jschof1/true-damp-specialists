@@ -145,26 +145,27 @@ export const services: Service[] = [
   },
   {
     slug: "moisture-diagnostics-building-pathology",
-    title: "Moisture Diagnostics & Building Pathology",
-    metaTitle: `Moisture Diagnostics & Building Pathology ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Moisture diagnostics and building pathology support in ${DEFAULT_AREA}. Evidence-led investigation for unclear damp, moisture movement, and building defect cases.`,
+    title: "Specialist Damp & Moisture Investigations",
+    metaTitle: `Specialist Damp & Moisture Investigations ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Specialist damp and moisture investigations in ${DEFAULT_AREA}. Evidence-led investigation for unclear damp, moisture movement, thermal patterns and building defect cases.`,
     icon: Scale,
     heroDescription:
-      "Detailed moisture diagnostics built around how the building is actually performing. Used where the cause is unclear, the moisture mechanism needs proper interpretation, or the problem requires a more technical building-pathology lens.",
+      "Detailed damp and moisture investigations built around how the building is actually performing. Used where the cause is unclear, moisture behaviour needs proper interpretation, or previous repairs have failed because the root cause was never diagnosed.",
     shortDesc:
-      "Evidence-led diagnostics for unclear moisture behaviour, defect pathways, and building-pathology cases.",
+      "Consultancy-led investigation for unclear moisture behaviour, defect pathways, thermal patterns and failed previous repairs.",
     fullDescription: [
       "This service is designed for cases where moisture behaviour, construction detail, or defect interaction needs to be broken down properly before the right decision can be made.",
-      "We use evidence-led reasoning to explain what is actually happening within the building fabric, rather than relying on generic damp labels or assumptions.",
-      "The output is a clearer diagnosis, a more defensible explanation, and practical guidance on what should happen next.",
+      "We use evidence-led reasoning, moisture profiling, thermal context and environmental analysis to explain what is actually happening within the building fabric, rather than relying on generic damp labels or assumptions.",
+      "The output is a clearer root cause diagnosis, a more defensible explanation of why the issue is occurring, and staged guidance on what should happen next.",
     ],
     features: [
-      "Building-pathology-led reasoning",
+      "Specialist damp and moisture investigation",
       "Moisture mechanism analysis",
+      "Thermal and environmental context",
       "Defect interaction and construction context",
+      "Root cause diagnosis for failed previous repairs",
+      "Staged remediation thinking",
       "Evidence-led reporting",
-      "Clear diagnosis and next-step guidance",
-      "Suitable for technically unclear cases",
     ],
     pricing: [
       {

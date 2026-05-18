@@ -5,4 +5,4 @@ Disallow: /marketing-form
 Disallow: /feedback
 Disallow: /discount
 
-Sitemap: https://total-wraps.com/sitemap.xml
+Sitemap: https://www.truedampspecialists.co.uk/sitemap.xml

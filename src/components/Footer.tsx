@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import { areas } from "@/data/areas";
 import { getFooterContent, getSiteContent } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
+import { reportsPageContent } from "@/data/reports";
 
 const Footer = () => {
   const footer = getFooterContent() as ReturnType<typeof getFooterContent> & {
@@ -80,6 +81,7 @@ const Footer = () => {
                 <li><Link to="/about" className="text-primary-foreground/70 hover:text-accent">About us</Link></li>
                 <li><Link to="/services" className="text-primary-foreground/70 hover:text-accent">Services</Link></li>
                 <li><Link to="/portfolio" className="text-primary-foreground/70 hover:text-accent">Case studies</Link></li>
+                <li><Link to="/reports" className="text-primary-foreground/70 hover:text-accent">{reportsPageContent.navLabel}</Link></li>
                 <li><Link to="/reviews" className="text-primary-foreground/70 hover:text-accent">Reviews</Link></li>
                 <li><Link to="/faq" className="text-primary-foreground/70 hover:text-accent">FAQs</Link></li>
                 <li><Link to="/contact" className="text-primary-foreground/70 hover:text-accent">Contact</Link></li>

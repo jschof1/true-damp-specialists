@@ -47,6 +47,12 @@ const buildLocalBusinessSchema = (imageUrl: string) => {
   const hasGeo =
     typeof siteSettings.geo?.latitude !== "undefined" &&
     typeof siteSettings.geo?.longitude !== "undefined";
+  const address =
+    hasAddressDetails
+      ? Object.fromEntries(
+          Object.entries(siteSettings.addressDetails).filter(([, value]) => Boolean(value))
+        )
+      : undefined;
 
   const aggregateRating =
     ratingValue && reviewCount
@@ -66,14 +72,14 @@ const buildLocalBusinessSchema = (imageUrl: string) => {
     url: siteSettings.baseUrl,
     image: imageUrl,
     logo: buildAbsoluteUrl(siteSettings.logoPath),
-    telephone: siteSettings.phoneFormatted,
+    telephone: siteSettings.phone,
     email: siteSettings.email,
     ...(siteSettings.priceRange ? { priceRange: siteSettings.priceRange } : {}),
-    ...(hasAddressDetails
+    ...(address && Object.keys(address).length
       ? {
           address: {
             "@type": "PostalAddress",
-            ...siteSettings.addressDetails,
+            ...address,
           },
         }
       : {}),

@@ -482,7 +482,7 @@
     },
     "technicalStandards": {
       "title": "Standards-informed approach",
-      "description": "Our assessments are informed by recognised industry standards including BS 5250 (control of condensation), BS 8102 (below-ground waterproofing), and BS 6576 (rising damp), alongside practical building pathology.\n\nThis ensures our recommendations are technically grounded, proportionate, and appropriate to the building."
+      "description": "Our assessments are informed by recognised industry standards including BS 5250 (control of condensation), BS 8102 (below-ground waterproofing), and BS 6576 (rising damp), alongside practical building investigation principles.\n\nThis ensures our recommendations are technically grounded, proportionate, and appropriate to the building."
     },
     "reporting": {
       "title": "Reporting That Stands Up",
@@ -711,7 +711,7 @@
     ],
     "approach": {
       "title": "Our Approach",
-      "body": "We do not sell treatments.\n\nWe provide independent, evidence-led diagnosis based on:\n\nBuilding pathology principles\nBritish Standards (including BS 5250 and BS 6576)\nMoisture behaviour and environmental assessment\nThermal imaging and moisture profiling\nExternal and internal correlation\n\nOur role is to identify cause, explain behaviour, and provide clear, practical next steps."
+      "body": "We do not sell treatments.\n\nWe provide independent, evidence-led diagnosis based on:\n\nSpecialist damp and moisture investigation principles\nBritish Standards (including BS 5250 and BS 6576)\nMoisture behaviour and environmental assessment\nThermal imaging and moisture profiling\nExternal and internal correlation\n\nOur role is to identify cause, explain behaviour, and provide clear, practical next steps."
     },
     "clients": {
       "title": "Who We Work With",
@@ -862,15 +862,15 @@
   },
   "portfolioPage": {
     "hero": {
-      "badge": "Project Evidence",
-      "title": "Case studies, investigation themes and specialist work",
-      "description": "This section should showcase outcomes, project types and the sort of evidence-rich work the business is known for, rather than generic marketing gallery filler.",
+      "badge": "Specialist Damp & Moisture Investigations",
+      "title": "Case studies built around evidence, diagnosis and building behaviour",
+      "description": "These case studies are intended to show how damp and moisture problems are investigated properly: how moisture behaves, how environmental and thermal evidence is interpreted, why previous repairs often fail, and how the right remedial strategy follows the diagnosis.",
       "ctaPrimary": "Request Advice",
       "ctaSecondary": "Call Now"
     },
     "gallery": {
-      "title": "Selected case-study themes",
-      "description": "A curated mix of generated atmosphere, real proof imagery and case-study framing to show what kind of work and reasoning the business is trusted for.",
+      "title": "Investigation-led case studies",
+      "description": "Each summary is written to preserve the diagnostic detail: the symptoms, evidence, root cause and staged thinking behind the recommended next steps.",
       "categories": [
         "All",
         "Surveys",
@@ -880,8 +880,8 @@
       ]
     },
     "cta": {
-      "title": "Need clarity on your own property issue?",
-      "description": "If the problem has been lingering, misdiagnosed or repeatedly treated without success, start with a clearer diagnosis.",
+      "title": "Need a proper investigation before more works are agreed?",
+      "description": "If the problem has been lingering, misdiagnosed or repeatedly treated without success, start with a specialist damp and moisture investigation that explains the cause before recommending the next stage.",
       "primaryText": "Request Callback",
       "secondaryText": "Call Now"
     }
@@ -1259,7 +1259,7 @@
     },
     "seoSection": {
       "title": "Damp and Moisture Investigations Across Residential and Complex Buildings",
-      "description": "We undertake damp and moisture assessments across a wide range of properties, including:\n\nResidential homes and flats\nPeriod and heritage buildings\nConverted properties and basements\nMixed-use and commercial spaces\nProperties affected by leaks, condensation, or structural defects\n\nOur approach is based on building pathology and moisture behaviour, not product-led solutions."
+      "description": "We undertake damp and moisture assessments across a wide range of properties, including:\n\nResidential homes and flats\nPeriod and heritage buildings\nConverted properties and basements\nMixed-use and commercial spaces\nProperties affected by leaks, condensation, or structural defects\n\nOur approach is based on specialist damp and moisture investigation, building performance and moisture behaviour, not product-led solutions."
     },
     "finalCta": {
       "title": "If You’re Not Getting Clear Answers, That’s the Problem",
@@ -1305,14 +1305,14 @@
   },
   "projectGallery": {
     "badge": "Case studies",
-    "title": "Real Investigations. Real Outcomes.",
-    "description": "Examples of how we identify the cause and guide the correct solution.",
+    "title": "Specialist Damp & Moisture Investigations",
+    "description": "Examples of how we investigate symptoms, interpret moisture behaviour, identify root causes and guide the correct remedial strategy.",
     "viewAllText": "View All Work",
     "projects": [
       {
         "title": "Grade II listed terrace — external moisture, not rising damp",
         "location": "London",
-        "description": "A mid-19th century listed property where previous contractors had proposed chemical damp proofing and internal tanking. Our investigation found the moisture was caused by external water management failures and lateral ingress, not rising damp. We recommended a source-first strategy focusing on external drainage rather than internal barriers that could damage the historic fabric.",
+        "description": "A mid-19th century listed property where previous contractors had proposed chemical damp proofing and internal tanking. The investigation reviewed the age and permeability of the building fabric, the external ground and rainwater context, and the pattern of moisture internally. The evidence pointed to external water management failures and lateral ingress, not rising damp. We recommended a source-first strategy focused on drainage and external detailing rather than internal barriers that could trap moisture and damage the historic fabric.",
         "type": "completed",
         "tag": "Heritage & Listed",
         "imageKey": "independentSurveyCase",
@@ -1321,7 +1321,7 @@
       {
         "title": "Escape of water in converted factory flat",
         "location": "St Albans",
-        "description": "Visible floor distortion, fungal growth at the bathroom doorway, and ceiling staining in the property below. Our investigation identified a concealed leak behind the WC installation within a service void. Water had migrated laterally through the floor structure and vertically downwards. We provided a clear remedial plan covering leak repair, structural drying, and reinstatement.",
+        "description": "Visible floor distortion, fungal growth at the bathroom doorway, and ceiling staining in the property below suggested a wider moisture pathway than surface staining alone. The investigation traced the issue to a concealed leak behind the WC installation within a service void. Moisture had migrated laterally through the floor structure and vertically downwards, explaining the spread of damage and the symptoms in the property below. We provided a staged remedial plan covering leak repair, controlled drying, affected materials and reinstatement.",
         "type": "completed",
         "tag": "Escape of Water",
         "imageKey": "condensationControlCase",
@@ -1330,7 +1330,7 @@
       {
         "title": "Listed barn conversion — no active dampness confirmed",
         "location": "Milton Keynes",
-        "description": "A Grade II listed agricultural barn conversion flagged for suspected dampness and timber deterioration in a prior RICS Level 3 survey. Our investigation found no evidence of active moisture defects — the readings were consistent with the inherent characteristics of traditional vapour-permeable construction. We recommended ongoing monitoring and conservation-aligned maintenance rather than unnecessary treatment.",
+        "description": "A Grade II listed agricultural barn conversion had been flagged for suspected dampness and timber deterioration in a prior RICS Level 3 survey. Our investigation considered the traditional vapour-permeable construction, ventilation context, meter readings and visible fabric condition. The evidence did not support active moisture defects; the readings were consistent with the behaviour of the original construction. We recommended ongoing monitoring and conservation-aligned maintenance rather than unnecessary damp treatment.",
         "type": "completed",
         "tag": "Heritage & Listed",
         "imageKey": "waterproofingCase",
@@ -1339,7 +1339,7 @@
       {
         "title": "Second opinion overturns recommended damp treatment",
         "location": "High Wycombe",
-        "description": "A homeowner had been quoted for chemical damp proofing and membrane installation by a treatment company. Our independent survey identified external defect and rainwater ingress as the primary moisture source — not rising damp. By addressing the external drainage and junction detailing, the moisture issue was resolved without any internal treatment or disruption.",
+        "description": "A homeowner had been quoted for chemical damp proofing and membrane installation by a treatment company. Our independent survey compared the internal moisture pattern with external defects, drainage, junction detailing and rainwater exposure. The findings showed the primary source was external defect and rainwater ingress, not rising damp. By addressing the external drainage and junction detailing, the moisture issue could be resolved without unnecessary internal treatment or disruption.",
         "type": "completed",
         "tag": "Second Opinion",
         "imageKey": "externalDefectsCase",
@@ -1348,7 +1348,7 @@
       {
         "title": "Repeated mould complaint traced to ventilation failure",
         "location": "Luton",
-        "description": "A landlord facing repeated mould complaints from tenants. Previous contractors had treated the mould cosmetically without identifying the cause. Our assessment found the mould was driven by inadequate ventilation and excess humidity, not building defects. We provided a clear ventilation strategy and monitoring plan that resolved the issue at a fraction of the previous quoted cost.",
+        "description": "A landlord was facing repeated mould complaints after previous contractors had treated the mould cosmetically without identifying the cause. The assessment considered occupancy moisture load, ventilation provision, surface temperature risk, humidity behaviour and visible mould distribution. The evidence showed the issue was driven by inadequate ventilation and excess humidity rather than a primary building defect. We provided a ventilation strategy and monitoring plan so the cause could be controlled instead of repeatedly cleaning the symptom.",
         "type": "completed",
         "tag": "Mould & Condensation",
         "imageKey": "secondOpinionCase",
@@ -1357,7 +1357,7 @@
       {
         "title": "Remedial specification for complex basement moisture",
         "location": "Oxford",
-        "description": "A property with complex below-ground moisture issues where multiple contractors had given conflicting advice. Our BS 8102-aligned investigation identified the specific moisture pathways and provided a clear, prioritised remedial specification. The client was able to instruct the right specialist works with confidence and less guesswork.",
+        "description": "A property had complex below-ground moisture issues and multiple contractors had given conflicting advice. The BS 8102-aligned investigation reviewed moisture pathways, below-ground risk, construction interfaces and the limitations of previous recommendations. We separated immediate control measures from longer-term specification decisions and provided a clear, prioritised remedial strategy. The client could then instruct the right specialist works with confidence instead of relying on guesswork.",
         "type": "completed",
         "tag": "Waterproofing",
         "imageKey": "projectSupportCase",

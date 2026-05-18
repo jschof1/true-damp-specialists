@@ -116,7 +116,7 @@ export const areas: Area[] = [
     region: "Oxfordshire",
     postcodes: ["OX1", "OX2", "OX3", "OX4"],
     emergencyTime: QUOTE_TIME,
-    description: "Independent damp and building-pathology-led investigations in Oxford, including heritage-sensitive, occupied and technically complex properties.",
+    description: "Independent specialist damp and moisture investigations in Oxford, including heritage-sensitive, occupied and technically complex properties.",
     metaTitle: "Independent Damp Survey Oxford | True Damp Specialists",
     metaDescription: "Independent damp and moisture investigations in Oxford. Clear diagnosis, practical reporting and specialist thinking for complex and heritage-sensitive cases.",
     localContext: "Oxford's older buildings, altered historic fabric and more specialist property stock often call for a gentler, more analytical approach to moisture diagnosis than generic treatment-led advice.",

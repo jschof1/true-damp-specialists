@@ -4,7 +4,6 @@ import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import TopBanner from "@/components/TopBanner";
 import Footer from "@/components/Footer";
-import MobileCallButton from "@/components/MobileCallButton";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, MapPin, Maximize2, Flame } from "lucide-react";
 import { siteSettings } from "@/data/siteSettings";
@@ -102,7 +101,7 @@ const PortfolioPage = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
               {projects.map((project, index) => (
                 <Link
                   key={index}
@@ -123,25 +122,26 @@ const PortfolioPage = () => {
                       '--hover-transform': `translateY(-${theme.metrics.hover.liftSm})`
                     } as React.CSSProperties}
                   >
-                    <div className="relative aspect-[4/5] overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                        loading="lazy"
-                        width={400}
-                        height={500}
-                        decoding="async"
-                      />
-                      
-                      <div 
-                        className="absolute inset-0 opacity-80 group-hover:opacity-95 transition-opacity duration-500" 
-                        style={{
-                          background: `linear-gradient(to top, ${theme.colors.primary[900]} 10%, ${theme.colors.primary.DEFAULT.replace(')', ' / 0.3)')} 60%, transparent)`
-                        }}
-                      />
-                      
-                      <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
+                    <div className="overflow-hidden">
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                          loading="lazy"
+                          width={720}
+                          height={450}
+                          decoding="async"
+                        />
+                        
+                        <div 
+                          className="absolute inset-0 opacity-35 group-hover:opacity-20 transition-opacity duration-500" 
+                          style={{
+                            background: `linear-gradient(to top, ${theme.colors.primary[900]} 0%, transparent 60%)`
+                          }}
+                        />
+                        
+                        <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
                         {project.type === "before-after" && (
                           <span 
                             className="inline-flex text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded shadow-sm"
@@ -166,7 +166,19 @@ const PortfolioPage = () => {
                         </span>
                       </div>
 
-                      <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-10">
+                        <div 
+                          className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100 z-10"
+                          style={{
+                            background: theme.brand?.goldGradient ?? theme.colors.accent.DEFAULT,
+                            color: theme.surfaces.accentForeground,
+                            boxShadow: theme.effects.shadows.accentGlow
+                          }}
+                        >
+                          <Maximize2 className="w-5 h-5 ml-0.5 mt-0.5" />
+                        </div>
+                      </div>
+
+                      <div className="p-5 sm:p-6 md:p-8">
                         <div 
                           className="flex items-center gap-1.5 font-bold text-[11px] uppercase tracking-wider mb-2"
                           style={{ color: theme.colors.accent.DEFAULT }}
@@ -175,31 +187,20 @@ const PortfolioPage = () => {
                           {project.location.split(',')[0]}
                         </div>
                         <h3 
-                          className="font-display font-black text-xl mb-3 leading-tight transition-colors duration-300 hover:[color:var(--hover-text)] group-hover:[color:var(--hover-text)]"
+                          className="font-display font-black text-xl sm:text-2xl mb-3 leading-tight transition-colors duration-300 hover:[color:var(--hover-text)] group-hover:[color:var(--hover-text)]"
                           style={{ 
-                            color: theme.surfaces.primaryForeground,
+                            color: theme.surfaces.foreground,
                             '--hover-text': theme.colors.accent.DEFAULT
                           } as React.CSSProperties}
                         >
                           {project.title}
                         </h3>
                         <p 
-                          className="text-sm leading-relaxed line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"
-                          style={{ color: theme.colors.secondary[300] }}
+                          className="text-sm sm:text-base leading-relaxed transition-opacity duration-500 delay-100"
+                          style={{ color: theme.surfaces.mutedForeground }}
                         >
                           {project.description}
                         </p>
-                      </div>
-
-                      <div 
-                        className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100 z-10"
-                        style={{
-                          background: theme.brand?.goldGradient ?? theme.colors.accent.DEFAULT,
-                          color: theme.surfaces.accentForeground,
-                          boxShadow: theme.effects.shadows.accentGlow
-                        }}
-                      >
-                        <Maximize2 className="w-5 h-5 ml-0.5 mt-0.5" />
                       </div>
                     </div>
                   </div>
@@ -299,7 +300,6 @@ const PortfolioPage = () => {
       </main>
 
       <Footer />
-      <MobileCallButton />
     </div>
   );
 };

@@ -21,7 +21,7 @@ export const fallbackReviews: Review[] = [
     location: siteSettings.addressDetails.addressLocality,
     rating: 5,
     text: "The report made a confusing issue much easier to understand before we committed to major works.",
-    service: "Moisture Diagnostics & Building Pathology",
+    service: "Specialist Damp & Moisture Investigations",
     scenarioLabel: "Pre-purchase damp assessment",
     date: "Recently",
     verified: false,

@@ -23,6 +23,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
+import ReportsPage from "./pages/ReportsPage";
 import NotFound from "./pages/NotFound";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -51,6 +52,7 @@ export function AppRoutes() {
       <Route path="/discount" element={<DiscountPage />} />
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/reports" element={<ReportsPage />} />
       <Route path="/add-customer" element={<AddCustomerPage />} />
       <Route path="/marketing-form" element={<MarketingFormPage />} />
       {/* <Route path="/blog" element={<BlogPage />} />

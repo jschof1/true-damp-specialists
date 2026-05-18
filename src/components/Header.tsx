@@ -6,6 +6,7 @@ import { getHeaderContent } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
 import { services } from "@/data/services";
 import { areas } from "@/data/areas";
+import { reportsPageContent } from "@/data/reports";
 import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
@@ -146,6 +147,11 @@ const Header = () => {
               <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
             </Link>
 
+            <Link to="/reports" className={navLinkClass}>
+              {reportsPageContent.navLabel}
+              <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
+            </Link>
+
             <Link to="/contact" className={navLinkClass}>
               {header.contact}
               <span className={cn(navLinkUnderline, "w-0 group-hover:w-full")} />
@@ -263,6 +269,14 @@ const Header = () => {
                 onClick={closeMobile}
               >
                 {header.reviews}
+              </Link>
+
+              <Link
+                to="/reports"
+                className="text-white/90 font-medium py-3 px-2 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {reportsPageContent.navLabel}
               </Link>
 
               <Link
