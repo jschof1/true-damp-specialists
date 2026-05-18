@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { indexableRoutes } from "../src/routes";
+import { routes } from "../src/routes";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, "../dist/client");
@@ -16,9 +16,9 @@ async function run() {
   const template = fs.readFileSync(path.join(distDir, "index.html"), "utf-8");
   const { render } = await import(serverBundlePath);
 
-  console.log(`Prerendering ${indexableRoutes.length} routes...`);
+  console.log(`Prerendering ${routes.length} routes...`);
 
-  for (const route of indexableRoutes) {
+  for (const route of routes) {
     console.log(`  Prerendering ${route.path}...`);
     const { html: appHtml, helmet } = render(route.path);
 
