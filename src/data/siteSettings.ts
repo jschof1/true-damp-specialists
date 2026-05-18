@@ -27,7 +27,8 @@ export const siteSettings = {
   /** Public review/profile link. */
   googlePageUrl: "https://g.page/r/CU-GUEpjknolEBM",
   sameAs: [] as string[],
-  feedbackGoogleReviewUrl: "https://g.page/r/CU-GUEpjknolEBM/review",
+  feedbackGoogleReviewUrl:
+    "https://search.google.com/local/writereview?placeid=ChIJH7TaINRkKy8RT4ZQSmOSeiU",
   areaServed:
     "London, the Home Counties, the Midlands, Buckinghamshire, Hertfordshire, Bedfordshire, Oxfordshire, heritage and listed buildings nationwide",
   standardFaqs: [
