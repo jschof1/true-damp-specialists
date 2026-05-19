@@ -1,3 +1,5 @@
 /reports/*.pdf /reports/ 301
 /our-work /portfolio 301
+/feedback /feedback/index.html 200
+/feedback/ /feedback/index.html 200
 /* /index.html 200
