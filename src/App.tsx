@@ -49,6 +49,7 @@ export function AppRoutes() {
       <Route path="/get-quote" element={<GetQuotePage />} />
       <Route path="/reviews" element={<ReviewsPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/feedback/" element={<FeedbackPage />} />
       <Route path="/discount" element={<DiscountPage />} />
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/contact" element={<ContactPage />} />
