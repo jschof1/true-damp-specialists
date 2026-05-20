@@ -23,6 +23,28 @@ Real project imagery has replaced the generated/stock-like gallery and service v
 - Portfolio/case study cards: external moisture, ceiling water staining, listed fabric, roof junction, mould/ventilation, and thermal imaging images.
 - Service cards/detail heroes: masonry/external survey, thermal diagnostics, mould, building fabric, roof junction, and remedial fabric images.
 
+## Placement Audit
+
+Reviewed again on 2026-05-20 to make sure images were not just visually interesting but contextually right.
+
+| Placement | Image rationale | Decision |
+| --- | --- | --- |
+| Homepage hero / OG | Close-up scaffolded external wall investigation. Strong first impression for real inspection work without showing a complete identifiable home. | Keep |
+| Grade II listed terrace — external moisture | Same scaffolded exposed external masonry/rainwater context. It supports the external moisture and heritage fabric story. | Keep |
+| Escape of water in converted factory flat | Ceiling staining and localised moisture marking. It is not a full project scene, but it represents escape-of-water evidence without exposing private details. | Keep |
+| Listed barn conversion — no active dampness confirmed | Changed from a stripped/remedial-looking wall to a clean interior conversion room, because the case is about confirming no active dampness rather than showing damage. | Updated |
+| Second opinion overturns recommended damp treatment | Roof junction/flashing detail. This directly supports the external defect/rainwater ingress explanation. | Keep |
+| Repeated mould complaint traced to ventilation failure | Visible mould growth at ceiling/wall junction. This directly supports mould and ventilation failure copy. | Keep |
+| Remedial specification for complex basement moisture | Changed from a thermal image to lower masonry and ground/interface detail, which better fits below-ground moisture pathway and specification thinking. | Updated |
+| Damp & mould assessment service | Exposed masonry/fabric detail. Acceptable for broad diagnostic assessment, though future shots showing Rob using instruments would be stronger. | Keep |
+| Specialist Damp & Moisture Investigations service | Thermal image showing temperature/moisture pattern context. Strong fit for the technical investigation positioning. | Keep |
+| Mould/condensation service | Bathroom/ceiling mould pattern image. Direct fit. | Keep |
+| Basement/waterproofing service | Changed to lower masonry and ground/interface detail to better match below-ground waterproofing risk. | Updated |
+| External defects service | Roof junction/flashing detail. Direct fit. | Keep |
+| Remedial specifications service | Exposed wall/fabric condition where specification decisions are needed. Fit is acceptable. | Keep |
+
+Note: unless Rob confirms exact project-to-photo matching, the images should be treated as representative real project evidence rather than a claim that every card image is from that exact named case.
+
 Public-facing guidance PDFs have been copied into `/public/reports` and linked from the Reports page:
 
 - `condensation-bs-5250.pdf`
