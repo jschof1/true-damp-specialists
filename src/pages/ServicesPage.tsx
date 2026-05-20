@@ -61,12 +61,12 @@ const ServicesPage = () => {
   };
 
   const serviceImages: Record<string, string> = {
-    "independent-damp-mould-surveys": "/assets/true-damp-service-survey.jpeg",
-    "moisture-diagnostics-building-pathology": "/assets/true-damp-service-diagnostics.jpeg",
-    "mould-remediation-condensation-control": "/assets/true-damp-service-mould.jpeg",
-    "basement-below-ground-waterproofing": "/assets/true-damp-service-waterproofing.jpeg",
-    "external-defects-drainage-weathering": "/assets/true-damp-service-external.jpeg",
-    "remedial-specifications-project-support": "/assets/true-damp-service-specifications.jpeg",
+    "independent-damp-mould-surveys": "/images/services/independent-survey-masonry.webp",
+    "moisture-diagnostics-building-pathology": "/images/services/thermal-moisture-diagnostics.webp",
+    "mould-remediation-condensation-control": "/images/services/mould-condensation-control.webp",
+    "basement-below-ground-waterproofing": "/images/services/waterproofing-building-fabric.webp",
+    "external-defects-drainage-weathering": "/images/services/external-defects-roof-junction.webp",
+    "remedial-specifications-project-support": "/images/services/remedial-specifications-fabric.webp",
   };
 
   const trustIcons = [ShieldCheck, Search, FileText, CheckCircle2];

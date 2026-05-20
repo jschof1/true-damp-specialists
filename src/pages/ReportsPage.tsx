@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { reportCategories, reportResources, reportsPageContent } from "@/data/reports";
 import { siteSettings } from "@/data/siteSettings";
-import { BookOpen, FileText, ShieldCheck } from "lucide-react";
+import { BookOpen, Download, FileText, ShieldCheck } from "lucide-react";
 import heroImage from "@/assets/general/damp-consultation-report-review.webp";
 
 const featuredReports = reportResources.filter((report) => report.featured);
@@ -35,6 +35,7 @@ const ReportsPage = () => {
             name: report.title,
             description: report.description,
             about: report.category,
+            ...(report.href ? { url: `${siteSettings.baseUrl}${report.href}`, encodingFormat: "application/pdf" } : {}),
           })),
         }}
       />
@@ -129,7 +130,17 @@ const ReportsPage = () => {
                     {report.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{report.description}</p>
-                  <p className="mt-6 text-xs font-black uppercase tracking-widest text-foreground">{report.status}</p>
+                  <div className="mt-6 flex items-center justify-between gap-3">
+                    <p className="text-xs font-black uppercase tracking-widest text-foreground">{report.status}</p>
+                    {report.href ? (
+                      <Button asChild size="sm" variant="outline" className="h-9 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                        <a href={report.href} target="_blank" rel="noopener noreferrer">
+                          <Download className="mr-2 h-4 w-4" />
+                          PDF
+                        </a>
+                      </Button>
+                    ) : null}
+                  </div>
                 </article>
               ))}
             </div>
@@ -168,10 +179,25 @@ const ReportsPage = () => {
                               <h4 className="font-display text-lg font-black leading-tight text-foreground group-hover:text-accent">
                                 {report.title}
                               </h4>
-                              <span className="mt-1 shrink-0 rounded-full bg-muted px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground group-hover:text-accent">Soon</span>
+                              <span className="mt-1 shrink-0 rounded-full bg-muted px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground group-hover:text-accent">
+                                {report.href ? "PDF" : "Soon"}
+                              </span>
                             </div>
                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{report.description}</p>
-                            <p className="mt-3 text-[11px] font-black uppercase tracking-widest text-muted-foreground">{report.status}</p>
+                            <div className="mt-3 flex flex-wrap items-center gap-3">
+                              <p className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">{report.status}</p>
+                              {report.href ? (
+                                <a
+                                  href={report.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-accent hover:text-foreground"
+                                >
+                                  <Download className="h-3.5 w-3.5" />
+                                  Open PDF
+                                </a>
+                              ) : null}
+                            </div>
                           </div>
                         </article>
                       ))}

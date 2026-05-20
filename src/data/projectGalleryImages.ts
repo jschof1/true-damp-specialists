@@ -3,10 +3,10 @@
  * Files live under public/images/gallery/ (served at /images/gallery/…).
  */
 export const PROJECT_GALLERY_IMAGES: Record<string, string> = {
-  independentSurveyCase: "/images/gallery/independentSurveyCase.jpeg",
-  condensationControlCase: "/images/gallery/condensationControlCase.jpeg",
-  waterproofingCase: "/images/gallery/waterproofingCase.jpeg",
-  externalDefectsCase: "/images/gallery/externalDefectsCase.jpeg",
-  secondOpinionCase: "/images/gallery/secondOpinionCase.jpeg",
-  projectSupportCase: "/images/gallery/projectSupportCase.jpeg",
+  independentSurveyCase: "/images/gallery/heritage-external-moisture.webp",
+  condensationControlCase: "/images/gallery/escape-of-water-ceiling.webp",
+  waterproofingCase: "/images/gallery/listed-fabric-investigation.webp",
+  externalDefectsCase: "/images/gallery/external-defects-roof-junction.webp",
+  secondOpinionCase: "/images/gallery/mould-ventilation-failure.webp",
+  projectSupportCase: "/images/gallery/thermal-remedial-planning.webp",
 };

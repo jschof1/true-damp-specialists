@@ -12,7 +12,7 @@ import { PROJECT_GALLERY_IMAGES } from "@/data/projectGalleryImages";
 import { getServiceDestination } from "@/lib/serviceLinks";
 import theme from "@/config/theme";
 
-import ctaBackground from "@/assets/general/damp-survey-thermal-imaging.webp";
+import ctaBackground from "@/assets/projects/case-studies-thermal-imaging.webp";
 
 const PortfolioPage = () => {
   const portfolioPage = getPortfolioPageContent();

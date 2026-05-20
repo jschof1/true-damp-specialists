@@ -72,7 +72,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "reports/index.html",
     title: "Reports & Guidance | True Damp Specialists",
     description:
-      "Preview the new reports and guidance section from True Damp Specialists while redacted sample documents are being prepared.",
+      "Read specialist damp and moisture investigation guidance from True Damp Specialists, including technical notes on thermal imaging, condensation and moisture diagnosis.",
     priority: 0.75,
     changefreq: "monthly",
   },

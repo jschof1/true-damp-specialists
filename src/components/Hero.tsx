@@ -65,7 +65,7 @@ const Hero = ({ areaName, description }: HeroProps) => {
     <section className="relative min-h-[min(72vh,780px)] flex items-center overflow-hidden bg-primary">
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/true-damp-hero-building.jpeg"
+          src="/assets/true-damp-hero-building.webp"
           alt={`Damp and moisture investigation in ${displayArea}`}
           className="w-full h-full object-cover"
           width={1920}

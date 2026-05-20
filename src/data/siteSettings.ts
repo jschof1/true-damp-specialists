@@ -2,7 +2,7 @@ export const siteSettings = {
   businessName: "True Damp Specialists",
   legalName: "TRUE DAMP SPECIALISTS LIMITED",
   baseUrl: "https://www.truedampspecialists.co.uk",
-  primaryImagePath: "/assets/true-damp-hero-og.jpeg",
+  primaryImagePath: "/assets/true-damp-hero-og.webp",
   /** House mark only (transparent PNG); wordmark is rendered as text in layout. */
   logoPath: "/assets/true-damp-logo-icon.png",
   /** Two-line lockup next to the icon for readability on dark headers. */
