@@ -161,7 +161,7 @@ const ServicesPage = () => {
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {servicesPage.serviceCards.map((card) => {
-                const img = serviceImages[card.slug] ?? "/assets/true-damp-service-survey.jpeg";
+                const img = serviceImages[card.slug] ?? "/images/services/independent-survey-masonry.webp";
                 return (
                   <Card key={card.title} className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden shrink-0">
@@ -229,7 +229,7 @@ const ServicesPage = () => {
 
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => {
-                const img = serviceImages[service.slug] ?? "/assets/true-damp-service-survey.jpeg";
+                const img = serviceImages[service.slug] ?? "/images/services/independent-survey-masonry.webp";
                 return (
                   <Card
                     key={service.slug}

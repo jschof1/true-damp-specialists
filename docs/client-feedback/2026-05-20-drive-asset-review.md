@@ -70,3 +70,12 @@ The competitor survey PDFs should be treated as internal research only.
 - Reports page JSON-LD now includes `CreativeWork` URLs and `encodingFormat: application/pdf` for published PDFs.
 - The report copy now describes available guidance rather than claiming everything is still pending.
 - The production site source still has no `premium building pathology` wording in `src`, `data`, `public`, or `scripts`.
+
+## Duplicate Image Reduction
+
+Reviewed again after feedback that too many repeated images were visible.
+
+- Replaced the homepage hero/OG image with a different real project photo so it no longer mirrors the red scaffolded case-study image.
+- Replaced the older shared generated/stock-like general damp assets with distinct real Drive photos for thermal imaging, roof junctions, exposed masonry, mould, inspection context and lower-wall moisture detail.
+- Kept the visible case study and service images representative but distinct; some subjects are naturally similar because the supplied project photography is mostly masonry, roof junction, mould and thermal evidence.
+- Removed unused older generated/public JPEGs for service cards and gallery cards so the repo no longer carries duplicate-looking legacy assets that are not used by the site.
