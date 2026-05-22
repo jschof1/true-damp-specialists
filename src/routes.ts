@@ -36,7 +36,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "locations/index.html",
     title: "Areas We Cover | True Damp Specialists",
     description:
-      "Independent damp, mould and waterproofing consultancy across London, Hertfordshire, Buckinghamshire, Bedfordshire and Oxfordshire.",
+      "Independent damp, mould and moisture investigations across North London, the Home Counties, Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City and Stevenage.",
     priority: 0.8,
     changefreq: "weekly",
   },
@@ -90,7 +90,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "get-quote/index.html",
     title: "Request Specialist Advice | True Damp Specialists",
     description:
-      "Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across London & the Home Counties and the UK.",
+      "Request an independent damp, mould or moisture investigation. Specialist response across North London, the Home Counties and the UK.",
     priority: 0.6,
     changefreq: "monthly",
   },

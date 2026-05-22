@@ -51,14 +51,18 @@ export interface Service {
 }
 
 const coreAreas = [
+  "North London",
   "Central London",
-  "Watford",
-  "St Albans",
-  "High Wycombe",
-  "Luton",
-  "Hemel Hempstead",
-  "Oxford",
-  "Aylesbury",
+  "Home Counties",
+  "Buckinghamshire",
+  "Hertfordshire",
+  "Bedfordshire",
+  "Milton Keynes",
+  "Bedford",
+  "Amersham",
+  "Hitchin",
+  "Welwyn Garden City",
+  "Stevenage",
 ];
 
 const commonProcess: ServiceProcessStep[] = [
@@ -248,7 +252,7 @@ export const services: Service[] = [
       {
         question: "Can this support insurance or regulatory documentation?",
         answer:
-          "Reports are structured around clear findings and evidence. Use with your own legal or compliance advisers where formal duties apply.",
+          "Reports are structured around clear findings and evidence. Where the brief extends beyond diagnosis, we can also support insured remedial or project works planning so the next stage is properly scoped. Use with your own legal or compliance advisers where formal duties apply.",
       },
       {
         question: "Is environmental testing always required?",

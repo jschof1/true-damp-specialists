@@ -136,7 +136,7 @@ const GetQuotePage = () => {
     <>
       <SEO
         title={`Request Specialist Advice | ${siteSettings.businessName}`}
-        description={`Request an independent damp, mould or waterproofing survey in under 2 minutes. Fast response across ${siteSettings.addressDetails.addressLocality} and ${siteSettings.addressDetails.addressRegion}.`}
+        description="Request an independent damp, mould or moisture investigation. Specialist response across North London, the Home Counties and the UK."
         path="/get-quote"
         breadcrumbs={[
           { name: "Home", path: "/" },

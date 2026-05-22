@@ -384,11 +384,11 @@
         "description": "Used where water ingress is suspected from plumbing, roofing or external defects.\n\nWe identify the source and clearly distinguish between cause and resulting damage.",
         "includes": [
           "Leak tracing and moisture spread assessment",
-          "Cause vs damage differentiation (critical for insurance claims)",
+          "Cause vs damage differentiation for insurance and remedial planning",
           "CCTV drainage surveys where required to confirm defects and water pathways",
           "Targeted investigation where required"
         ],
-        "note": "Reporting is structured to support insurance claims, clearly defining cause, extent and required action."
+        "note": "Reporting is structured to support insurance claims and, where applicable, insured remedial or project works support by clearly defining cause, extent and required action."
       },
       {
         "slug": "basement-below-ground-waterproofing",
@@ -423,7 +423,8 @@
           "CCTV and other investigative methods where necessary",
           "Hidden defect identification",
           "Verification of moisture pathways"
-        ]
+        ],
+        "note": "Reporting is structured to support insurance claims and, where applicable, insured remedial or project works support by clearly defining cause, extent and required action."
       },
       {
         "slug": "moisture-diagnostics-building-pathology",
@@ -898,7 +899,7 @@
       "trustChips": [
         "Independent of product sales",
         "PCA-trained, CSCS-qualified professionals",
-        "Fully insured for consultancy and reporting",
+        "Fully insured for consultancy, reporting and relevant project support",
         "Trusted by TFL, Network Rail & Housing Associations"
       ],
       "ctaPrimary": "Request Advice",
@@ -919,7 +920,7 @@
         {
           "label": "Fully insured",
           "value": "PI Covered",
-          "hint": "Consultancy and reporting services"
+          "hint": "Consultancy, reporting and relevant project support"
         },
         {
           "label": "Qualifications",
@@ -1190,17 +1191,17 @@
     "emergencyDescription": "When the cause isn’t clear or previous work hasn’t resolved the issue",
     "projectSupport": "Project & Technical Support",
     "projectSupportDescription": "For surveys, second opinions, and remedial planning",
-    "coverageDescription": "London, Home Counties & Midlands",
+    "coverageDescription": "North London, Home Counties & Midlands",
     "coverageNote": "We also take on specialist projects further afield where required.",
     "rights": "© 2025 True Damp Specialists. All rights reserved.",
     "services": [],
     "popularAreas": [
-      "Watford",
-      "Central London",
-      "St Albans",
-      "High Wycombe",
-      "Luton",
-      "Oxford"
+      "North London",
+      "Milton Keynes",
+      "Bedford",
+      "Amersham",
+      "Hitchin",
+      "Stevenage"
     ]
   },
   "reviewsPage": {
@@ -1230,7 +1231,7 @@
         },
         {
           "title": "Detailed Reporting",
-          "desc": "Reports are structured to support decision-making, contractor pricing, and where required, insurance submissions."
+          "desc": "Reports are structured to support decision-making, contractor pricing, insurance submissions, and where needed the planning of insured remedial or project support."
         },
         {
           "title": "Practical Next Steps",
@@ -1271,29 +1272,29 @@
   "serviceAreas": {
     "badge": "Where we work",
     "title": "Where we work",
-    "description": "We operate across London and the Home Counties, including Hertfordshire, Buckinghamshire, Bedfordshire, Midlands and Oxfordshire.\n\nWe also take on specialist projects further afield where a clear, diagnosis-led approach is required.",
+    "description": "We operate across North London and the Home Counties, including Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City and Stevenage.\n\nWe also take on specialist projects further afield where a clear, diagnosis-led approach is required.",
     "mapTitle": "True Damp Specialists — coverage map",
     "infoBox": {
       "title": "Specialist Coverage",
-      "subtitle": "London, Home Counties & Midlands",
+      "subtitle": "North London, Home Counties & Midlands",
       "arrivalText": "Discuss the property and the problem — not just the postcode"
     },
     "regions": [
       {
-        "id": "Hertfordshire & Watford",
-        "label": "Watford, St Albans, Hemel Hempstead"
+        "id": "North London & Hertfordshire",
+        "label": "North London, Watford, St Albans, Hitchin, Welwyn Garden City, Stevenage"
       },
       {
-        "id": "London",
-        "label": "Central London and surrounding boroughs"
+        "id": "Buckinghamshire",
+        "label": "Milton Keynes, Amersham, Aylesbury and wider Buckinghamshire"
       },
       {
-        "id": "Buckinghamshire & Bedfordshire",
-        "label": "High Wycombe, Aylesbury, Luton, Bedford"
+        "id": "Bedfordshire",
+        "label": "Bedford, Luton and surrounding Bedfordshire"
       },
       {
-        "id": "Oxfordshire",
-        "label": "Oxford and surrounding areas"
+        "id": "Wider specialist coverage",
+        "label": "Home Counties, Midlands and specialist projects further afield"
       }
     ],
     "cta": {

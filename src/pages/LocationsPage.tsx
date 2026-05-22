@@ -37,7 +37,7 @@ const LocationsPage = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title={`Areas We Cover | ${siteSettings.businessName}`}
-        description="Independent damp, mould and waterproofing consultancy across London, Hertfordshire, Buckinghamshire, Bedfordshire and Oxfordshire."
+        description="Independent damp, mould and moisture investigations across North London, the Home Counties, Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City and Stevenage."
         path="/locations"
         breadcrumbs={[
           { name: "Home", path: "/" },

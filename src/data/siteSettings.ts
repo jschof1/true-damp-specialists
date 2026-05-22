@@ -11,7 +11,7 @@ export const siteSettings = {
   phone: "+447877988453",
   phoneFormatted: "07877 988 453",
   email: "info@truedampspecialists.co.uk",
-  address: "National coverage — London, Home Counties, Midlands & beyond",
+  address: "National coverage — North London, the Home Counties, Midlands & beyond",
   addressDetails: {
     addressLocality: "London & the Home Counties",
     addressRegion: "the UK",
@@ -29,7 +29,7 @@ export const siteSettings = {
   sameAs: [] as string[],
   feedbackGoogleReviewUrl: "https://g.page/r/CU-GUEpjknolEBM/review",
   areaServed:
-    "London, the Home Counties, the Midlands, Buckinghamshire, Hertfordshire, Bedfordshire, Oxfordshire, heritage and listed buildings nationwide",
+    "North London, London, the Home Counties, Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City, Stevenage, the Midlands, heritage and listed buildings nationwide",
   standardFaqs: [
     {
       question: "Why choose an independent damp survey instead of a free damp quote?",
@@ -54,7 +54,7 @@ export const siteSettings = {
     {
       question: "What areas do you cover?",
       answer:
-        "We provide national coverage with a core focus on London, the Home Counties and the Midlands. We regularly travel across the UK for specialist projects, including heritage and listed buildings. If you have a property that needs an independent damp investigation, get in touch — distance is rarely a barrier.",
+        "We provide national coverage with a core focus on North London, the Home Counties, Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City, Stevenage and the Midlands. We regularly travel across the UK for specialist projects, including heritage and listed buildings. If you have a property that needs an independent damp investigation, get in touch — distance is rarely a barrier.",
     },
     {
       question: "Can your reports help with Awaab's Law and damp compliance cases?",

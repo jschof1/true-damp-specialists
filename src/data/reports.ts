@@ -14,28 +14,28 @@ export const reportResources: ReportResource[] = [
     title: "Sample Escape of Water Report",
     description: "Example report for an escape-of-water scenario, useful for understanding moisture pathways and remedial priorities.",
     category: "Sample Reports",
-    status: "Preview coming soon",
+    status: "Redacted preview coming soon",
     featured: true,
   },
   {
     title: "Sample Home Buyer Damp Report",
     description: "Sample report for home buyers who need clarity before purchase, negotiation or planned remedial works.",
     category: "Sample Reports",
-    status: "Preview coming soon",
+    status: "Redacted preview coming soon",
     featured: true,
   },
   {
     title: "Sample Heritage Damp Report",
     description: "Example report for a heritage or older building where breathability, materials and context matter.",
     category: "Sample Reports",
-    status: "Preview coming soon",
+    status: "Redacted preview coming soon",
     featured: true,
   },
   {
     title: "Sample Heritage Damp Report 2",
     description: "Second heritage sample showing how True Damp Specialists approach complex traditional buildings.",
     category: "Sample Reports",
-    status: "Preview coming soon",
+    status: "Redacted preview coming soon",
   },
   {
     title: "Condensation and BS 5250",
@@ -128,8 +128,8 @@ export const reportsPageContent = {
     eyebrow: "Reports and guidance",
     title: "See the evidence-led reports behind the advice.",
     description: "Read technical notes and practical damp guidance written to show how moisture behaves, why diagnosis matters and why generic repairs often fail.",
-    imageAlt: "A damp survey report being reviewed on a desk",
-    primaryCta: "Preview section",
+    imageAlt: "Exposed building fabric photographed during a damp and moisture investigation",
+    primaryCta: "View guidance",
     secondaryCta: "Book a survey",
   },
   trustCards: [
@@ -148,7 +148,7 @@ export const reportsPageContent = {
   ],
   featured: {
     eyebrow: "Start here",
-    title: "Featured report previews",
+    title: "Featured guidance",
     description: "Start with the documents that explain moisture behaviour, diagnostic tools and common reasons damp repairs fail.",
   },
   library: {
