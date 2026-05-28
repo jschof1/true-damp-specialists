@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "scores": {
+    "gbp_categories": {
+      "points": 15,
+      "score": null
+    },
+    "gbp_completeness": {
+      "points": 15,
+      "score": null
+    },
+    "reviews": {
+      "points": 15,
+      "score": null
+    },
+    "website_local_relevance": {
+      "points": 15,
+      "score": null
+    },
+    "nap_citations": {
+      "points": 10,
+      "score": null
+    },
+    "photos_proof_activity": {
+      "points": 10,
+      "score": null
+    },
+    "competitor_gap": {
+      "points": 10,
+      "score": null
+    },
+    "links_prominence": {
+      "points": 5,
+      "score": null
+    },
+    "measurement_process": {
+      "points": 5,
+      "score": null
+    }
+  },
+  "notes": "Scores are evidence-led. Use null until evidence exists."
+}

@@ -1,0 +1,16 @@
+name: GBP Optimizer
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 9 * * 1"
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: GBP optimisation reminder
+        run: |
+          python3 .gbp-optimizer/scripts/run_cycle.py --mode weekly
+          echo "Review .gbp-optimizer/cycles/ and run the google-business-optimizer skill."

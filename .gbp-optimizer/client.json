@@ -1,0 +1,84 @@
+{
+  "business_name": "True Damp Specialists",
+  "gbp_url": "",
+  "website": "https://truedampspecialists.co.uk",
+  "primary_phone": "",
+  "address": "",
+  "service_areas": [],
+  "primary_category": "",
+  "secondary_categories": [],
+  "money_services": [
+    "Damp proofing",
+    "Mould treatment",
+    "Condensation control",
+    "Timber treatment",
+    "Basement waterproofing"
+  ],
+  "target_locations": [],
+  "competitors": [],
+  "gohighlevel": {
+    "enabled": false,
+    "location_id": "P7gAXg3KSOnBNGK0XlYO",
+    "social_planner_enabled": false,
+    "review_workflow_id": "",
+    "preferred_post_approval_flow": "csv_first"
+  },
+  "computer_use": {
+    "require_eu_activate_preflight": true,
+    "last_verified": "",
+    "notes": ""
+  },
+  "approval_required_for_live_gbp_edits": true,
+  "cadence": {
+    "weekly": [
+      "reviews",
+      "photos",
+      "posts",
+      "competitor_snapshot"
+    ],
+    "monthly": [
+      "profile_audit",
+      "nap_citations",
+      "website_local_seo",
+      "review_campaign"
+    ],
+    "quarterly": [
+      "strategy_review",
+      "citation_backlinks",
+      "schema_technical"
+    ]
+  },
+  "created": "2026-05-28",
+  "work_os": {
+    "updated": "2026-05-28",
+    "owner": "Rob",
+    "vertical": "home_services",
+    "business_type": "SAB/hybrid to verify",
+    "priority": "P0",
+    "state": [
+      "Review/reputation action needed",
+      "Posts/photos/services/category action needed",
+      "Website support issue: lead-volume concern after major changes",
+      "Missing data: exact GBP category/services/photos/review velocity need approval/evidence"
+    ],
+    "evidence": "Work OS: positive client but asking why lead volume is not higher; reviews/GBP automation identified as fastest confidence lever; website changes active; direct debit/payment question separate.",
+    "suggested_gbp_categories_to_verify": [
+      "Damp proofing service or Water damage restoration service - verify exact live GBP primary category before proposing any public change"
+    ],
+    "approval_required_public_changes": [
+      "Any GBP primary/secondary category change",
+      "Any public service list update",
+      "Any GBP post/photo upload",
+      "Any review reply or review removal request",
+      "Any NAP/hours/website URL correction"
+    ],
+    "safe_internal_tasks": [
+      "Audit live GBP fields against site NAP/schema",
+      "Draft review request flow and GBP post batch",
+      "Create photo shot list for recent damp jobs",
+      "Check LocalBusiness/HomeAndConstructionBusiness schema on GBP-linked page",
+      "Produce before/after lead-flow explanation for Rob"
+    ],
+    "source": "node work-os/bin/work-os.js clients --limit 100 --json"
+  }
+}
