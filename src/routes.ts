@@ -86,6 +86,15 @@ export const routes: RouteMetadata[] = [
     changefreq: "monthly",
   },
   {
+    path: "/privacy-policy",
+    outputPath: "privacy-policy/index.html",
+    title: "Privacy policy | True Damp Specialists",
+    description:
+      "How True Damp Specialists handles website enquiries and optional website tools.",
+    priority: 0.2,
+    changefreq: "yearly",
+  },
+  {
     path: "/get-quote",
     outputPath: "get-quote/index.html",
     title: "Request Specialist Advice | True Damp Specialists",

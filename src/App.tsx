@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import ChatWidget from "./components/ChatWidget";
+import OptionalToolsConsent from "./components/OptionalToolsConsent";
+import PlausibleAnalytics from "./components/PlausibleAnalytics";
 
 // Import pages directly for SSR
 import Index from "./pages/Index";
@@ -25,11 +27,14 @@ import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ReportsPage from "./pages/ReportsPage";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <TooltipProvider>
       <ChatWidget />
+      <PlausibleAnalytics />
+      <OptionalToolsConsent />
       <Toaster />
       <Sonner />
       <ScrollToTop />
@@ -60,6 +65,7 @@ export function AppRoutes() {
       <Route path="/blog/:slug" element={<BlogPostPage />} /> */}
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
