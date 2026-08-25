@@ -5,6 +5,7 @@ import { areas } from "@/data/areas";
 import { getFooterContent, getSiteContent } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
 import { reportsPageContent } from "@/data/reports";
+import { openOptionalToolsPreferences } from "@/components/OptionalToolsConsent";
 
 const Footer = () => {
   const footer = getFooterContent() as ReturnType<typeof getFooterContent> & {
@@ -85,6 +86,7 @@ const Footer = () => {
                 <li><Link to="/reviews" className="text-primary-foreground/70 hover:text-accent">Reviews</Link></li>
                 <li><Link to="/faq" className="text-primary-foreground/70 hover:text-accent">FAQs</Link></li>
                 <li><Link to="/contact" className="text-primary-foreground/70 hover:text-accent">Contact</Link></li>
+                <li><Link to="/privacy-policy" className="text-primary-foreground/70 hover:text-accent">Privacy policy</Link></li>
               </ul>
             </div>
 
@@ -150,7 +152,16 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10">
           <div className="container mx-auto px-4 py-6 text-sm text-primary-foreground/50">
-            {footer.rights}
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span>{footer.rights}</span>
+              <button
+                type="button"
+                onClick={openOptionalToolsPreferences}
+                className="text-left text-primary-foreground/70 underline-offset-4 hover:text-accent hover:underline"
+              >
+                Optional tools preferences
+              </button>
+            </div>
           </div>
         </div>
       </footer>
