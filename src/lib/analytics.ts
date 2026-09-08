@@ -1,6 +1,6 @@
 import { indexableRoutes } from "../routes";
 
-const domain = "www.truedampspecialists.co.uk";
+const domain = "truedampspecialists.co.uk";
 const paths = new Set(indexableRoutes.map(route => route.path.replace(/\/$/, "") || "/"));
 type EventName = "pageview" | "Phone Click" | "Email Click" | "Enquiry Submitted";
 type Plausible = ((name: EventName, options: { u: string }) => void) & { q?: unknown[][] };
@@ -9,7 +9,7 @@ declare global { interface Window { plausible?: Plausible } }
 // Only public routes and campaign labels: never form data, arbitrary query strings or hashes.
 export function analyticsUrl(href: string): string | null {
   const url = new URL(href);
-  if (![domain, "truedampspecialists.co.uk"].includes(url.hostname)) return null;
+  if (![domain, `www.${domain}`].includes(url.hostname)) return null;
   if (!paths.has(url.pathname.replace(/\/$/, "") || "/")) return null;
   const clean = new URL(url.pathname, `https://${domain}`);
   for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {

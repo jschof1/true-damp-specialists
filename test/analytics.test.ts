@@ -7,13 +7,13 @@ test('analytics limits collection to production public routes and campaign label
   assert.equal(analyticsUrl('https://preview.pages.dev/'), null);
   assert.equal(analyticsUrl('https://www.truedampspecialists.co.uk/add-customer?name=Tom'), null);
   assert.equal(analyticsUrl('https://www.truedampspecialists.co.uk/unknown-person'), null);
-  assert.equal(analyticsUrl('https://www.truedampspecialists.co.uk/contact/?email=person@example.com&utm_source=google#private'), 'https://www.truedampspecialists.co.uk/contact/?utm_source=google');
+  assert.equal(analyticsUrl('https://truedampspecialists.co.uk/contact/?email=person@example.com&utm_source=google#private'), 'https://truedampspecialists.co.uk/contact/?utm_source=google');
 });
 
 test('only successful contact or quote responses emit enquiries, with no payload data', async () => {
   const events: unknown[] = [];
   const oldFetch = globalThis.fetch;
-  Object.assign(globalThis, { window: { location: { href: 'https://www.truedampspecialists.co.uk/contact/' }, plausible: (...args: unknown[]) => events.push(args) } });
+  Object.assign(globalThis, { window: { location: { href: 'https://truedampspecialists.co.uk/contact/' }, plausible: (...args: unknown[]) => events.push(args) } });
   try {
     globalThis.fetch = async () => new Response('', { status: 500 });
     await assert.rejects(postFormSubmission(formEndpoints.contact, { email: 'private@example.com' }));
@@ -22,7 +22,7 @@ test('only successful contact or quote responses emit enquiries, with no payload
     await postFormSubmission(formEndpoints.feedback, {});
     assert.equal(events.length, 0);
     await postFormSubmission(formEndpoints.contact, { email: 'private@example.com' });
-    assert.deepEqual(events, [['Enquiry Submitted', { u: 'https://www.truedampspecialists.co.uk/contact/' }]]);
+    assert.deepEqual(events, [['Enquiry Submitted', { u: 'https://truedampspecialists.co.uk/contact/' }]]);
     window.plausible = () => { throw new Error('blocked analytics'); };
     await postFormSubmission(formEndpoints.quote, {});
     assert.doesNotThrow(() => trackEvent('Phone Click'));
