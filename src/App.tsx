@@ -1,3 +1,4 @@
+import { Analytics } from "./components/Analytics";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,6 +33,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <ChatWidget />
       <Toaster />
       <Sonner />
+      <Analytics />
       <ScrollToTop />
       {children}
     </TooltipProvider>

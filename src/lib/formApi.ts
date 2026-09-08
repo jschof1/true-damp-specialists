@@ -1,3 +1,4 @@
+import { trackEvent } from "./analytics";
 export const formEndpoints = {
   contact: "/api/forms/contact",
   quote: "/api/forms/quote",
@@ -21,5 +22,6 @@ export const postFormSubmission = async (
     throw new Error(`Submission failed with status ${response.status}`);
   }
 
+  if (endpoint === formEndpoints.contact || endpoint === formEndpoints.quote) trackEvent("Enquiry Submitted");
   return response;
 };
