@@ -124,9 +124,9 @@
     "titlePrefix": "",
     "propertyTypes": [],
     "titleAccent": "",
-    "title": "Damp & Moisture Problems — Properly Diagnosed",
-    "description": "Independent, evidence-led surveys to identify the real cause — not guesswork, not sales-driven solutions.",
-    "additionalLine": "Often instructed where the cause isn’t clear or previous works have failed.",
+    "title": "Independent Damp Surveys & Second Opinions",
+    "description": "Understand the cause of damp before committing to repairs. Clear findings and practical advice for homeowners, buyers and property professionals.",
+    "additionalLine": "Conflicting advice, failed damp-proofing work or damp flagged in a homebuyer report? Talk it through with Rob.",
     "formTitle": "Request Specialist Advice",
     "formSubtitle": "Tell us what you are seeing and we will review the most appropriate next step.",
     "ctaText": "Request Specialist Advice",
@@ -893,9 +893,9 @@
     },
     "hero": {
       "badge": "About us",
-      "title": "The right diagnosis before the right repair",
-      "description": "Independent, evidence-led surveys to identify the real cause — not assumptions, not sales-driven solutions.",
-      "additionalLine": "Often instructed where the cause isn’t clear or previous works have failed.",
+      "title": "Independent advice, with Rob at the centre",
+      "description": "True Damp Specialists is an independent consultancy led by Rob Cain. We help you understand the building, the findings and what actually needs to happen next.",
+      "additionalLine": "A personal conversation, a clear report and advice tailored to your property.",
       "trustChips": [
         "Independent of product sales",
         "PCA-trained, CSCS-qualified professionals",
@@ -953,12 +953,12 @@
       }
     ],
     "valueSplit": {
-      "badge": "Technical depth, practical judgement, zero sales agenda",
-      "title": "Technical depth, practical judgement, zero sales agenda",
+      "badge": "Rob's approach",
+      "title": "The right advice before you commit to work",
       "paragraphs": [
-        "We combine technical depth with a practical understanding of how buildings actually perform.",
-        "Our role is not to sell a default treatment — it is to investigate, analyse, and explain what is genuinely happening.",
-        "That means looking beyond surface symptoms and understanding how moisture is moving through the structure.",
+        "Rob starts by listening to what has happened, the advice you have already received and the decision you need to make.",
+        "The purpose of the survey is to explain the cause and recommend a proportionate response. If monitoring, a small repair or work by your own contractor is appropriate, we will explain that.",
+        "Where more substantial work is needed, we consider the wider building and practical implications, rather than treating a damp patch in isolation.",
         "This is particularly important when:",
         "– You are buying a property",
         "– Previous repairs have failed",
@@ -1068,7 +1068,7 @@
         }
       ]
     },
-    "teamHeading": "Our core team includes:",
+    "teamHeading": "Specialist support brought in to suit the project:",
     "teamRoles": [
       {
         "role": "PCA-trained surveyors",

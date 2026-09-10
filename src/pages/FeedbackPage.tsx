@@ -9,6 +9,7 @@ import { siteSettings } from "@/data/siteSettings";
 import { formEndpoints, postFormSubmission } from "@/lib/formApi";
 import { normalizeUKPhone } from "@/lib/phoneUtils";
 import TrustBar from "@/components/TrustBar";
+import { feedbackContent } from "@/data/feedback";
 
 const FeedbackPage = () => {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
@@ -27,13 +28,7 @@ const FeedbackPage = () => {
   const handleStarClick = (rating: number) => {
     setSelectedRating(rating);
 
-    if (rating === 5) {
-      // Redirect to Google Reviews for 5 stars
-      window.location.href = siteSettings.feedbackGoogleReviewUrl;
-    } else {
-      // Show feedback form for 1, 2, 3, or 4 stars
-      setShowForm(true);
-    }
+    setShowForm(true);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -113,10 +108,9 @@ const FeedbackPage = () => {
             {showForm && !submitted && (
               <div>
                 <div className="text-center mb-6">
-                  <h2 className="text-xl font-bold text-foreground mb-2">We're sorry to hear that</h2>
+                  <h2 className="text-xl font-bold text-foreground mb-2">{feedbackContent.formTitle}</h2>
                   <p className="text-muted-foreground text-sm">
-                    We truly apologise if we didn't meet your expectations. Please let us know what went wrong so we can
-                    make it right.
+                    {feedbackContent.formDescription}
                   </p>
                 </div>
 
@@ -152,7 +146,7 @@ const FeedbackPage = () => {
                   </div>
                   <div>
                     <Textarea
-                      placeholder="Please tell us what went wrong..."
+                      placeholder={feedbackContent.messagePlaceholder}
                       value={formData.feedback}
                       onChange={(e) => setFormData({ ...formData, feedback: e.target.value })}
                       required
@@ -174,11 +168,18 @@ const FeedbackPage = () => {
                 </div>
                 <h2 className="text-xl font-bold text-foreground mb-2">Thank you for your feedback</h2>
                 <p className="text-muted-foreground text-sm">
-                  We appreciate you taking the time to share your experience. A member of our team will be in touch
-                  shortly to discuss how we can make things right.
+                  {feedbackContent.thankYouDescription}
                 </p>
               </div>
             )}
+            <div className="mt-6 border-t border-border pt-6 text-center">
+              <Button asChild className="w-full">
+                <a href={siteSettings.feedbackGoogleReviewUrl} target="_blank" rel="noopener noreferrer">
+                  {feedbackContent.publicReviewLabel}
+                </a>
+              </Button>
+              <p className="mt-3 text-sm text-muted-foreground">{feedbackContent.publicReviewDescription}</p>
+            </div>
           </div>
         </div>
       </div>

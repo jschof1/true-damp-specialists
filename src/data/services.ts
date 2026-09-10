@@ -89,14 +89,14 @@ const commonProcess: ServiceProcessStep[] = [
 export const services: Service[] = [
   {
     slug: "independent-damp-mould-surveys",
-    title: "Damp & Mould Assessment",
-    metaTitle: `Damp & Mould Assessment ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Independent damp and mould diagnostics in ${DEFAULT_AREA} using moisture profiling, thermal imaging, mould testing and salt testing. Clear data, visual evidence and defensible conclusions.`,
+    title: "Independent Damp & Mould Surveys",
+    metaTitle: `Independent Damp Surveys ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Independent damp surveys in ${DEFAULT_AREA}. Clear advice for damp patches, homebuyer concerns and failed repairs, with a written report and practical next steps.`,
     icon: Search,
     heroDescription:
-      "Independent diagnostics using moisture profiling, thermal imaging, mould testing and salt testing to determine the true cause and extent of damp. Every survey is backed by clear data and visual evidence.",
+      "Find out what is causing the damp before committing to treatment. We investigate the property, explain the evidence and provide a written report with practical next steps. Useful when a homebuyer survey has flagged damp or previous advice has left you unsure.",
     shortDesc:
-      "Moisture profiling, thermal imaging, mould and salt testing with evidence-led conclusions on cause and extent.",
+      "Clear answers for homeowners and buyers, with evidence, a written report and proportionate advice before repairs.",
     fullDescription: [
       "This service is built for clients who need the issue explained with measurable data, not guesswork. We combine moisture profiling, thermal imaging, mould sampling where appropriate, and salt analysis to build a coherent picture of what is happening in the building fabric.",
       "The objective is to establish the true cause and extent of damp-related problems so decisions about treatment, negotiation or further investigation rest on defensible evidence.",
@@ -149,9 +149,9 @@ export const services: Service[] = [
   },
   {
     slug: "moisture-diagnostics-building-pathology",
-    title: "Specialist Damp & Moisture Investigations",
-    metaTitle: `Specialist Damp & Moisture Investigations ${DEFAULT_AREA} | True Damp Specialists`,
-    metaDescription: `Specialist damp and moisture investigations in ${DEFAULT_AREA}. Evidence-led investigation for unclear damp, moisture movement, thermal patterns and building defect cases.`,
+    title: "Second-Opinion Damp & Moisture Investigations",
+    metaTitle: `Second-Opinion Damp Surveys ${DEFAULT_AREA} | True Damp Specialists`,
+    metaDescription: `Conflicting damp reports or failed damp-proofing? Independent second opinions in ${DEFAULT_AREA} to understand the cause and decide what work is needed.`,
     icon: Scale,
     heroDescription:
       "Detailed damp and moisture investigations built around how the building is actually performing. Used where the cause is unclear, moisture behaviour needs proper interpretation, or previous repairs have failed because the root cause was never diagnosed.",
@@ -448,6 +448,55 @@ export const services: Service[] = [
     ],
     process: commonProcess,
   },
+  // Specialist commercial routes support, rather than replace, the core damp offer.
+  {
+    slug: "commercial-damp-surveys",
+    title: "Commercial Damp Surveys & Investigations",
+    metaTitle: "Commercial Damp Surveys | True Damp Specialists",
+    metaDescription: "Independent commercial damp investigations for managing agents, property owners and project teams. Clear findings, practical recommendations and specialist support.",
+    icon: Building2,
+    heroDescription: "Understand damp and moisture problems in a commercial property before deciding on repairs. We agree the investigation around the building, access arrangements and the decisions your project team needs to make.",
+    shortDesc: "Independent investigation and practical reporting for commercial properties, managing agents and project teams.",
+    fullDescription: [
+      "Commercial instructions can involve recurring water ingress, conflicting reports or defects that affect a wider refurbishment. We start with the history, existing evidence and intended works so the investigation answers the right questions.",
+      "The report explains the findings and proportionate next steps. Where further specialist input or remedial planning is needed, Rob can coordinate suitable support from his network for the agreed brief.",
+      "Ferro and reinforcement scanning can be considered separately when a project requires information about concrete before proposed cutting or drilling. It complements the commercial offer without replacing a damp investigation.",
+    ],
+    features: ["Brief agreed around your property and project", "Review of existing reports and repair history", "Investigation of damp and moisture pathways", "Clear written findings and practical priorities", "Coordination with property and project teams", "Specialist support where the brief requires it"],
+    pricing: [{service:"Commercial damp investigation",price:"Quoted per project",note:"Scope, access, reporting and any specialist input agreed in advance"}],
+    faqs: [
+      {question:"Who is this service for?",answer:"Commercial property owners, managing agents and project teams who need an independent explanation of a damp or moisture problem before planning the next step."},
+      {question:"Can you review a problem after previous repairs?",answer:"Yes. Share the reports, photographs and repair history so we can agree an investigation focused on the unresolved issue."},
+      {question:"Is concrete scanning included?",answer:"No. Scanning has a separate scope and quotation. We will discuss whether it is relevant to your proposed works and what specialist input is needed."},
+    ],
+    areas: coreAreas,
+    relatedServices:["ferro-reinforcement-scanning","moisture-diagnostics-building-pathology","remedial-specifications-project-support"],
+    process:commonProcess,
+  },
+  {
+    slug:"ferro-reinforcement-scanning",
+    title:"Ferro & Reinforcement Scanning",
+    metaTitle:"Ferro & Reinforcement Scanning | True Damp Specialists",
+    metaDescription:"Specialist concrete scanning coordinated by Rob Cain for commercial projects. Discuss your proposed cutting or drilling, site access and reporting requirements.",
+    icon:Search,
+    heroDescription:"Planning work involving concrete floors or structures? Rob coordinates specialist scanning to help the project team investigate what lies within the concrete before deciding how to proceed.",
+    shortDesc:"Specialist concrete scanning for commercial project teams planning cutting, drilling or further investigation.",
+    fullDescription:[
+      "Rob has developed this service through commercial project work and a network of specialist subcontractors. Start by sharing what you plan to do, the concrete areas involved and any drawings or existing information.",
+      "The appropriate scanning method, access requirements and reporting scope are agreed for the project. Findings help inform the next decision; they are not a blanket guarantee that cutting or drilling is safe.",
+      "Scanning is a supporting commercial service. For damp, leaks or recurring moisture problems, an independent damp investigation remains the starting point."
+    ],
+    features:["Project brief reviewed with Rob", "Specialist scanning coordinated to suit the brief", "Existing drawings and site information considered", "Access and survey scope agreed in advance", "Findings for the project team's next decision", "Separate quotation for specialist investigation"],
+    pricing:[{service:"Ferro / reinforcement scanning",price:"Quoted per project",note:"Method, coverage, access and reporting agreed before attendance"}],
+    faqs:[
+      {question:"What should I send with an enquiry?",answer:"The site location, the proposed works, approximate area to investigate, any drawings or photographs and your preferred timescale. Rob will review what further detail is needed."},
+      {question:"Does a scan authorise cutting or drilling?",answer:"No. The project team must consider the findings alongside the construction information and any necessary engineering advice before agreeing the work."},
+      {question:"Is this the same as a damp survey?",answer:"No. Concrete scanning answers a different project question. If you are investigating damp or water ingress, we can help identify the appropriate damp survey first."},
+    ],
+    areas:coreAreas,
+    relatedServices:["commercial-damp-surveys","independent-damp-mould-surveys","remedial-specifications-project-support"],
+    process:commonProcess,
+  }
 ];
 
 export const getServiceBySlug = (slug: string): Service | undefined =>

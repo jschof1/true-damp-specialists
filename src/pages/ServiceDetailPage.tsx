@@ -425,7 +425,7 @@ const ServiceDetailPage = () => {
                       <Card className="h-full border-border/40 hover:border-accent/40 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 overflow-hidden rounded-2xl sm:rounded-3xl text-left bg-muted">
                         <div className="relative h-36 sm:h-40 md:h-48 overflow-hidden">
                         <img 
-                            src={serviceImages[related.slug] || kitchenWrapping} 
+                            src={serviceImages[related.slug] || "/images/services/independent-survey-masonry.webp"}
                           alt={related.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 grayscale"
                             width={640}
