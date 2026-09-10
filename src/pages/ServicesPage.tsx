@@ -6,7 +6,6 @@ import MobileCallButton from "@/components/MobileCallButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { siteSettings } from "@/data/siteSettings";
-import { services } from "@/data/services";
 import { getServiceDestination } from "@/lib/serviceLinks";
 import { ArrowRight, CheckCircle2, FileText, Phone, Search, ShieldCheck } from "lucide-react";
 import ctaBackground from "@/assets/general/damp-survey-thermal-imaging.webp";
@@ -227,56 +226,6 @@ const ServicesPage = () => {
               })}
             </div>
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => {
-                const img = serviceImages[service.slug] ?? "/images/services/independent-survey-masonry.webp";
-                return (
-                  <Card
-                    key={service.slug}
-                    className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col"
-                  >
-                    <div className="relative h-48 overflow-hidden shrink-0">
-                      <img
-                        src={img}
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                        width={600}
-                        height={400}
-                        decoding="async"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
-                        aria-hidden
-                      />
-                    </div>
-                    <CardContent className="p-6 border-t-4 border-accent flex flex-col flex-1">
-                      <h3 className="font-display text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                      <p className="text-sm leading-relaxed text-muted-foreground flex-1 mb-5">
-                        {service.shortDesc}
-                      </p>
-                      <div className="flex gap-3">
-                        <Button
-                          asChild
-                          size="sm"
-                          className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
-                        >
-                          <Link to={`/get-quote?service=${service.slug}`}>Enquire</Link>
-                        </Button>
-                        <Button
-                          asChild
-                          size="sm"
-                          variant="outline"
-                          className="flex-1 border-border text-foreground hover:bg-muted hover:border-accent/40 font-semibold rounded-lg"
-                        >
-                          <Link to={getServiceDestination(service.slug)}>Learn More</Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
           </div>
         </section>
 

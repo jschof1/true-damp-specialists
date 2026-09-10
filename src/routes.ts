@@ -27,7 +27,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "services/index.html",
     title: "Services | True Damp Specialists",
     description:
-      "We identify the cause of damp, mould and moisture issues using evidence-led investigation — giving you clear conclusions and practical next steps you can rely on.",
+      "Start with the concern you have about the building. We will agree the appropriate investigation, report clearly on the evidence and explain what should happen next.",
     priority: 0.9,
     changefreq: "weekly",
   },
@@ -81,7 +81,7 @@ export const routes: RouteMetadata[] = [
     outputPath: "about/index.html",
     title: "About Us | True Damp Specialists",
     description:
-      "Independent damp specialists with PCA-trained surveyors, engineers and waterproofing designers. Evidence-led surveys, clear reports, and advice that is not tied to treatment sales.",
+      "A specialist damp, moisture and building-defect consultancy combining proper investigation, wider construction experience and clear advice.",
     priority: 0.85,
     changefreq: "monthly",
   },

@@ -33,6 +33,8 @@ const WhyChooseUs = ({ areaName }: WhyChooseUsProps) => {
   const displayArea = areaName || siteSettings.addressDetails.addressLocality;
   const section = getWhyChooseUsContent(displayArea) as ReturnType<typeof getWhyChooseUsContent> & {
     contentBlocks?: ContentBlock[];
+    ctaText?: string;
+    ctaPath?: string;
   };
 
   const blocks: ContentBlock[] = section.contentBlocks ?? [];
@@ -84,8 +86,8 @@ const WhyChooseUs = ({ areaName }: WhyChooseUsProps) => {
             size="lg"
             className="bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold px-6 sm:px-8 h-12 rounded-xl text-base shadow-xl shadow-accent/20"
           >
-            <Link to="/get-quote" className="inline-flex items-center gap-2">
-              {getSectionCtaLabel()}
+            <Link to={section.ctaPath ?? "/get-quote"} className="inline-flex items-center gap-2">
+              {section.ctaText ?? getSectionCtaLabel()}
               <ChevronRight className="w-5 h-5" />
             </Link>
           </Button>
