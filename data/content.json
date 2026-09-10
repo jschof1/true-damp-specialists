@@ -658,7 +658,7 @@
       "title": "If You’re Not Sure What’s Causing It, That’s the First Problem",
       "description": "Most damp issues are not straightforward, and incorrect advice often leads to unnecessary work.\n\nWe will help you understand what is actually happening before any decisions are made.",
       "primaryText": "Request Independent Advice",
-      "secondaryText": "Call the Survey Team"
+      "secondaryText": "Speak to Rob"
     }
   },
   "locationsPage": {
@@ -836,14 +836,14 @@
     "pricing": {
       "badge": "Scope & Typical Cost Positioning",
       "title": "{serviceName} scope and pricing context",
-      "description": "This site should talk about pricing carefully: enough to set expectations, without pretending every case fits a flat template. Complexity, property type and reporting depth matter.",
+      "description": "Your quotation reflects the property, access, investigation and reporting you need. Rob will agree the scope and cost with you before the work starts.",
       "rateLabel": "Clear Scope",
       "cta": "Request Advice",
       "note": "* Exact pricing depends on the property, complexity and reporting requirements."
     },
     "process": {
       "title": "How this service is delivered",
-      "description": "The process should move from context and evidence gathering through to analysis and a usable recommendation."
+      "description": "We start with your questions, gather the relevant evidence and explain the findings with practical next steps."
     },
     "coverage": {
       "badge": "London, Home Counties & Midlands",
