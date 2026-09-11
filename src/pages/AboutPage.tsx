@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Phone, Quote, ShieldCheck } from "lucide-react";
 import { siteSettings } from "@/data/siteSettings";
 import { getAboutPageContent } from "@/data/content";
+import ReviewShowcase from "@/components/ReviewShowcase";
 
 import imgThermal from "@/assets/general/damp-survey-thermal-imaging.webp";
 import imgFlatlay from "@/assets/general/damp-survey-equipment-flatlay.webp";
@@ -491,6 +492,8 @@ const AboutPage = () => {
             </p>
           </div>
         </section>
+
+        <ReviewShowcase />
 
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">

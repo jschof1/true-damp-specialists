@@ -333,8 +333,8 @@
       }
     ],
     "coreServices": {
-      "title": "Choose the route that best matches your concern",
-      "description": "These pathways make it easier to see where to start, so you can choose the investigation or support that best fits the concern about your property."
+      "title": "Six clear ways we can help",
+      "description": "Start with the route that best matches the decision you need to make. If the issue spans more than one area, we will scope the investigation around the building rather than force it into a generic treatment."
     },
     "process": {
       "subtitle": "How we work",
@@ -358,14 +358,10 @@
     "serviceCards": [
       { "slug": "independent-damp-mould-surveys", "title": "Damp & Moisture Investigations", "description": "Damp, staining, unexplained moisture or deterioration where the cause needs establishing.", "includes": ["Building-led investigation", "Clear findings", "Practical next steps"] },
       { "slug": "moisture-diagnostics-building-pathology", "title": "Second Opinions & Failed Previous Works", "description": "Conflicting advice, previous treatments that have not resolved the issue, or significant proposed works you want independently reviewed.", "includes": ["Review of previous advice", "Investigation of the unresolved issue", "Proportionate recommendations"] },
-      { "slug": "independent-damp-mould-surveys", "title": "Pre-Purchase Investigations", "description": "Where a RICS or building survey has raised damp, timber, moisture or building-defect concerns.", "includes": ["Buyer-focused explanation", "Clear report", "Next-step guidance before a decision"] },
+      { "slug": "independent-damp-mould-surveys", "title": "Pre-Purchase, Heritage & Traditional Buildings", "description": "Independent investigation before a purchase, or a considered approach for older, traditionally built and listed properties.", "includes": ["Buyer-focused explanation", "Traditional construction and permeability", "Clear next-step guidance"] },
       { "slug": "mould-remediation-condensation-control", "title": "Condensation, Mould & Ventilation", "description": "Humidity, condensation, thermal bridging, ventilation and mould-related concerns.", "includes": ["Internal environment", "Moisture behaviour", "Prevention-focused advice"] },
-      { "slug": "independent-damp-mould-surveys", "title": "Heritage & Traditional Buildings", "description": "Older, traditionally constructed and listed buildings requiring an approach appropriate to their construction and materials.", "includes": ["Traditional construction", "Materials and permeability", "Whole-building context"] },
       { "slug": "external-defects-drainage-weathering", "title": "Leaks, Drainage & Water Ingress", "description": "Plumbing leaks, drainage defects, roofs, external water ingress and concealed moisture pathways.", "includes": ["Source investigation", "External assessment", "Evidence for the next decision"] },
-      { "slug": "basement-below-ground-waterproofing", "title": "Basements, Below-Ground & Waterproofing", "description": "Basements and other below-ground structures requiring specialist moisture and waterproofing assessment.", "includes": ["Below-ground context", "Ingress pathways", "Waterproofing assessment"] },
-      { "slug": "commercial-damp-surveys", "title": "Commercial Investigations", "description": "For commercial property owners, landlords, managing agents, project teams and professional clients.", "includes": ["Investigation and reporting", "Practical construction understanding", "Specialist coordination where required"] },
-      { "slug": "remedial-specifications-project-support", "title": "Remedial & Project Support", "description": "Specifications, specialist coordination and properly managed works following diagnosis.", "includes": ["Diagnosis-led scope", "Specialist coordination", "Practical project support"] },
-      { "slug": "ferro-reinforcement-scanning", "title": "Ferro & Reinforcement Scanning", "description": "Specialist concrete investigation for commercial projects where reinforcement scanning is needed.", "includes": ["Commercial project scope", "Specialist scanning coordination", "Appropriate enquiry route"] }
+      { "slug": "basement-below-ground-waterproofing", "title": "Basements, Commercial & Project Support", "description": "Below-ground moisture, waterproofing, commercial investigations and diagnosis-led coordination after the cause is understood.", "includes": ["Below-ground and waterproofing context", "Commercial reporting", "Specialist coordination where required"] }
     ],
     "positioningBlock": {
       "title": "Need a clear answer, not a guess or a generic quote?",
@@ -776,7 +772,7 @@
     },
     "gallery": {
       "title": "Investigation-led case studies",
-      "description": "Each summary is written to preserve the diagnostic detail: the symptoms, evidence, root cause and staged thinking behind the recommended next steps.",
+      "description": "Each summary preserves the diagnostic detail: the symptoms, evidence, root cause and staged thinking behind the recommended next steps. The photographs are real investigation evidence selected to illustrate the building condition discussed; to protect clients and properties, an image may be representative rather than from the precise case described.",
       "categories": [
         "All",
         "Surveys",
