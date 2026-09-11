@@ -28,6 +28,7 @@ const ServicesPage = () => {
       description: string;
       includes: string[];
       note?: string;
+      group?: string;
     }[];
     process: {
       subtitle: string;
@@ -66,10 +67,12 @@ const ServicesPage = () => {
     "basement-below-ground-waterproofing": "/images/services/waterproofing-building-fabric.webp",
     "external-defects-drainage-weathering": "/images/services/external-defects-roof-junction.webp",
     "remedial-specifications-project-support": "/images/services/remedial-specifications-fabric.webp",
+    "commercial-damp-surveys": "/images/services/remedial-specifications-fabric.webp",
+    "ferro-reinforcement-scanning": "/images/services/thermal-moisture-diagnostics.webp",
   };
 
   const trustIcons = [ShieldCheck, Search, FileText, CheckCircle2];
-  const stepIcons = [Search, ShieldCheck, FileText];
+  const stepIcons = [Search, ShieldCheck, FileText, CheckCircle2];
 
   return (
     <div className="min-h-screen bg-background">
@@ -113,7 +116,7 @@ const ServicesPage = () => {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-xl bg-accent font-bold text-accent-foreground hover:bg-accent/90">
-                <Link to="/get-quote">{servicesPage.hero.ctaPrimary}</Link>
+                <Link to="/contact">{servicesPage.hero.ctaPrimary}</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10">
                 <a href="#services-grid">{servicesPage.hero.ctaSecondary}</a>
@@ -158,72 +161,23 @@ const ServicesPage = () => {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {servicesPage.serviceCards.map((card) => {
-                const img = serviceImages[card.slug] ?? "/images/services/independent-survey-masonry.webp";
-                return (
-                  <Card key={card.title} className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col">
-                    <div className="relative h-48 overflow-hidden shrink-0">
-                      <img
-                        src={img}
-                        alt={card.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                        width={600}
-                        height={400}
-                        decoding="async"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
-                        aria-hidden
-                      />
-                    </div>
-                    <CardContent className="p-6 border-t-4 border-accent flex flex-col flex-1">
-                      <h3 className="font-display text-xl font-black text-foreground mb-4">{card.title}</h3>
-                      <div className="space-y-3 mb-5">
-                        {card.description.split("\n\n").map((paragraph) => (
-                          <p key={paragraph} className="text-sm leading-relaxed text-muted-foreground">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                      <div className="mb-5">
-                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Includes</p>
-                        <ul className="space-y-2">
-                          {card.includes.map((item) => (
-                            <li key={item} className="flex items-start gap-2 text-sm text-foreground">
-                              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      {card.note ? (
-                        <p className="mb-5 rounded-xl bg-muted px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-                          {card.note}
-                        </p>
-                      ) : null}
-                      <div className="mt-auto flex gap-3">
-                        <Button
-                          asChild
-                          size="sm"
-                          className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
-                        >
-                          <Link to={`/get-quote?service=${card.slug}`}>Enquire</Link>
-                        </Button>
-                        <Button
-                          asChild
-                          size="sm"
-                          variant="outline"
-                          className="flex-1 border-border text-foreground hover:bg-muted hover:border-accent/40 font-semibold rounded-lg"
-                        >
-                          <Link to={getServiceDestination(card.slug)}>Learn More</Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+            <div className="space-y-12">
+              {Array.from(new Set(servicesPage.serviceCards.map((card) => card.group ?? "Services"))).map((group) => (
+                <div key={group}>
+                  <h3 className="mb-5 border-b border-border pb-3 font-display text-xl font-black uppercase tracking-wide text-foreground">{group}</h3>
+                  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    {servicesPage.serviceCards.filter((card) => (card.group ?? "Services") === group).map((card) => {
+                      const img = serviceImages[card.slug] ?? "/images/services/independent-survey-masonry.webp";
+                      return (
+                        <Card key={card.title} className="group border-2 border-border bg-card shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl h-full flex flex-col">
+                          <div className="relative h-48 overflow-hidden shrink-0"><img src={img} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={600} height={400} decoding="async" /><div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60" aria-hidden /></div>
+                          <CardContent className="p-6 border-t-4 border-accent flex flex-col flex-1"><h4 className="font-display text-xl font-black text-foreground mb-4">{card.title}</h4><p className="text-sm leading-relaxed text-muted-foreground mb-5 flex-1">{card.description}</p><div className="mt-auto flex gap-3"><Button asChild size="sm" className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"><Link to="/contact">Discuss</Link></Button><Button asChild size="sm" variant="outline" className="flex-1 border-border text-foreground hover:bg-muted hover:border-accent/40 font-semibold rounded-lg"><Link to={getServiceDestination(card.slug)}>Learn More</Link></Button></div></CardContent>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
 
           </div>
@@ -237,7 +191,7 @@ const ServicesPage = () => {
                 {servicesPage.process.title}
               </h2>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {servicesPage.process.steps.map((step, index) => {
                 const Icon = stepIcons[index] ?? Search;
                 return (
@@ -373,7 +327,7 @@ const ServicesPage = () => {
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-xl bg-accent font-bold text-accent-foreground hover:bg-accent/90">
-                <Link to="/get-quote">{servicesPage.finalCta.primaryText}</Link>
+                <Link to="/contact">{servicesPage.finalCta.primaryText}</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10">
                 <a href={`tel:${siteSettings.phone}`} className="flex items-center gap-2">

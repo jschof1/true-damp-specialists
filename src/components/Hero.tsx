@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -81,7 +82,7 @@ const Hero = ({ areaName, description }: HeroProps) => {
           {/* Left Content */}
           <div className="text-center lg:text-left animate-fade-in lg:pr-8 xl:pr-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground/90 backdrop-blur-sm mb-6">
-              Independent, evidence-led diagnosis
+              {hero.eyebrow}
             </div>
 
             <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-[1.05] mb-5 sm:mb-6 drop-shadow-sm">
@@ -99,7 +100,7 @@ const Hero = ({ areaName, description }: HeroProps) => {
             ) : null}
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
-              {hero.badges.slice(0, 3).map((badge: { text: string }, i: number) => {
+              {hero.badges.map((badge: { text: string }, i: number) => {
                 const isPCA = badge.text.toLowerCase().includes("pca");
                 return (
                   <span
@@ -118,12 +119,8 @@ const Hero = ({ areaName, description }: HeroProps) => {
             </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 h-12 rounded-xl shadow-xl shadow-accent/20">
-                <a href={`tel:${siteSettings.phone}`} className="inline-flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  {siteSettings.phoneFormatted}
-                </a>
-              </Button>
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 h-12 rounded-xl shadow-xl shadow-accent/20"><Link to="/contact">{hero.ctaText}</Link></Button>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10"><Link to="/about">{hero.secondaryCta ?? "See How We Investigate"}</Link></Button>
             </div>
           </div>
 

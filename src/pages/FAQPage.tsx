@@ -95,11 +95,7 @@ const FAQPage = () => {
               {faqPage.hero.badge ?? "Frequently Asked Questions"}
             </div>
             <h1 className="font-display font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 sm:mb-8 leading-tight max-w-4xl mx-auto animate-fade-in">
-              How Can We{" "}
-              <span className="text-accent relative inline-block">
-                Help You?
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-accent/20 -z-10 -rotate-1" aria-hidden="true" />
-              </span>
+              {faqPage.hero.title}
             </h1>
             <p className="text-primary-foreground/80 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-12 animate-fade-in">
               {faqPage.hero.description}

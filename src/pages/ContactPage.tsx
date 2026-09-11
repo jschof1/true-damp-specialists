@@ -57,8 +57,10 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     issue: "",
     previousAdvice: "",
+    firstNoticed: "",
     postcode: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,14 +80,16 @@ const ContactPage = () => {
       await postFormSubmission(formEndpoints.contact, {
         name: formData.name.trim(),
         phone: normalizeUKPhone(formData.phone.trim()),
+        email: formData.email.trim(),
         issue: formData.issue,
         previousAdvice: formData.previousAdvice.trim(),
+        firstNoticed: formData.firstNoticed.trim(),
         postcode: formData.postcode.trim(),
         source: "website_contact_page_v3",
       });
 
       toast.success("Thanks — we’ll review your enquiry and point you in the right direction.");
-      setFormData({ name: "", phone: "", issue: "", previousAdvice: "", postcode: "" });
+      setFormData({ name: "", phone: "", email: "", issue: "", previousAdvice: "", firstNoticed: "", postcode: "" });
     } catch {
       toast.error("Something went wrong. Please call or email us directly.");
     } finally {
@@ -97,7 +101,7 @@ const ContactPage = () => {
     <>
       <SEO
         title={`Contact ${siteSettings.businessName} | Independent Damp Specialists`}
-        description="Speak to a damp and moisture specialist for independent advice, diagnosis-led surveys, second opinions, and clear next-step guidance."
+        description="Tell True Damp Specialists about the property, the concern and any previous advice so we can advise on the appropriate next step."
         path="/contact"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -148,7 +152,7 @@ const ContactPage = () => {
                 <a href="#contact-form">{contactPage.form.emergencyTab}</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10">
-                <a href={`tel:${siteSettings.phone}`}>Call the Survey Team</a>
+                <a href={`tel:${siteSettings.phone}`}>Call Now</a>
               </Button>
             </div>
           </div>
@@ -221,6 +225,17 @@ const ContactPage = () => {
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           required
                         />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-5 md:grid-cols-2">
+                      <div className="space-y-2">
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">Email</label>
+                        <Input type="email" placeholder="name@example.com" className="h-12 rounded-xl border-2" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-black uppercase tracking-widest text-muted-foreground">When did you first notice it?</label>
+                        <Input placeholder="For example, after recent rain" className="h-12 rounded-xl border-2" value={formData.firstNoticed} onChange={(e) => setFormData({ ...formData, firstNoticed: e.target.value })} />
                       </div>
                     </div>
 

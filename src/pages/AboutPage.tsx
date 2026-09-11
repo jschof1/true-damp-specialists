@@ -115,7 +115,7 @@ const AboutPage = () => {
 
   const pageDescription =
     about.seo?.description ??
-    "Independent damp specialists with PCA-trained surveyors, engineers and waterproofing designers.";
+    "True Damp Specialists is a specialist damp, moisture and building pathology consultancy working across residential, commercial and heritage property.";
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -182,7 +182,7 @@ const AboutPage = () => {
               </div>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <Button asChild size="lg" className="rounded-xl bg-accent font-bold text-accent-foreground hover:bg-accent/90">
-                  <Link to="/get-quote">{about.hero.ctaPrimary}</Link>
+                  <Link to="/contact">{about.hero.ctaPrimary}</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="rounded-xl border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10">
                   <a href={`tel:${siteSettings.phone}`} className="flex items-center gap-2">
@@ -550,7 +550,7 @@ const AboutPage = () => {
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" className="rounded-xl bg-accent font-bold text-accent-foreground hover:bg-accent/90">
-                <Link to="/get-quote">{about.cta.primaryText}</Link>
+                <Link to="/contact">{about.cta.primaryText}</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl border-primary-foreground/25 bg-transparent font-bold text-primary-foreground hover:bg-primary-foreground/10">
                 <a href={`tel:${siteSettings.phone}`}>{about.cta.secondaryText}</a>

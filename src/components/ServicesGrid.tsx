@@ -1,122 +1,53 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 import { getServicesContent, getSectionCtaLabel } from "@/data/content";
 import { siteSettings } from "@/data/siteSettings";
-import { services } from "@/data/services";
 import { getServiceDestination } from "@/lib/serviceLinks";
 import { Layers } from "lucide-react";
 
-interface ServicesGridProps {
-  areaName?: string;
-}
+interface ServicesGridProps { areaName?: string; }
+type ServiceCard = { title: string; description: string; slug: string; group?: string };
+
+const serviceImages: Record<string, string> = {
+  "independent-damp-mould-surveys": "/images/services/independent-survey-masonry.webp",
+  "moisture-diagnostics-building-pathology": "/images/services/thermal-moisture-diagnostics.webp",
+  "mould-remediation-condensation-control": "/images/services/mould-condensation-control.webp",
+  "basement-below-ground-waterproofing": "/images/services/waterproofing-building-fabric.webp",
+  "external-defects-drainage-weathering": "/images/services/external-defects-roof-junction.webp",
+  "remedial-specifications-project-support": "/images/services/remedial-specifications-fabric.webp",
+  "commercial-damp-surveys": "/images/services/remedial-specifications-fabric.webp",
+  "ferro-reinforcement-scanning": "/images/services/thermal-moisture-diagnostics.webp",
+};
 
 const ServicesGrid = ({ areaName }: ServicesGridProps) => {
   const displayArea = areaName || siteSettings.addressDetails.addressRegion;
-  const servicesContent = getServicesContent(displayArea);
-  const serviceImages: Record<string, string> = {
-    "independent-damp-mould-surveys": "/images/services/independent-survey-masonry.webp",
-    "moisture-diagnostics-building-pathology": "/images/services/thermal-moisture-diagnostics.webp",
-    "mould-remediation-condensation-control": "/images/services/mould-condensation-control.webp",
-    "basement-below-ground-waterproofing": "/images/services/waterproofing-building-fabric.webp",
-    "external-defects-drainage-weathering": "/images/services/external-defects-roof-junction.webp",
-    "remedial-specifications-project-support": "/images/services/remedial-specifications-fabric.webp",
-  };
+  const servicesContent = getServicesContent(displayArea) as ReturnType<typeof getServicesContent> & { items: ServiceCard[] };
+  const groups = servicesContent.groups ?? [];
 
-  return (
-    <section id="services" className="py-10 md:py-16 lg:py-24 bg-white text-slate-900">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-10 md:mb-16">
-          <span className="inline-flex items-center gap-1.5 bg-accent-gradient text-accent-foreground font-semibold text-xs sm:text-sm uppercase tracking-wider mb-4 px-3 py-1 rounded-full shadow-sm">
-            <Layers className="size-3.5 shrink-0" aria-hidden />
-            {servicesContent.subtitle}
-          </span>
-          <h2 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4">
-            {servicesContent.title}
-          </h2>
-          <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">
-            {servicesContent.description}
-          </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <Card
-              key={service.slug}
-              className="group border-2 border-slate-200 overflow-hidden transition-all duration-500 bg-white shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 hover:-translate-y-1 h-full flex flex-col"
-            >
-              <div className="relative h-52 overflow-hidden shrink-0">
-                <img
-                  src={serviceImages[service.slug] ?? "/images/services/independent-survey-masonry.webp"}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                  width={600}
-                  height={400}
-                  decoding="async"
-                />
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
-                  aria-hidden
-                />
-                <div
-                  className="absolute top-0 right-0 w-12 h-12 bg-accent/90 backdrop-blur-sm -mr-6 -mt-6 rotate-45 group-hover:bg-accent transition-colors border-b border-l border-white/20 shadow-sm"
-                  aria-hidden
-                />
-              </div>
-              <CardContent className="p-6 border-t-4 border-accent bg-white flex flex-col flex-1">
-                <h3 className="font-display font-bold text-xl text-slate-900 leading-tight tracking-tight mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-slate-600 text-sm leading-relaxed font-medium flex-1 mb-5">
-                  {service.shortDesc}
-                </p>
-                <div className="flex gap-3">
-                  <Button
-                    asChild
-                    size="sm"
-                    className="flex-1 bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold rounded-lg shadow-sm"
-                  >
-                    <Link to={`/get-quote?service=${service.slug}`}>Enquire</Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="sm"
-                    variant="outline"
-                    className="flex-1 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 font-semibold rounded-lg"
-                  >
-                    <Link to={getServiceDestination(service.slug)}>Learn More</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-slate-600 mb-4 font-medium">
-            {servicesContent.footerText}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button asChild size="lg" className="bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold px-6 h-12 rounded-xl shadow-xl shadow-accent/20">
-              <Link to="/get-quote">{getSectionCtaLabel()}</Link>
-            </Button>
-            <a
-              href={`tel:${siteSettings.phoneFormatted}`}
-              className="text-slate-900 font-bold hover:text-accent-text-on-light transition-colors inline-flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
-            >
-              {servicesContent.footerCTA}{" "}
-              <span className="group-hover:translate-x-1 transition-transform" aria-hidden>→</span>
-            </a>
-          </div>
-        </div>
+  return <section id="services" className="bg-white py-10 text-slate-900 md:py-16 lg:py-24">
+    <div className="container mx-auto px-4">
+      <div className="mb-10 text-center md:mb-16">
+        <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-accent-gradient px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground shadow-sm sm:text-sm"><Layers className="size-3.5 shrink-0" aria-hidden />{servicesContent.subtitle}</span>
+        <h2 className="mb-4 font-display text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl">{servicesContent.title}</h2>
+        <p className="mx-auto max-w-2xl text-base text-slate-600 md:text-lg">{servicesContent.description}</p>
       </div>
-    </section>
-  );
+      <div className="space-y-12">
+        {groups.map((group) => {
+          const cards = servicesContent.items.filter((item) => item.group === group.title);
+          return <div key={group.title}>
+            <h3 className="mb-5 border-b border-slate-200 pb-3 font-display text-xl font-black uppercase tracking-wide text-slate-900 md:text-2xl">{group.title}</h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {cards.map((service) => <Card key={`${group.title}-${service.title}`} className="group flex h-full flex-col overflow-hidden border-2 border-slate-200 bg-white shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/20">
+                <div className="relative h-40 shrink-0 overflow-hidden"><img src={serviceImages[service.slug] ?? serviceImages["independent-damp-mould-surveys"]} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" width={600} height={400} decoding="async" /><div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" aria-hidden /></div>
+                <CardContent className="flex flex-1 flex-col border-t-4 border-accent bg-white p-5"><h4 className="mb-3 font-display text-lg font-bold leading-tight text-slate-900">{service.title}</h4><p className="mb-5 flex-1 text-sm font-medium leading-relaxed text-slate-600">{service.description}</p><Button asChild size="sm" className="bg-accent-gradient font-bold text-accent-foreground hover:opacity-90"><Link to={getServiceDestination(service.slug)}>Learn More</Link></Button></CardContent>
+              </Card>)}
+            </div>
+          </div>;
+        })}
+      </div>
+      <div className="mt-12 text-center"><p className="mb-4 font-medium text-slate-600">{servicesContent.footerText}</p><Button asChild size="lg" className="h-12 rounded-xl bg-accent-gradient px-6 font-bold text-accent-foreground shadow-xl shadow-accent/20 hover:opacity-90"><Link to="/contact">{getSectionCtaLabel()}</Link></Button></div>
+    </div>
+  </section>;
 };
-
 export default ServicesGrid;

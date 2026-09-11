@@ -135,12 +135,12 @@ const GetQuotePage = () => {
   return (
     <>
       <SEO
-        title={`Request Specialist Advice | ${siteSettings.businessName}`}
+        title={`Start Your Enquiry | ${siteSettings.businessName}`}
         description="Request an independent damp, mould or moisture investigation. Specialist response across North London, the Home Counties and the UK."
         path="/get-quote"
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: "Request Advice", path: "/get-quote" },
+          { name: "Start Your Enquiry", path: "/get-quote" },
         ]}
       />
 
@@ -164,13 +164,13 @@ const GetQuotePage = () => {
           <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-accent text-accent-foreground text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 sm:mb-8 animate-fade-in shrink-0">
               <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden />
-              Takes less than 2 minutes
+              Start with the property
             </div>
             <h1 className="font-display font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 sm:mb-8 leading-tight max-w-4xl mx-auto animate-fade-in">
-              Request a Survey
+              Start Your Enquiry
             </h1>
             <p className="text-primary-foreground/80 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-12 animate-fade-in">
-              Tell us what you're seeing and we'll point you toward the right next step. Independent advice, not a sales pitch.
+              Tell us what you are seeing, what has happened previously and what you need to decide. We will advise on the most appropriate next step.
             </p>
 
             <div className="flex flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 animate-fade-in">
@@ -178,7 +178,7 @@ const GetQuotePage = () => {
                 href="#quote-form"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 sm:px-8 h-12 sm:h-14 text-base sm:text-lg shadow-xl shadow-accent/25 transition-colors"
               >
-                Start your quote
+                Start your enquiry
               </a>
             </div>
           </div>
@@ -429,12 +429,12 @@ const GetQuotePage = () => {
                               Sending...
                             </>
                           ) : (
-                            "Request My Survey"
+                            "Send My Enquiry"
                           )}
                         </Button>
                         <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-2 flex items-center gap-1">
                           <Shield className="w-3 h-3 text-accent" />
-                          No obligation, no sales pitch
+                          Clear scope before work starts
                         </p>
                       </div>
                     )}
@@ -463,15 +463,15 @@ const GetQuotePage = () => {
             <div className="lg:col-span-4 space-y-6 hidden lg:block">
               {/* Trust Card */}
               <div className="bg-card rounded-2xl border border-border p-6 shadow-sm">
-                <h3 className="font-display font-bold text-lg mb-4">Why choose us?</h3>
+                <h3 className="font-display font-bold text-lg mb-4">What you can expect</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm">Independent Advice</div>
-                      <div className="text-xs text-muted-foreground">Evidence-led, not sales-driven.</div>
+                      <div className="font-bold text-sm">Clear scope</div>
+                      <div className="text-xs text-muted-foreground">The property, concern and reporting requirements are agreed before work starts.</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -479,8 +479,8 @@ const GetQuotePage = () => {
                       <Shield className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm">12-Month Guarantee</div>
-                      <div className="text-xs text-muted-foreground">We stand by our premium workmanship.</div>
+                      <div className="font-bold text-sm">Detailed Reporting</div>
+                      <div className="text-xs text-muted-foreground">Clear findings and practical next steps in the form agreed for the instruction.</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -488,8 +488,8 @@ const GetQuotePage = () => {
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm">Quick Turnaround</div>
-                      <div className="text-xs text-muted-foreground">Most projects completed in 1-2 days.</div>
+                      <div className="font-bold text-sm">Personal Communication</div>
+                      <div className="text-xs text-muted-foreground">A clear person to discuss the enquiry, findings and next stage with.</div>
                     </div>
                   </li>
                 </ul>

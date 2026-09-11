@@ -57,7 +57,7 @@ export const siteSettings = {
         "We provide national coverage with a core focus on North London, the Home Counties, Buckinghamshire, Hertfordshire, Bedfordshire, Milton Keynes, Bedford, Amersham, Hitchin, Welwyn Garden City, Stevenage and the Midlands. We regularly travel across the UK for specialist projects, including heritage and listed buildings. If you have a property that needs an independent damp investigation, get in touch — distance is rarely a barrier.",
     },
     {
-      question: "Can your reports help with Awaab's Law and damp compliance cases?",
+      question: "Can your reports support a property or project decision?",
       answer:
         "Yes, where relevant. We provide evidence-led reporting that can support landlords, housing providers, and property professionals dealing with damp, mould, moisture, and health-related housing concerns.",
     },
@@ -67,7 +67,7 @@ export const siteSettings = {
         "Investigations typically combine visual inspection, moisture profiling, thermal imaging, salts analysis, ventilation assessment, and defect-led reasoning so that the likely cause, extent, and practical next steps are clearly documented.",
     },
     {
-      question: "Do you offer any guarantee on your findings?",
+      question: "How are findings and next steps explained?",
       answer:
         "The client commitment described in the brief is that if a client is not satisfied that the likely cause or next steps have been made clear, the case will be reviewed again free of charge. Any final wording should stay aligned with the client's approved promise.",
     },

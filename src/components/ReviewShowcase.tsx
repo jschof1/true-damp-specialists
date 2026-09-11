@@ -13,7 +13,7 @@ const ReviewShowcase = () => {
   // Get top verified reviews
   const featuredReviews = reviews
     .filter(r => r.rating === 5)
-    .slice(0, 10);
+    .slice(0, 3);
 
   return (
     <section className="py-16 relative overflow-hidden bg-white text-slate-900">
@@ -101,7 +101,7 @@ const ReviewShowcase = () => {
       {/* Section CTA */}
       <div className="container mx-auto px-4 pt-8 pb-4 relative z-10 text-center">
         <Button asChild size="lg" className="bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold px-6 sm:px-8 h-12 rounded-xl text-base shadow-xl shadow-accent/20">
-          <Link to="/get-quote" className="inline-flex items-center gap-2">
+          <Link to="/contact" className="inline-flex items-center gap-2">
             {getSectionCtaLabel()}
             <ChevronRight className="w-5 h-5" />
           </Link>
