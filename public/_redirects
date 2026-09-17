@@ -1,6 +1,8 @@
 /our-work /portfolio 301
-/feedback /feedback/index.html 200
-/feedback/ /feedback/index.html 200
+/feedback https://share.google/IDcMPgjEOAQOyzyP8 301
+/feedback/ https://share.google/IDcMPgjEOAQOyzyP8 301
+/feeback https://share.google/IDcMPgjEOAQOyzyP8 301
+/feeback/ https://share.google/IDcMPgjEOAQOyzyP8 301
 /recovery-plan / 302
 /recovery-plan/ / 302
 /* /index.html 200
