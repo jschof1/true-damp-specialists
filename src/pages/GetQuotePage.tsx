@@ -518,7 +518,7 @@ const GetQuotePage = () => {
               {/* Privacy Note */}
               <div className="text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
                 <Shield className="w-3.5 h-3.5" />
-                Your information is 100% secure.
+                Please include only information relevant to your enquiry.
               </div>
             </div>
           </div>
