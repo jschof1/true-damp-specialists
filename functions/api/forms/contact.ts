@@ -7,6 +7,7 @@ interface FunctionContext {
 
 export const onRequestPost = async (context: FunctionContext) =>
   forwardFormSubmission(context.request, context.env, "FORM_WEBHOOK_URL", {
+    includeSummary: true,
     allowedFields: [
       "name",
       "phone",

@@ -316,7 +316,7 @@ const GetQuotePage = () => {
                     </h2>
                     <p className="text-sm font-medium text-muted-foreground mb-6 flex items-center gap-2">
                       <Clock className="w-4 h-4" />
-                      We'll call you back within 15 minutes.
+                      Rob will review your enquiry and get back to you.
                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-4">
@@ -377,7 +377,7 @@ const GetQuotePage = () => {
                       Request Received!
                     </h2>
                     <p className="text-base text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
-                      Thanks <span className="text-foreground font-bold">{formData.name.split(" ")[0]}</span>! We've received your request and will call you back within 15 minutes.
+                      Thanks <span className="text-foreground font-bold">{formData.name.split(" ")[0]}</span>! We've received your enquiry. Rob will review the details and get back to you.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                       <Button asChild className="bg-accent-gradient hover:opacity-90 text-accent-foreground font-bold h-14 px-8 text-lg rounded-xl shadow-lg shadow-accent/20 transition-all hover:scale-[1.02] active:scale-[0.98]">

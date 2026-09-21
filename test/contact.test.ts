@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { withFormSummary } from '../src/lib/formSummary';
 import { onRequestPost } from '../functions/api/forms/contact';
 
 const webhookUrl = 'https://upstream.test/contact';
@@ -69,7 +70,7 @@ test('contact proxy forwards the exact ContactPage and Hero payload contracts', 
         assert.equal(calls[0].input, webhookUrl);
         assert.equal(calls[0].init?.method, 'POST');
         assert.equal(new Headers(calls[0].init?.headers).get('Content-Type'), 'application/json');
-        assert.deepEqual(JSON.parse(String(calls[0].init?.body)), payload);
+        assert.deepEqual(JSON.parse(String(calls[0].init?.body)), withFormSummary(payload));
       } finally {
         globalThis.fetch = oldFetch;
       }

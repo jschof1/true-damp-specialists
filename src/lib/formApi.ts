@@ -1,3 +1,4 @@
+import { withFormSummary } from "./formSummary";
 import { trackEvent } from "./analytics";
 export const formEndpoints = {
   contact: "/api/forms/contact",
@@ -33,7 +34,11 @@ export const postFormSubmission = async (
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(
+      endpoint === formEndpoints.contact || endpoint === formEndpoints.quote
+        ? withFormSummary(payload as Record<string, string | number | boolean | null>)
+        : payload,
+    ),
   });
 
   if (!response.ok) {

@@ -1,3 +1,5 @@
+import { withFormSummary } from "../../src/lib/formSummary";
+
 type Env = Record<string, string | undefined>;
 type Primitive = string | number | boolean | null;
 
@@ -8,6 +10,7 @@ interface JsonResponseInit extends ResponseInit {
 interface ProxyOptions {
   allowedFields: readonly string[];
   maxBodyBytes?: number;
+  includeSummary?: boolean;
 }
 
 const jsonResponse = ({
@@ -160,7 +163,13 @@ export const forwardFormSubmission = async (
     return error;
   }
 
-  const sanitizedResult = sanitizePayload(body, options.allowedFields);
+  // Summaries are derived from validated native fields, never trusted from the caller.
+  const nativeBody = { ...body };
+  if (options.includeSummary) {
+    delete nativeBody.summary;
+    delete nativeBody.summaryText;
+  }
+  const sanitizedResult = sanitizePayload(nativeBody, options.allowedFields);
   if (sanitizedResult.error) {
     return sanitizedResult.error;
   }
@@ -174,7 +183,9 @@ export const forwardFormSubmission = async (
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(sanitizedResult.payload),
+      body: JSON.stringify(options.includeSummary
+        ? withFormSummary(sanitizedResult.payload)
+        : sanitizedResult.payload),
       signal: controller.signal,
     });
 
