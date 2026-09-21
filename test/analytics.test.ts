@@ -18,9 +18,22 @@ test('only successful contact or quote responses emit enquiries, with no payload
     globalThis.fetch = async () => new Response('', { status: 500 });
     await assert.rejects(postFormSubmission(formEndpoints.contact, { email: 'private@example.com' }));
     assert.equal(events.length, 0);
-    globalThis.fetch = async () => new Response('', { status: 200 });
+    globalThis.fetch = async () => new Response('{"ok":true}', {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
     await postFormSubmission(formEndpoints.feedback, {});
     assert.equal(events.length, 0);
+    globalThis.fetch = async () => new Response('<html>Static fallback</html>', {
+      status: 200,
+      headers: { 'Content-Type': 'text/html' },
+    });
+    await assert.rejects(postFormSubmission(formEndpoints.contact, { email: 'private@example.com' }));
+    assert.equal(events.length, 0);
+    globalThis.fetch = async () => new Response('{"ok":true}', {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
     await postFormSubmission(formEndpoints.contact, { email: 'private@example.com' });
     assert.deepEqual(events, [['Enquiry Submitted', { u: 'https://truedampspecialists.co.uk/contact/' }]]);
     window.plausible = () => { throw new Error('blocked analytics'); };

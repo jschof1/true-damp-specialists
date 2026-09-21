@@ -6,6 +6,24 @@ export const formEndpoints = {
   discount: "/api/forms/discount",
 } as const;
 
+const requireConfirmedReceipt = async (response: Response) => {
+  const contentType = response.headers.get("Content-Type")?.split(";")[0].trim().toLowerCase();
+  if (contentType !== "application/json") {
+    throw new Error("Submission receipt was not confirmed");
+  }
+
+  let result: unknown;
+  try {
+    result = await response.clone().json();
+  } catch {
+    throw new Error("Submission receipt was not confirmed");
+  }
+
+  if (!result || typeof result !== "object" || !("ok" in result) || result.ok !== true) {
+    throw new Error("Submission receipt was not confirmed");
+  }
+};
+
 export const postFormSubmission = async (
   endpoint: string,
   payload: Record<string, unknown>,
@@ -21,6 +39,8 @@ export const postFormSubmission = async (
   if (!response.ok) {
     throw new Error(`Submission failed with status ${response.status}`);
   }
+
+  await requireConfirmedReceipt(response);
 
   if (endpoint === formEndpoints.contact || endpoint === formEndpoints.quote) trackEvent("Enquiry Submitted");
   return response;
