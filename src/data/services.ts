@@ -27,8 +27,8 @@ const related = ["independent-damp-mould-surveys", "moisture-diagnostics-buildin
 export const services: Service[] = [
   {
     slug: "independent-damp-mould-surveys", title: "Damp & Moisture Investigations", icon: Search,
-    metaTitle: `Damp & Moisture Investigations ${area} | True Damp Specialists`,
-    metaDescription: `Damp and moisture investigations in ${area}. Understand the cause before committing to repairs, with clear written findings and practical next steps.`,
+    metaTitle: `Independent Damp & Mould Surveys ${area} | True Damp Specialists`,
+    metaDescription: `Independent damp and mould surveys in ${area}, with evidence-led investigation, clear written findings and practical next steps before repairs.`,
     heroDescription: "Visible damp is a starting point, not a diagnosis. We investigate the building, the available evidence and the history of the issue before explaining what we believe is causing the problem and what should happen next.",
     shortDesc: "For damp, staining, unexplained moisture or deterioration where the cause needs establishing.",
     fullDescription: ["A damp or moisture concern can involve rainwater, drainage, ground levels, floors, ventilation, thermal bridging, salts, leaks, previous alterations or a combination of factors.", "The investigation considers the visible symptom in the context of the building. The report explains the relevant findings and gives practical next steps rather than a pre-selected treatment."],
