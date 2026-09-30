@@ -1,3 +1,4 @@
+import PoweredByUKTradeLeads from './layout/PoweredByUKTradeLeads';
 import { Clock, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBar from "@/components/TrustBar";
@@ -154,6 +155,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <PoweredByUKTradeLeads />
     </>
   );
 };
