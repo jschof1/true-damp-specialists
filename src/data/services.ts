@@ -48,6 +48,17 @@ export const services: Service[] = [
     areas: coreAreas, relatedServices: ["independent-damp-mould-surveys", "external-defects-drainage-weathering", "remedial-specifications-project-support"], process,
   },
   {
+    slug: "pre-purchase-investigations", title: "Pre-Purchase Investigations", icon: Search,
+    metaTitle: `Pre-Purchase Damp Survey ${area} | True Damp Specialists`,
+    metaDescription: `Pre-purchase damp and moisture investigations in ${area} for buyers who need clear, practical findings before committing to a property.`,
+    heroDescription: "If a RICS or building survey has raised damp, timber, moisture or building-defect concerns, we investigate the relevant issues so you can understand what they mean before you commit to the purchase.",
+    shortDesc: "Clear investigation of damp, moisture or building-defect concerns raised during a property purchase.",
+    fullDescription: ["Buying a property can become difficult when a survey raises damp or moisture concerns without making the likely cause, scale or next step clear. We review the relevant information and investigate the building within an agreed scope so you can understand what the evidence supports.", "The aim is not to replace a full building survey or valuation. It is to give you clearer, specialist context around the damp, moisture or related building-defect concerns that could affect your decision, further enquiries or planned works."],
+    features: ["Review relevant survey findings and previous advice", "Targeted damp and moisture investigation", "Building context and likely moisture pathways", "Clear written findings for the purchase decision", "Practical next questions and recommendations"], pricing: scope("Pre-purchase investigation"),
+    faqs: [{question:"Can you review concerns raised in my RICS or building survey?",answer:"Yes. Relevant survey findings and previous advice can form part of the brief so the investigation focuses on the concerns that need clearer specialist context."},{question:"Is this a full building survey or valuation?",answer:"No. The service is a targeted damp, moisture and building-defect investigation within the agreed scope. It does not replace a full building survey or property valuation."},{question:"Can the findings help me decide what to do before exchange?",answer:"The purpose is to explain the relevant findings, likely causes and practical next steps so you have better information for your purchase decision and any further enquiries."}],
+    areas: coreAreas, relatedServices: ["independent-damp-mould-surveys", "moisture-diagnostics-building-pathology", "external-defects-drainage-weathering"], process,
+  },
+  {
     slug: "mould-remediation-condensation-control", title: "Condensation, Mould & Ventilation Investigations", icon: Building2,
     metaTitle: `Condensation & Mould Investigations ${area} | True Damp Specialists`, metaDescription: `Condensation, mould and ventilation investigations in ${area} that consider the building, internal environment and moisture behaviour.`,
     heroDescription: "Mould and condensation are symptoms. We investigate the internal environment, ventilation, cold surfaces, thermal bridging and any building defects that may be affecting moisture behaviour.",
