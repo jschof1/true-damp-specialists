@@ -8,7 +8,7 @@ for (const slug of ["commercial-damp-surveys", "ferro-reinforcement-scanning"]) 
   const normalized = html.replace(/&amp;/g, "&");
   assert.match(normalized, new RegExp(`<h1[^>]*>${service.title}</h1>`));
   assert.ok(normalized.includes(service.metaDescription));
-  assert.ok(normalized.includes(`https://www.truedampspecialists.co.uk/services/${slug}`));
+  assert.ok(normalized.includes(`https://truedampspecialists.co.uk/services/${slug}`));
   assert.ok(fs.readFileSync("dist/client/sitemap.xml", "utf8").includes(`/services/${slug}`));
 }
 const feedback = fs.readFileSync("dist/client/feedback/index.html", "utf8");
