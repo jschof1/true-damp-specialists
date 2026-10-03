@@ -57,7 +57,7 @@ for (const route of indexableRoutes) {
     }
   }
 
-  const canonicalTags = html.match(/<link\\b[^>]*\\brel=["']canonical["'][^>]*>/gi) ?? [];
+  const canonicalTags = html.match(/<link\b[^>]*\brel=["']canonical["'][^>]*>/gi) ?? [];
   const expectedCanonical = expectedCanonicalFor(route.path);
   if (canonicalTags.length !== 1 || !canonicalTags[0].includes(`href="${expectedCanonical}"`)) {
     console.error(`❌ Canonical mismatch in ${route.outputPath}`);
@@ -91,7 +91,7 @@ if (!fs.existsSync(sitemapPath)) {
   errors++;
 } else {
   const sitemap = fs.readFileSync(sitemapPath, "utf-8");
-  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\\/loc>/g)].map((match) => match[1]);
+  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
   const wrongHostUrls = sitemapUrls.filter((url) => !url.startsWith(`${canonicalBase}/`));
   if (sitemapUrls.length === 0 || wrongHostUrls.length > 0) {
     console.error("❌ sitemap.xml contains missing or non-canonical host URLs");
