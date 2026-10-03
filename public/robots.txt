@@ -4,4 +4,4 @@ Disallow: /add-customer
 Disallow: /marketing-form
 Disallow: /discount
 
-Sitemap: https://www.truedampspecialists.co.uk/sitemap.xml
+Sitemap: https://truedampspecialists.co.uk/sitemap.xml
