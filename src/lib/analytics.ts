@@ -2,6 +2,7 @@ import { indexableRoutes } from "../routes";
 
 const domain = "truedampspecialists.co.uk";
 const paths = new Set(indexableRoutes.map(route => route.path.replace(/\/$/, "") || "/"));
+paths.add("/get-quote"); // Public enquiry route, intentionally absent from the SEO sitemap.
 type EventName = "pageview" | "Phone Click" | "Email Click" | "Enquiry Submitted";
 type Plausible = ((name: EventName, options: { u: string }) => void) & { q?: unknown[][] };
 declare global { interface Window { plausible?: Plausible } }
