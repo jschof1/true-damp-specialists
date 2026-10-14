@@ -27,3 +27,6 @@ jobs:
 
       - name: Build production site
         run: npm run build
+
+      - name: Verify enquiry setup safeguards
+        run: node --test scripts/set-webhook-secrets.test.mjs scripts/test-form-health.mjs
