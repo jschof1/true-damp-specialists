@@ -1,5 +1,6 @@
-# GHL webhooks (Main / Quote / Negative / Discount)
-FORM_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/fJBkV60oEidpLQK6gsGP
-QUOTE_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/UNBSZRTzZZtN3qIUAEFI
-FEEDBACK_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/LNI7myrFYlBONwi8aHyr
-DISCOUNT_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/e1Jc4KgwiSkDhvH5fwfH/webhook-trigger/vb4OGGaiLPaoBVU6sO26
+# Inert examples only. Obtain role-specific values from the approved secret store.
+# Never commit .dev.vars or export secrets through a traced terminal session.
+FORM_WEBHOOK_URL=
+QUOTE_WEBHOOK_URL=
+FEEDBACK_WEBHOOK_URL=
+DISCOUNT_WEBHOOK_URL=
