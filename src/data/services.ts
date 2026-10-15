@@ -59,6 +59,34 @@ export const services: Service[] = [
     areas: coreAreas, relatedServices: ["independent-damp-mould-surveys", "moisture-diagnostics-building-pathology", "external-defects-drainage-weathering"], process,
   },
   {
+    slug: "heritage-traditional-buildings", title: "Heritage & Traditional Buildings", icon: Building2,
+    metaTitle: `Heritage & Traditional Building Damp Surveys ${area} | True Damp Specialists`,
+    metaDescription: `Damp and moisture investigations for heritage and traditional buildings in ${area}, considering construction, materials, alterations and moisture behaviour before repairs.`,
+    heroDescription: "Older buildings need to be understood on their own terms. Traditional materials, vapour permeability, historic alterations, external ground levels, rainwater management and previous repairs can all influence how moisture behaves.",
+    shortDesc: "Building-specific damp and moisture investigation for older, traditionally constructed and listed properties.",
+    fullDescription: [
+      "Older and traditionally constructed buildings weren't designed to behave like modern buildings. We consider the original construction and how it manages moisture, alongside later changes and the history of the concern.",
+      "A modern intervention applied without understanding that construction can sometimes change the way the building manages moisture rather than resolve the underlying problem. True Damp Specialists investigates those relationships before recommending what should happen next.",
+      "The investigation considers the relevant materials, alterations, rainwater details, external ground levels and previous repairs. Findings are explained in the context of the building, with practical recommendations and further investigation identified where the evidence is not yet sufficient.",
+      "The objective isn't to avoid modern materials simply because a building is old. It is to understand the original construction, identify the actual defect and select an intervention that is appropriate to both. Understand the building first. Intervene only where the evidence justifies it."
+    ],
+    features: [
+      "Traditional materials: consider masonry, lime-based materials, timber and how the original construction was intended to perform.",
+      "Historic alterations: consider how later extensions, renders, plasters, floors or coatings may have changed moisture behaviour.",
+      "Rainwater management: assess relevant roofs, chimneys, parapets, flashings, gutters, downpipes and external drainage.",
+      "External ground levels: consider whether landscaping, hardstanding or raised levels may be affecting the building.",
+      "Breathability and evaporation: understand whether finishes or barriers may be restricting moisture movement and evaporation.",
+      "Previous repairs: consider whether earlier interventions remain appropriate or may be contributing to the symptoms."
+    ],
+    pricing: scope("Heritage & traditional building investigation"),
+    faqs: [
+      { question: "Do you investigate listed and traditionally constructed buildings?", answer: "Yes. The investigation is scoped around the building, its construction, materials, history, previous alterations and the damp or moisture concern that needs explaining." },
+      { question: "Will an older building always need modern damp treatment?", answer: "No treatment is selected in advance. We investigate the relevant defect and moisture behaviour first, then explain an appropriate next step. The aim is to respect the building while addressing what the evidence supports." },
+      { question: "What should I share before arranging an investigation?", answer: "Tell us about the property, the symptoms and when they occur, previous repairs or alterations, and any reports or advice you have already received. Access, investigation and reporting requirements are agreed before instruction." }
+    ],
+    areas: coreAreas, relatedServices: ["independent-damp-mould-surveys", "external-defects-drainage-weathering", "remedial-specifications-project-support"], process,
+  },
+  {
     slug: "mould-remediation-condensation-control", title: "Condensation, Mould & Ventilation Investigations", icon: Building2,
     metaTitle: `Condensation & Mould Investigations ${area} | True Damp Specialists`, metaDescription: `Condensation, mould and ventilation investigations in ${area} that consider the building, internal environment and moisture behaviour.`,
     heroDescription: "Mould and condensation are symptoms. We investigate the internal environment, ventilation, cold surfaces, thermal bridging and any building defects that may be affecting moisture behaviour.",

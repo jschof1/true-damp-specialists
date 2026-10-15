@@ -12,6 +12,7 @@ jobs:
     timeout-minutes: 15
     env:
       PUPPETEER_SKIP_DOWNLOAD: "true"
+      SOURCE_BASELINE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -30,3 +31,17 @@ jobs:
 
       - name: Verify enquiry setup safeguards
         run: node --test scripts/set-webhook-secrets.test.mjs scripts/test-form-health.mjs
+
+      - name: Compare full app types and lint with canonical baseline
+        run: |
+          git fetch --no-tags --depth=1 origin "$SOURCE_BASELINE_SHA"
+          git diff --exit-code "$SOURCE_BASELINE_SHA" -- package.json package-lock.json tsconfig.app.json tsconfig.json eslint.config.js functions src/pages src/components src/lib src/data/siteSettings.ts
+          git worktree add --detach "$RUNNER_TEMP/true-damp-source-baseline" "$SOURCE_BASELINE_SHA"
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$RUNNER_TEMP/true-damp-source-baseline/node_modules"
+          node scripts/check-source-diagnostics.mjs "$RUNNER_TEMP/true-damp-source-baseline"
+      - name: Lint changed service data and check regression syntax
+        run: |
+          npx --no-install eslint src/data/services.ts
+          node --check scripts/check-source-diagnostics.mjs
+      - name: Verify form contracts and built heritage route
+        run: node --import tsx --test test/*.test.ts
