@@ -22,6 +22,7 @@ import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteSettings } from "@/data/siteSettings";
+import { reviews } from "@/data/reviews";
 import { formEndpoints, postFormSubmission } from "@/lib/formApi";
 import { normalizeUKPhone } from "@/lib/phoneUtils";
 import { cn } from "@/lib/utils";
@@ -54,6 +55,9 @@ const ContactPage = () => {
     trust: { title: string; description: string };
     finalCta: { title: string; description: string; primaryText: string; secondaryText: string };
   };
+  // Use only approved public reviews; anonymous example themes must not look like testimonials.
+  const contactReviews = reviews.filter((review) => review.verified).slice(0, 3);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -385,15 +389,20 @@ const ContactPage = () => {
                   {contactPage.trust.description}
                 </p>
                 <div className="mt-6 grid gap-4">
-                  {[
-                    "They explained the damp problem properly, ruled out the wrong treatment and gave us a report we could actually use.",
-                    "Finally someone who looked at ventilation, moisture patterns and defects together instead of jumping straight to damp proofing.",
-                    "We needed an independent second opinion before spending money on remedial works, and the report gave us exactly that clarity.",
-                  ].map((quote) => (
-                    <div key={quote} className="rounded-2xl border border-border bg-muted p-4">
-                      <p className="text-sm italic leading-relaxed text-foreground">“{quote}”</p>
+                  {contactReviews.map((review) => (
+                    <div key={`${review.name}-${review.date}`} className="rounded-2xl border border-border bg-muted p-4">
+                      <p className="text-sm italic leading-relaxed text-foreground line-clamp-4">“{review.text}”</p>
+                      <p className="mt-3 text-xs font-semibold text-muted-foreground">{review.name} · {review.location}</p>
                     </div>
                   ))}
+                  <a
+                    href={siteSettings.googlePageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center text-sm font-semibold text-accent underline underline-offset-4 hover:text-accent/80"
+                  >
+                    Read public reviews
+                  </a>
                 </div>
               </div>
             </div>
